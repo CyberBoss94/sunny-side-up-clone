@@ -104,7 +104,7 @@ const ServicesSection = () => {
               </div>
 
               {/* Content */}
-              <div className="p-4 sm:p-5 lg:p-6">
+              <div className="p-4 sm:p-5 lg:p-6 border-red-300">
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 leading-tight">
                   {service.title}
                 </h3>
@@ -115,7 +115,7 @@ const ServicesSection = () => {
                   {service.description}
                 </p>
                 
-                <div className="space-y-2 mb-4 sm:mb-6">
+                <div className="space-y-2 mb-4 sm:mb-6 border-red-300">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center">
                       <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-tow-red rounded-full mr-2 sm:mr-3 flex-shrink-0" />
