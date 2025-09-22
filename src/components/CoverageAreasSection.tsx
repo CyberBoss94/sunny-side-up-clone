@@ -47,20 +47,20 @@ const CoverageAreasSection = () => {
       {/* Content Container */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
         <div className="max-w-6xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
             
             {/* Left Content */}
-            <div className="text-white">
-              <p className="text-tow-red font-semibold text-sm sm:text-base uppercase tracking-wider mb-3 sm:mb-4">
+            <div className="text-white text-center lg:text-left">
+              <p className="text-tow-red font-semibold text-xs sm:text-sm md:text-base uppercase tracking-wider mb-2 sm:mb-3 lg:mb-4">
                 Ontario-Wide Coverage
               </p>
               
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 lg:mb-6 leading-tight">
                 We Cover All of
                 <span className="block text-tow-red">Ontario</span>
               </h2>
               
-              <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-white/90 leading-relaxed">
+              <p className="text-sm sm:text-base lg:text-lg xl:text-xl mb-4 sm:mb-6 lg:mb-8 text-white/90 leading-relaxed max-w-lg mx-auto lg:mx-0">
                 From bustling city centers to remote rural highways, TowDaddy provides reliable towing and roadside assistance across every corner of Ontario. No matter where you are, help is just a call away.
               </p>
 
