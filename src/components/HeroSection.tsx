@@ -33,7 +33,7 @@ const HeroSection = () => {
           </div>
 
           {/* Service Highlights */}
-          <div className="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
             <Card className="p-6 bg-service-card/95 backdrop-blur-sm border-service-border">
               <div className="text-center">
                 <Truck className="h-8 w-8 text-tow-red mx-auto mb-3" />
