@@ -50,7 +50,7 @@ const HeroSection = () => {
               </div>
             </Card>
 
-            <Card className="p-6 bg-service-card/95 backdrop-blur-sm border-service-border">
+            <Card className="p-6 bg-service-card/95 backdrop-blur-sm border-service-border px-[12px]">
               <div className="text-center">
                 <MapPin className="h-8 w-8 text-tow-red mx-auto mb-3" />
                 <h3 className="font-semibold text-card-foreground mb-2">Ontario-Wide</h3>
@@ -58,7 +58,7 @@ const HeroSection = () => {
               </div>
             </Card>
 
-            <Card className="p-6 bg-service-card/95 backdrop-blur-sm border-service-border">
+            <Card className="p-6 bg-service-card/95 backdrop-blur-sm border-service-border px-0 py-[25px]">
               <div className="text-center">
                 <Shield className="h-8 w-8 text-tow-red mx-auto mb-3" />
                 <h3 className="font-semibold text-card-foreground mb-2">Licensed & Insured</h3>
