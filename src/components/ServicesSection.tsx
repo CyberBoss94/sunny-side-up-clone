@@ -34,10 +34,10 @@ const ServicesSection = () => {
     },
     {
       image: "https://i.postimg.cc/g0KSq5Vc/TOWDADDY-f.png",
-      title: "PROFESSIONAL VEHICLE RESCUE",
-      subtitle: "Expert vehicle retrieval",
-      description: "Our professional rescue team handles complex situations requiring specialized expertise. From luxury vehicles to commercial fleets, we provide expert care and handling.",
-      features: ["Luxury Vehicle Care", "Commercial Fleet", "Specialized Equipment"]
+      title: "PROFESSIONAL VEHICLE RESCUE & TRANSPORT",
+      subtitle: "Expert care for every situation",
+      description: "From roadside recoveries to safe long-distance relocation, our professional team provides specialized expertise and premium handling for all vehicle types. Whether it’s a high-value luxury car, a commercial fleet, or multiple units for a dealership, we ensure secure, damage-free service every time..",
+      features: ["Luxury Vehicle Care & Enclosed Trailers", "Commercial Fleet Recovery & Transport", "Specialized Equipment for Complex Situations"]
     },
     {
       image: "https://i.postimg.cc/Y0p6Cy5Z/2.png",
