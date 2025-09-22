@@ -5,7 +5,7 @@ import { Phone } from "lucide-react";
 const ServicesSection = () => {
   const services = [
     {
-      image: "https://via.placeholder.com/400x300/dc2626/ffffff?text=Emergency+Towing",
+      image: "https://i.postimg.cc/YCK8gbBn/accidentfull.png",
       title: "EMERGENCY TOWING",
       subtitle: "Swift assistance 24/7",
       description: "Our emergency towing service operates around the clock, ensuring you're never stranded. With GPS tracking and rapid response times, we locate and assist you within minutes of your call.",
