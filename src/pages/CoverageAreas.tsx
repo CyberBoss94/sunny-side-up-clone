@@ -85,19 +85,19 @@ const CoverageAreas = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-hero-bg text-hero-foreground py-20">
-        <div className="container mx-auto px-4">
+      <section className="bg-hero-bg text-hero-foreground py-12 sm:py-16 lg:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
               Ontario-Wide Coverage
               <span className="block text-tow-red">From City to Remote Areas</span>
             </h1>
-            <p className="text-xl mb-8 text-hero-foreground/90">
+            <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90">
               TowDaddy provides comprehensive towing and roadside assistance across all of Ontario. 
               From bustling city centers to remote rural communities, we're there when you need us.
             </p>
-            <Button variant="towRed" size="lg">
-              <Phone className="w-5 h-5 mr-2" />
+            <Button variant="towRed" size="lg" className="text-sm sm:text-base">
+              <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Emergency: (647) 949-7729
             </Button>
           </div>
@@ -105,18 +105,18 @@ const CoverageAreas = () => {
       </section>
 
       {/* Service Features */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <section className="py-12 sm:py-16 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {serviceFeatures.map((feature, index) => (
-              <Card key={index} className="p-6 text-center bg-service-card border-service-border">
-                <div className="flex justify-center mb-4">
+              <Card key={index} className="p-4 sm:p-6 text-center bg-service-card border-service-border">
+                <div className="flex justify-center mb-3 sm:mb-4">
                   {feature.icon}
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-3">
+                <h3 className="text-base sm:text-lg font-bold text-foreground mb-2 sm:mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-xs sm:text-sm">
                   {feature.description}
                 </p>
               </Card>
@@ -126,45 +126,45 @@ const CoverageAreas = () => {
       </section>
 
       {/* Regional Coverage */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
+      <section className="py-12 sm:py-16 lg:py-20 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
               Regional Coverage Areas
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
               Our strategic positioning ensures rapid response across Ontario's diverse geography, 
               from urban centers to rural highways.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {regions.map((region, index) => (
-              <Card key={index} className="p-8 bg-service-card border-service-border">
-                <div className="flex justify-center mb-6">
+              <Card key={index} className="p-6 sm:p-8 bg-service-card border-service-border">
+                <div className="flex justify-center mb-4 sm:mb-6">
                   {region.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4 text-center">
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4 text-center">
                   {region.name}
                 </h3>
-                <p className="text-muted-foreground mb-6 text-center">
+                <p className="text-muted-foreground mb-4 sm:mb-6 text-center text-sm sm:text-base">
                   {region.description}
                 </p>
                 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-foreground mb-3">Major Cities & Towns:</h4>
-                  <div className="grid grid-cols-2 gap-2">
+                <div className="mb-4 sm:mb-6">
+                  <h4 className="font-semibold text-foreground mb-3 text-sm sm:text-base">Major Cities & Towns:</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {region.cities.map((city, cityIndex) => (
                       <div key={cityIndex} className="flex items-center">
-                        <div className="w-2 h-2 bg-tow-red rounded-full mr-3" />
-                        <span className="text-sm text-foreground">{city}</span>
+                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-tow-red rounded-full mr-2 sm:mr-3 flex-shrink-0" />
+                        <span className="text-xs sm:text-sm text-foreground">{city}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="bg-tow-red/10 text-tow-red p-4 rounded-lg text-center">
-                  <span className="font-semibold">Average Response Time: {region.responseTime}</span>
+                <div className="bg-tow-red/10 text-tow-red p-3 sm:p-4 rounded-lg text-center">
+                  <span className="font-semibold text-xs sm:text-sm">Average Response Time: {region.responseTime}</span>
                 </div>
               </Card>
             ))}
@@ -173,32 +173,32 @@ const CoverageAreas = () => {
       </section>
 
       {/* Major Cities Grid */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
+      <section className="py-12 sm:py-16 lg:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
               Major Cities We Serve
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base sm:text-lg text-muted-foreground">
               Quick response times in Ontario's largest metropolitan areas
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {majorCities.map((city, index) => (
-              <Card key={index} className="p-6 bg-service-card border-service-border hover:shadow-lg transition-shadow">
+              <Card key={index} className="p-4 sm:p-6 bg-service-card border-service-border hover:shadow-lg transition-shadow">
                 <div className="text-center">
-                  <MapPin className="h-8 w-8 text-tow-red mx-auto mb-3" />
-                  <h3 className="text-xl font-bold text-foreground mb-2">
+                  <MapPin className="h-6 w-6 sm:h-8 sm:w-8 text-tow-red mx-auto mb-2 sm:mb-3" />
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1 sm:mb-2">
                     {city.name}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-2">
+                  <p className="text-xs sm:text-sm text-muted-foreground mb-1 sm:mb-2">
                     {city.region}
                   </p>
-                  <p className="text-xs text-muted-foreground mb-4">
+                  <p className="text-xs text-muted-foreground mb-3 sm:mb-4">
                     Population: {city.population}
                   </p>
-                  <div className="bg-tow-red/10 text-tow-red px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="bg-tow-red/10 text-tow-red px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
                     {city.responseTime}
                   </div>
                 </div>
@@ -209,38 +209,38 @@ const CoverageAreas = () => {
       </section>
 
       {/* Coverage Map Info */}
-      <section className="py-20 bg-hero-bg text-hero-foreground">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 lg:py-20 bg-hero-bg text-hero-foreground">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
               Anywhere in Ontario, Anytime
             </h2>
-            <p className="text-xl mb-8 text-hero-foreground/90">
+            <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90">
               Whether you're in downtown Toronto during rush hour or on a remote highway in Northern Ontario, 
               TowDaddy's network of professional drivers and modern equipment ensures help is always within reach.
             </p>
             
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
               <div className="text-center">
-                <div className="text-3xl font-bold text-tow-red mb-2">400+</div>
-                <div className="text-hero-foreground/80">Highway Coverage</div>
+                <div className="text-2xl sm:text-3xl font-bold text-tow-red mb-1 sm:mb-2">400+</div>
+                <div className="text-hero-foreground/80 text-sm sm:text-base">Highway Coverage</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-tow-red mb-2">50+</div>
-                <div className="text-hero-foreground/80">Cities Served</div>
+                <div className="text-2xl sm:text-3xl font-bold text-tow-red mb-1 sm:mb-2">50+</div>
+                <div className="text-hero-foreground/80 text-sm sm:text-base">Cities Served</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-tow-red mb-2">24/7</div>
-                <div className="text-hero-foreground/80">Always Available</div>
+                <div className="text-2xl sm:text-3xl font-bold text-tow-red mb-1 sm:mb-2">24/7</div>
+                <div className="text-hero-foreground/80 text-sm sm:text-base">Always Available</div>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="towRed" size="lg">
-                <Phone className="w-5 h-5 mr-2" />
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <Button variant="towRed" size="lg" className="text-sm sm:text-base">
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 Call Now: (647) 949-7729
               </Button>
-              <Button variant="outline" size="lg" className="bg-background/10 border-hero-foreground/30 text-hero-foreground hover:bg-background/20">
+              <Button variant="outline" size="lg" className="bg-background/10 border-hero-foreground/30 text-hero-foreground hover:bg-background/20 text-sm sm:text-base">
                 Check Coverage
               </Button>
             </div>

@@ -104,23 +104,23 @@ const Services = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-hero-bg text-hero-foreground py-20">
-        <div className="container mx-auto px-4">
+      <section className="bg-hero-bg text-hero-foreground py-12 sm:py-16 lg:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
               Professional Towing Services
               <span className="block text-tow-red">Across Ontario</span>
             </h1>
-            <p className="text-xl mb-8 text-hero-foreground/90">
+            <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90">
               Comprehensive towing and roadside assistance services available 24/7. 
               Professional, licensed, and fully insured for your peace of mind.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="towRed" size="lg">
-                <Phone className="w-5 h-5 mr-2" />
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <Button variant="towRed" size="lg" className="text-sm sm:text-base">
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 Call Now: (647) 949-7729
               </Button>
-              <Button variant="outline" size="lg" className="bg-background/10 border-hero-foreground/30 text-hero-foreground hover:bg-background/20">
+              <Button variant="outline" size="lg" className="bg-background/10 border-hero-foreground/30 text-hero-foreground hover:bg-background/20 text-sm sm:text-base">
                 Get Quote
               </Button>
             </div>
@@ -129,52 +129,52 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
+      <section className="py-12 sm:py-16 lg:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
               Complete Service Portfolio
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
               From emergency roadside assistance to specialized vehicle transport, 
               we have the expertise and equipment to handle any situation.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="p-8 bg-service-card border-service-border hover:shadow-lg transition-all duration-300">
-                <div className="text-center mb-6">
+              <Card key={index} className="p-6 sm:p-8 bg-service-card border-service-border hover:shadow-lg transition-all duration-300">
+                <div className="text-center mb-4 sm:mb-6">
                   {service.icon}
-                  <h3 className="text-2xl font-bold text-foreground mb-2">
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-tow-red font-medium text-lg mb-4">
+                  <p className="text-tow-red font-medium text-base sm:text-lg mb-3 sm:mb-4">
                     {service.subtitle}
                   </p>
-                  <div className="bg-tow-red/10 text-tow-red px-4 py-2 rounded-full inline-block font-semibold">
+                  <div className="bg-tow-red/10 text-tow-red px-3 sm:px-4 py-1.5 sm:py-2 rounded-full inline-block font-semibold text-sm sm:text-base">
                     {service.price}
                   </div>
                 </div>
                 
-                <p className="text-muted-foreground mb-6 text-center">
+                <p className="text-muted-foreground mb-4 sm:mb-6 text-center text-sm sm:text-base">
                   {service.description}
                 </p>
                 
-                <div className="grid grid-cols-2 gap-3 mb-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 mb-4 sm:mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center">
-                      <div className="w-2 h-2 bg-tow-red rounded-full mr-3" />
-                      <span className="text-sm text-foreground">{feature}</span>
+                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-tow-red rounded-full mr-2 sm:mr-3 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm text-foreground">{feature}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="flex gap-3">
-                  <Button variant="towRed" className="flex-1">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                  <Button variant="towRed" className="flex-1 text-sm sm:text-base">
                     Call Now
                   </Button>
-                  <Button variant="outline" className="flex-1">
+                  <Button variant="outline" className="flex-1 text-sm sm:text-base">
                     Get Quote
                   </Button>
                 </div>
@@ -183,22 +183,22 @@ const Services = () => {
           </div>
 
           {/* Service Guarantee */}
-          <div className="mt-20 bg-hero-bg text-hero-foreground p-8 rounded-lg">
-            <div className="grid md:grid-cols-3 gap-8 text-center">
+          <div className="mt-12 sm:mt-16 lg:mt-20 bg-hero-bg text-hero-foreground p-6 sm:p-8 rounded-lg">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-center">
               <div>
-                <Clock className="h-12 w-12 text-tow-red mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">Fast Response</h3>
-                <p className="text-hero-foreground/80">Average response time under 30 minutes</p>
+                <Clock className="h-10 w-10 sm:h-12 sm:w-12 text-tow-red mx-auto mb-3 sm:mb-4" />
+                <h3 className="text-lg sm:text-xl font-bold mb-2">Fast Response</h3>
+                <p className="text-hero-foreground/80 text-sm sm:text-base">Average response time under 30 minutes</p>
               </div>
               <div>
-                <Shield className="h-12 w-12 text-tow-red mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">Fully Licensed</h3>
-                <p className="text-hero-foreground/80">Licensed, insured, and bonded professionals</p>
+                <Shield className="h-10 w-10 sm:h-12 sm:w-12 text-tow-red mx-auto mb-3 sm:mb-4" />
+                <h3 className="text-lg sm:text-xl font-bold mb-2">Fully Licensed</h3>
+                <p className="text-hero-foreground/80 text-sm sm:text-base">Licensed, insured, and bonded professionals</p>
               </div>
               <div>
-                <MapPin className="h-12 w-12 text-tow-red mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">Ontario Wide</h3>
-                <p className="text-hero-foreground/80">Serving all cities and remote areas</p>
+                <MapPin className="h-10 w-10 sm:h-12 sm:w-12 text-tow-red mx-auto mb-3 sm:mb-4" />
+                <h3 className="text-lg sm:text-xl font-bold mb-2">Ontario Wide</h3>
+                <p className="text-hero-foreground/80 text-sm sm:text-base">Serving all cities and remote areas</p>
               </div>
             </div>
           </div>

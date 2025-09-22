@@ -70,31 +70,31 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="services" className="py-12 sm:py-16 lg:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-tow-red font-semibold text-sm uppercase tracking-wider mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <p className="text-tow-red font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4">
             OUR SERVICES
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
             24/7 Rapid Response with GPS Tracking
           </h2>
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+          <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3 sm:mb-4">
             ONTARIO ROADSIDE ASSISTANCE
           </h3>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4">
             Professional towing and roadside assistance services available 24/7 across Canada. 
             Scroll to explore our comprehensive service offerings.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => (
             <Card key={index} className="overflow-hidden bg-white border border-gray-200 rounded-xl hover:shadow-lg transition-shadow">
               {/* Service Image */}
-              <div className="relative h-48 w-full">
+              <div className="relative h-40 sm:h-48 w-full">
                 <img 
                   src={service.image} 
                   alt={service.title}
@@ -104,28 +104,28 @@ const ServicesSection = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <div className="p-4 sm:p-5 lg:p-6">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 leading-tight">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 font-medium mb-4">
+                <p className="text-gray-600 font-medium mb-3 sm:mb-4 text-sm sm:text-base">
                   {service.subtitle}
                 </p>
-                <p className="text-gray-700 mb-6 leading-relaxed">
+                <p className="text-gray-700 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                   {service.description}
                 </p>
                 
-                <div className="space-y-2 mb-6">
+                <div className="space-y-2 mb-4 sm:mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center">
-                      <div className="w-2 h-2 bg-tow-red rounded-full mr-3" />
-                      <span className="text-sm text-gray-700">{feature}</span>
+                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-tow-red rounded-full mr-2 sm:mr-3 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm text-gray-700">{feature}</span>
                     </div>
                   ))}
                 </div>
 
-                <Button variant="towRed" className="w-full">
-                  <Phone className="w-4 h-4 mr-2" />
+                <Button variant="towRed" className="w-full text-sm sm:text-base py-2 sm:py-3">
+                  <Phone className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                   Call Now
                 </Button>
               </div>
