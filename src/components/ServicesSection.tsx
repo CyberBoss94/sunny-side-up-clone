@@ -2,85 +2,73 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Phone } from "lucide-react";
 
-// Service Images
-import emergencyTowingImg from "@/assets/services/emergency-towing.jpg";
-import roadsideAssistanceImg from "@/assets/services/roadside-assistance.jpg";
-import vehicleRecoveryImg from "@/assets/services/vehicle-recovery.jpg";
-import longDistanceTowingImg from "@/assets/services/long-distance-towing.jpg";
-import professionalRescueImg from "@/assets/services/professional-rescue.jpg";
-import motorcycleTowingImg from "@/assets/services/motorcycle-towing.jpg";
-import commercialTowingImg from "@/assets/services/commercial-towing.jpg";
-import vehicleTransportImg from "@/assets/services/vehicle-transport.jpg";
-import extremeTerrainImg from "@/assets/services/extreme-terrain.jpg";
-import specializedTowingImg from "@/assets/services/specialized-towing.jpg";
-
 const ServicesSection = () => {
   const services = [
     {
-      image: emergencyTowingImg,
+      image: "https://via.placeholder.com/400x300/dc2626/ffffff?text=Emergency+Towing",
       title: "EMERGENCY TOWING",
       subtitle: "Swift assistance 24/7",
       description: "Our emergency towing service operates around the clock, ensuring you're never stranded. With GPS tracking and rapid response times, we locate and assist you within minutes of your call.",
       features: ["24/7 Availability", "GPS Tracking", "Rapid Response"]
     },
     {
-      image: roadsideAssistanceImg,
+      image: "https://via.placeholder.com/400x300/dc2626/ffffff?text=Roadside+Assistance",
       title: "ROADSIDE ASSISTANCE", 
       subtitle: "Quick aid for common issues",
       description: "From flat tires to dead batteries, our roadside assistance covers all common vehicle problems. Our certified technicians carry professional equipment to get you back on the road quickly.",
       features: ["Battery Jump Start", "Flat Tire Change", "Lockout Service"]
     },
     {
-      image: vehicleRecoveryImg,
+      image: "https://via.placeholder.com/400x300/dc2626/ffffff?text=Vehicle+Recovery",
       title: "VEHICLE RECOVERY",
       subtitle: "Skilled vehicle retrieval", 
       description: "Specialized in recovering vehicles from difficult situations including ditches, mud, snow, and accident scenes. Our recovery specialists use advanced equipment for safe extraction.",
       features: ["Accident Recovery", "Off-Road Retrieval", "Winch Services"]
     },
     {
-      image: longDistanceTowingImg,
+      image: "https://via.placeholder.com/400x300/dc2626/ffffff?text=Long+Distance+Towing",
       title: "LONG DISTANCE TOWING",
       subtitle: "Reliable transport offer",
       description: "Need to transport your vehicle across provinces? Our long-distance towing service ensures safe, secure transport with real-time tracking and professional handling.",
       features: ["Cross-Province Transport", "Real-Time Tracking", "Secure Loading"]
     },
     {
-      image: professionalRescueImg,
+      image: "https://via.placeholder.com/400x300/dc2626/ffffff?text=Professional+Rescue",
       title: "PROFESSIONAL VEHICLE RESCUE",
       subtitle: "Expert vehicle retrieval",
       description: "Our professional rescue team handles complex situations requiring specialized expertise. From luxury vehicles to commercial fleets, we provide expert care and handling.",
       features: ["Luxury Vehicle Care", "Commercial Fleet", "Specialized Equipment"]
     },
     {
-      image: motorcycleTowingImg,
+      image: "https://via.placeholder.com/400x300/dc2626/ffffff?text=Motorcycle+Towing",
       title: "MOTORCYCLE TOWING",
       subtitle: "Specialized bike transport",
       description: "Motorcycle towing requires special care and equipment. Our bike-specific trailers and trained operators ensure your motorcycle is transported safely without damage.",
       features: ["Specialized Trailers", "Secure Tie-Downs", "Damage Prevention"]
     },
     {
-      image: commercialTowingImg,
+      image: "https://via.placeholder.com/400x300/dc2626/ffffff?text=Commercial+Towing",
       title: "COMMERCIAL TOWING",
       subtitle: "Business vehicle assistance",
       description: "Supporting businesses with fleet management and commercial vehicle towing. We understand the urgency of keeping your business operations running smoothly.",
       features: ["Fleet Management", "Priority Service", "Business Accounts"]
     },
     {
-      image: vehicleTransportImg,
+      image: "https://via.placeholder.com/400x300/dc2626/ffffff?text=Vehicle+Transport",
       title: "VEHICLE TRANSPORT",
       subtitle: "Safe and secure vehicle relocation",
       description: "Professional vehicle transport service for dealerships, auctions, and private customers. Multi-car carriers and enclosed trailers available for premium protection.",
       features: ["Multi-Car Transport", "Enclosed Trailers", "Dealership Service"]
     },
     {
-      image: extremeTerrainImg,
+      image: "https://via.placeholder.com/400x300/dc2626/ffffff?text=Extreme+Terrain",
       title: "EXTREME TERRAIN VEHICLE RESCUE",
       subtitle: "Skilled retrieval from rugged landscapes",
       description: "Specialized in recovering vehicles from challenging terrain including mountains, forests, and remote areas. Our off-road recovery vehicles can reach where others can't.",
       features: ["Off-Road Capability", "Mountain Rescue", "Remote Access"]
     },
     {
-      image: specializedTowingImg,
+      image: "https://via.placeholder.com/400x300/dc2626/ffffff?text=Specialized+Towing",
       title: "SPECIALIZED TOWING",
       subtitle: "Custom vehicle transport",
       description: "Custom solutions for unique towing needs including classic cars, modified vehicles, and specialty equipment. We adapt our service to meet your specific requirements.",
