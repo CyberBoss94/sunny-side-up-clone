@@ -34,7 +34,7 @@ const HeroSection = () => {
 
           {/* Service Highlights */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
-            <Card className="p-6 bg-service-card/95 backdrop-blur-sm border-service-border">
+            <Card className="p-6 bg-service-card/95 backdrop-blur-sm border-service-border px-0 py-[12px]">
               <div className="text-center">
                 <Truck className="h-8 w-8 text-tow-red mx-auto mb-3" />
                 <h3 className="font-semibold text-card-foreground mb-2">Flatbed Only</h3>
@@ -42,7 +42,7 @@ const HeroSection = () => {
               </div>
             </Card>
 
-            <Card className="p-6 bg-service-card/95 backdrop-blur-sm border-service-border">
+            <Card className="p-6 bg-service-card/95 backdrop-blur-sm border-service-border px-0">
               <div className="text-center">
                 <Clock className="h-8 w-8 text-tow-red mx-auto mb-3" />
                 <h3 className="font-semibold text-card-foreground mb-2">24/7 Service</h3>
@@ -50,7 +50,7 @@ const HeroSection = () => {
               </div>
             </Card>
 
-            <Card className="p-6 bg-service-card/95 backdrop-blur-sm border-service-border px-[12px]">
+            <Card className="p-6 bg-service-card/95 backdrop-blur-sm border-service-border px-0">
               <div className="text-center">
                 <MapPin className="h-8 w-8 text-tow-red mx-auto mb-3" />
                 <h3 className="font-semibold text-card-foreground mb-2">Ontario-Wide</h3>
