@@ -12,7 +12,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="max-w-4xl">
-          <h1 className="text-2xl mb-6 leading-tight font-bold lg:text-5xl">
+          <h1 className="text-2xl mb-6 leading-tight font-bold lg:text-5xl mb:text-4xl ">
             24/7 Towing Across Ontario
             <span className="block text-tow-red">– TowDaddy</span>
           </h1>
@@ -33,7 +33,7 @@ const HeroSection = () => {
           </div>
 
           {/* Service Highlights */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 bg-card py-6 shadow-xl">
             <Card className="p-6 bg-service-card/95 backdrop-blur-sm border-service-border px-0 py-[12px]">
               <div className="text-center">
                 <Truck className="h-8 w-8 text-tow-red mx-auto mb-3" />
