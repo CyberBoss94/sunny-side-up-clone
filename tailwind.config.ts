@@ -47,6 +47,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // TowDaddy Custom Colors
+        "hero-bg": "hsl(var(--hero-bg))",
+        "hero-foreground": "hsl(var(--hero-foreground))",
+        "tow-red": "hsl(var(--tow-red))",
+        "tow-red-hover": "hsl(var(--tow-red-hover))",
+        "service-card": "hsl(var(--service-card))",
+        "service-border": "hsl(var(--service-border))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
