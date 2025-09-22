@@ -2,15 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Truck, Clock, MapPin, Shield } from "lucide-react";
 import heroTowing from "@/assets/hero-towing.jpg";
-
 const HeroSection = () => {
-  return (
-    <section className="relative bg-hero-bg text-hero-foreground min-h-screen flex items-center">
+  return <section className="relative bg-hero-bg text-hero-foreground min-h-screen flex items-center">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
-        style={{ backgroundImage: `url(${heroTowing})` }}
-      />
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" style={{
+      backgroundImage: `url(${heroTowing})`
+    }} />
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
@@ -27,18 +24,10 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
-            <Button 
-              variant="towRed" 
-              size="lg" 
-              className="text-lg px-8 py-6"
-            >
+            <Button variant="towRed" size="lg" className="text-lg px-8 py-6">
               Request a Tow →
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="text-lg px-8 py-6 bg-background/10 border-hero-foreground/30 text-hero-foreground hover:bg-background/20"
-            >
+            <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-background/10 border-hero-foreground/30 text-hero-foreground hover:bg-background/20">
               View Services
             </Button>
           </div>
@@ -79,8 +68,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
