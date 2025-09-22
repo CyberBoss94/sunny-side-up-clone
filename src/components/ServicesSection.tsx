@@ -54,13 +54,6 @@ const ServicesSection = () => {
       features: ["Fleet Management", "Priority Service", "Business Accounts"]
     },
     {
-      image: "https://i.postimg.cc/jSWz2f1x/7.png",
-      title: "VEHICLE TRANSPORT",
-      subtitle: "Safe and secure vehicle relocation",
-      description: "Professional vehicle transport service for dealerships, auctions, and private customers. Multi-car carriers and enclosed trailers available for premium protection.",
-      features: ["Multi-Car Transport", "Enclosed Trailers", "Dealership Service"]
-    },
-    {
       image: "https://i.postimg.cc/5935RbvV/3.png",
       title: "EXTREME TERRAIN VEHICLE RESCUE",
       subtitle: "Skilled retrieval from rugged landscapes",
