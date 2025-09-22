@@ -92,7 +92,7 @@ const ServicesSection = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="overflow-hidden bg-white border border-gray-200 rounded-xl hover:shadow-lg transition-shadow">
+            <Card key={index} className="overflow-hidden bg-white border border-red-300 rounded-xl hover:shadow-lg transition-shadow">
               {/* Service Image */}
               <div className="relative h-40 sm:h-48 w-full">
                 <img 
