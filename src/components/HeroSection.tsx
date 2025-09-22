@@ -17,7 +17,7 @@ const HeroSection = () => {
             <span className="block text-tow-red">– TowDaddy</span>
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 text-hero-foreground/90 max-w-2xl">
+          <p className="text-xl mb-8 text-hero-foreground/90 max-w-3xl md:text-2xl text-left">
             Safe flatbed towing and emergency roadside help across Ontario — no hooks, just care. 
             Serving you anywhere in the province.
           </p>
