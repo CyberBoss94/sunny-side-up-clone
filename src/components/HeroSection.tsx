@@ -33,8 +33,8 @@ const HeroSection = () => {
           </div>
 
           {/* Service Highlights */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 bg-card py-6 shadow-xl">
-            <Card className="p-6 bg-service-card/95 backdrop-blur-sm border-service-border px-0 py-[12px]">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
+            <Card className="p-6 bg-service-card/95 backdrop-blur-sm px-0 py-[12px]">
               <div className="text-center">
                 <Truck className="h-8 w-8 text-tow-red mx-auto mb-3" />
                 <h3 className="font-semibold text-card-foreground mb-2">Flatbed Only</h3>
