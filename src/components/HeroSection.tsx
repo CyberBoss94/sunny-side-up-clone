@@ -12,7 +12,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="max-w-4xl">
-          <h1 className="font-bold mb-6  lg:text-4xl md:text-4 xl sm:text-3xl  ">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6  eading-tight lg:text-5xl">
             24/7 Towing Across Ontario
             <span className="block text-tow-red">– TowDaddy</span>
           </h1>
