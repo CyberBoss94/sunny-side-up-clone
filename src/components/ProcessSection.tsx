@@ -41,7 +41,7 @@ const ProcessSection = () => {
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
           {steps.map((step, index) => {
           const IconComponent = step.icon;
-          return <Card key={index} className="relative p-6 bg-background border-2 border-red-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-tow-red/50 py-[16px] my-0">
+          return <Card key={index} className="relative p-6 bg-background border-2 border-red-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-tow-red/50 py-[16px] my-0 px-[7px]">
                 {/* Step Number */}
                 <div className="absolute -top-3 -right-3 w-8 h-8 bg-foreground text-background rounded-full flex items-center justify-center font-bold text-sm">
                   {step.number}
@@ -53,7 +53,7 @@ const ProcessSection = () => {
                 </div>
 
                 {/* Content */}
-                <div className="text-center">
+                <div className="text-center px-0 mx-0">
                   <h3 className="sm:text-xl font-bold text-foreground mb-3 leading-tight text-sm">
                     {step.title}
                   </h3>
