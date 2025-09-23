@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { Link } from "react-router-dom";
 import { 
   Phone, 
   Mail, 
@@ -118,8 +119,9 @@ const Contact = () => {
               <span className="block text-tow-red">We're Here to Help</span>
             </h1>
             <p className="text-xl mb-8 text-hero-foreground/90">
-              Need immediate roadside assistance? Have questions about our services? 
-              Our professional team is available 24/7 to provide support when you need it most.
+              Need immediate roadside assistance? Have questions about our <Link to="/services" className="text-tow-red hover:underline">services</Link>? 
+              Check our <Link to="/faq" className="text-tow-red hover:underline">FAQ page</Link> for quick answers or 
+              our professional team is available 24/7 to provide support when you need it most.
             </p>
             
             {/* Emergency CTA */}
@@ -294,6 +296,9 @@ const Contact = () => {
                   <strong>For immediate assistance or emergencies, call (647) 949-7729</strong>
                   <br />
                   Quote requests are typically responded to within 2-4 hours during business hours.
+                  <br />
+                  View our <Link to="/pricing" className="text-tow-red hover:underline">pricing guide</Link> for 
+                  standard rates and <Link to="/coverage-areas" className="text-tow-red hover:underline">service areas</Link>.
                 </p>
               </div>
             </Card>

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ServicesSection = () => {
   const services = [
@@ -84,8 +85,10 @@ const ServicesSection = () => {
             ONTARIO ROADSIDE ASSISTANCE
           </h3>
           <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4">
-            Professional towing and roadside assistance services available 24/7 across Canada. 
-            Scroll to explore our comprehensive service offerings.
+            Professional towing and roadside assistance services available 24/7 across Ontario. 
+            View detailed <Link to="/pricing" className="text-tow-red hover:underline font-medium">pricing information</Link> and 
+            comprehensive <Link to="/coverage-areas" className="text-tow-red hover:underline font-medium">coverage areas</Link>. 
+            Have questions? Check our <Link to="/faq" className="text-tow-red hover:underline font-medium">FAQ page</Link> for quick answers.
           </p>
         </div>
 
@@ -124,10 +127,15 @@ const ServicesSection = () => {
                   ))}
                 </div>
 
-                <Button variant="towRed" className="w-full text-sm sm:text-base py-2 sm:py-3">
-                  <Phone className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
-                  Call Now
-                </Button>
+                <div className="flex flex-col gap-2">
+                  <Button variant="towRed" className="w-full text-sm sm:text-base py-2 sm:py-3">
+                    <Phone className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
+                    Call Now
+                  </Button>
+                  <Button variant="outline" size="sm" className="w-full text-xs sm:text-sm" asChild>
+                    <Link to="/services">Learn More</Link>
+                  </Button>
+                </div>
               </div>
             </Card>
           ))}

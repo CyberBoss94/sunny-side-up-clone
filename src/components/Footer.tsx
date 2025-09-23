@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Clock, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 import towDaddyLogo from "@/assets/towdaddy-logo.png";
 
 const Footer = () => {
@@ -31,34 +32,25 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Our Services</h4>
-            <ul className="space-y-2 text-hero-foreground/80 text-sm sm:text-base">
-              <li>Emergency Towing</li>
-              <li>Roadside Assistance</li>
-              <li>Vehicle Recovery</li>
-              <li>Long Distance Towing</li>
-              <li>Motorcycle Towing</li>
-              <li>Commercial Towing</li>
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Services</h4>
+            <ul className="space-y-2">
+              <li><Link to="/services" className="text-hero-foreground/80 hover:text-tow-red transition-colors text-sm sm:text-base">All Services</Link></li>
+              <li><Link to="/services#emergency" className="text-hero-foreground/80 hover:text-tow-red transition-colors text-sm sm:text-base">Emergency Towing</Link></li>
+              <li><Link to="/services#roadside" className="text-hero-foreground/80 hover:text-tow-red transition-colors text-sm sm:text-base">Roadside Assistance</Link></li>
+              <li><Link to="/services#recovery" className="text-hero-foreground/80 hover:text-tow-red transition-colors text-sm sm:text-base">Vehicle Recovery</Link></li>
+              <li><Link to="/pricing" className="text-hero-foreground/80 hover:text-tow-red transition-colors text-sm sm:text-base">Pricing</Link></li>
             </ul>
           </div>
 
           {/* Coverage */}
           <div>
-            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Coverage Areas</h4>
-            <div className="flex items-start space-x-2 mb-3 sm:mb-4">
-              <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-tow-red mt-0.5 flex-shrink-0" />
-              <div className="text-hero-foreground/80">
-                <p className="font-medium text-sm sm:text-base">Ontario-Wide Service</p>
-                <p className="text-xs sm:text-sm">All cities and remote areas</p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-2">
-              <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-tow-red mt-0.5 flex-shrink-0" />
-              <div className="text-hero-foreground/80">
-                <p className="font-medium text-sm sm:text-base">24/7 Availability</p>
-                <p className="text-xs sm:text-sm">Always ready to help</p>
-              </div>
-            </div>
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Company</h4>
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-hero-foreground/80 hover:text-tow-red transition-colors text-sm sm:text-base">About Us</Link></li>
+              <li><Link to="/contact" className="text-hero-foreground/80 hover:text-tow-red transition-colors text-sm sm:text-base">Contact</Link></li>
+              <li><Link to="/faq" className="text-hero-foreground/80 hover:text-tow-red transition-colors text-sm sm:text-base">FAQ</Link></li>
+              <li><Link to="/coverage-areas" className="text-hero-foreground/80 hover:text-tow-red transition-colors text-sm sm:text-base">Coverage Areas</Link></li>
+            </ul>
           </div>
 
           {/* Contact */}

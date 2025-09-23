@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { Link } from "react-router-dom";
 import { 
   Shield, 
   Award, 
@@ -139,6 +140,8 @@ const About = () => {
               <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                 We've built our reputation on three core principles: using only flatbed towing (no hooks), 
                 maintaining 24/7 availability, and treating every customer's vehicle as if it were our own.
+                View our complete <Link to="/services" className="text-tow-red hover:underline">range of services</Link> and 
+                transparent <Link to="/pricing" className="text-tow-red hover:underline">pricing structure</Link>.
               </p>
               <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-center">

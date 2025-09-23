@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { Link } from "react-router-dom";
 import { 
   Truck, 
   Wrench, 
@@ -167,6 +168,8 @@ const Services = () => {
             <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90">
               Comprehensive towing and roadside assistance services available 24/7. 
               Professional, licensed, and fully insured for your peace of mind.
+              View our <Link to="/pricing" className="text-tow-red hover:underline">transparent pricing</Link> and 
+              <Link to="/coverage-areas" className="text-tow-red hover:underline">service coverage map</Link>.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button variant="towRed" size="lg" className="text-sm sm:text-base">
@@ -191,6 +194,8 @@ const Services = () => {
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
               From emergency roadside assistance to specialized vehicle transport, 
               we have the expertise and equipment to handle any situation.
+              Learn <Link to="/about" className="text-tow-red hover:underline">about our company</Link> or 
+              check our <Link to="/faq" className="text-tow-red hover:underline">FAQ</Link> for common questions.
             </p>
           </div>
 

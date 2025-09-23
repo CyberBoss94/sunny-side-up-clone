@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { Link } from "react-router-dom";
 import { 
   Truck, 
   Clock, 
@@ -151,6 +152,8 @@ const Pricing = () => {
             <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90">
               Fair, upfront pricing for all towing and roadside assistance services. 
               Know what you'll pay before we arrive - no surprises, no hidden charges.
+              View our <Link to="/services" className="text-tow-red hover:underline">complete service list</Link> and 
+              <Link to="/coverage-areas" className="text-tow-red hover:underline">coverage areas</Link>.
             </p>
             <Button variant="towRed" size="lg" className="text-sm sm:text-base">
               <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
@@ -312,7 +315,8 @@ const Pricing = () => {
             
             <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90">
               Need a custom quote for commercial accounts, fleet services, or specialty transport? 
-              Our team will work with you to create a fair pricing plan.
+              Our team will work with you to create a fair pricing plan. 
+              <Link to="/contact" className="text-tow-red hover:underline">Contact us</Link> for personalized service options.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">

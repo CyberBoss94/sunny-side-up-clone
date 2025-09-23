@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Truck, Clock, MapPin, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroTowing from "@/assets/hero-towing.jpg";
 const HeroSection = () => {
   return <section className="relative bg-hero-bg text-hero-foreground min-h-screen flex items-center">
@@ -24,11 +25,11 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
-            <Button variant="towRed" size="lg" className="text-lg px-8 py-6">
-              Request a Tow →
+            <Button variant="towRed" size="lg" className="text-lg px-8 py-6" asChild>
+              <Link to="/contact">Request a Tow →</Link>
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-background/10 border-hero-foreground/30 text-hero-foreground hover:bg-background/20">
-              View Services
+            <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-background/10 border-hero-foreground/30 text-hero-foreground hover:bg-background/20" asChild>
+              <Link to="/services">View Services</Link>
             </Button>
           </div>
 

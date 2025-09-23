@@ -61,7 +61,7 @@ const FAQ = () => {
       questions: [
         {
           question: "What areas do you service?",
-          answer: "We provide 24/7 towing and roadside assistance throughout Ontario, including all major cities, highways, and remote areas. Our coverage extends from Windsor to Ottawa, and from the US border to Northern Ontario communities."
+          answer: "We provide 24/7 towing and roadside assistance throughout Ontario, including all major cities, highways, and remote areas. Our coverage extends from Windsor to Ottawa, and from the US border to Northern Ontario communities. View our detailed coverage map to see response times in your area."
         },
         {
           question: "How quickly can you respond?",
@@ -73,7 +73,7 @@ const FAQ = () => {
         },
         {
           question: "What makes TowDaddy different from other towing companies?",
-          answer: "We use only flatbed towing (never hooks or chains), maintain the fastest response times in Ontario, employ only licensed and insured professionals, and provide transparent pricing with no hidden fees."
+          answer: "We use only flatbed towing (never hooks or chains), maintain the fastest response times in Ontario, employ only licensed and insured professionals, and provide transparent pricing with no hidden fees. Learn more about our company history and values."
         }
       ]
     },
@@ -83,7 +83,7 @@ const FAQ = () => {
       questions: [
         {
           question: "How much does towing cost?",
-          answer: "Local towing starts at $95 for distances up to 10km. Long-distance towing is $2.50 per kilometer. Roadside assistance starts at $75. We provide upfront quotes before beginning any work."
+          answer: "Local towing starts at $95 for distances up to 10km. Long-distance towing is $2.50 per kilometer. Roadside assistance starts at $75. We provide upfront quotes before beginning any work. View our complete pricing guide for detailed rates."
         },
         {
           question: "Are there any hidden fees?",

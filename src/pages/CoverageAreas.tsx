@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { Link } from "react-router-dom";
 import { 
   MapPin, 
   Clock, 
@@ -144,6 +145,8 @@ const CoverageAreas = () => {
             <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90">
               TowDaddy provides comprehensive towing and roadside assistance across all of Ontario. 
               From bustling city centers to remote rural communities, we're there when you need us.
+              Explore our <Link to="/services" className="text-tow-red hover:underline">full service offerings</Link> and 
+              view <Link to="/pricing" className="text-tow-red hover:underline">transparent pricing</Link>.
             </p>
             <Button variant="towRed" size="lg" className="text-sm sm:text-base">
               <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
