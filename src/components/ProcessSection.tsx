@@ -51,7 +51,7 @@ const ProcessSection = () => {
               // Step on left, number on right
               <>
                       <div className="w-5/12 pr-4 sm:pr-6 lg:pr-8">
-                        <div className="bg-primary rounded-full p-4 sm:p-5 lg:p-6 relative">
+                        <div className="bg-primary p-4 sm:p-5 lg:p-6 relative rounded-xl">
                           <div className="absolute -right-4 sm:-right-5 lg:-right-6 top-1/2 transform -translate-y-1/2">
                             <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-background rounded-full flex items-center justify-center shadow-lg border-2 sm:border-3 lg:border-4 border-primary">
                               <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-primary" />
@@ -97,7 +97,7 @@ const ProcessSection = () => {
                         </div>
                       </div>
                       <div className="w-5/12 pl-4 sm:pl-6 lg:pl-8">
-                        <div className="bg-muted rounded-full p-4 sm:p-5 lg:p-6 relative">
+                        <div className="bg-muted p-4 sm:p-5 lg:p-6 relative rounded-xl">
                           <div className="absolute -left-4 sm:-left-5 lg:-left-6 top-1/2 transform -translate-y-1/2">
                             <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-background rounded-full flex items-center justify-center shadow-lg border-2 sm:border-3 lg:border-4 border-muted">
                               <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-primary" />
