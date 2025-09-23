@@ -7,6 +7,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { 
   HelpCircle, 
   Phone, 
@@ -19,6 +21,39 @@ import {
 } from "lucide-react";
 
 const FAQ = () => {
+  const breadcrumbs = [{ name: "FAQ", url: "/faq" }];
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What areas do you serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide towing services across all of Ontario, including major cities like Toronto, Ottawa, Hamilton, and London, as well as rural and remote areas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you available 24/7?",
+        "acceptedAnswer": {
+          "@type": "Answer", 
+          "text": "Yes, we provide 24/7 emergency towing and roadside assistance services across Ontario."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly can you respond?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our average response time is 25 minutes in urban areas and 35 minutes in rural locations."
+        }
+      }
+    ]
+  };
+
   const faqCategories = [
     {
       title: "General Service",
@@ -134,7 +169,20 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO 
+        title="Towing FAQ - Frequently Asked Questions | TowDaddy Ontario"
+        description="Get answers to common towing questions. Learn about our services, pricing, coverage areas, and response times. Quick answers for all your towing needs."
+        keywords="towing FAQ, towing questions, emergency towing help, roadside assistance questions, Ontario towing info"
+        canonicalUrl="https://towdaddy.lovable.app/faq"
+        structuredData={structuredData}
+        breadcrumbs={breadcrumbs}
+      />
+      <div className="min-h-screen">
+        <div className="container mx-auto px-4 pt-8">
+          <Breadcrumbs items={breadcrumbs} />
+        </div>
+        <main>
       {/* Hero Section */}
       <section className="bg-hero-bg text-hero-foreground py-20">
         <div className="container mx-auto px-4">
@@ -270,7 +318,9 @@ const FAQ = () => {
       </section>
 
       <Footer />
+      </main>
     </div>
+    </>
   );
 };
 

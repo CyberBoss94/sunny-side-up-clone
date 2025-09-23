@@ -4,6 +4,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { 
   Phone, 
   Mail, 
@@ -17,6 +19,27 @@ import {
 } from "lucide-react";
 
 const Contact = () => {
+  const breadcrumbs = [{ name: "Contact", url: "/contact" }];
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "TowDaddy",
+      "telephone": "+1-647-949-7729",
+      "email": "info@towdaddy.ca",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-647-949-7729",
+        "contactType": "emergency",
+        "areaServed": "Ontario, Canada",
+        "availableLanguage": "English",
+        "hoursAvailable": "Mo-Su 00:00-23:59"
+      }
+    }
+  };
+
   const contactMethods = [
     {
       icon: <Phone className="h-12 w-12 text-tow-red mb-4" />,
@@ -72,9 +95,22 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-hero-bg text-hero-foreground py-20">
+    <>
+      <SEO 
+        title="Contact TowDaddy - 24/7 Emergency Towing | Get Quote & Assistance"
+        description="Contact TowDaddy for 24/7 emergency towing across Ontario. Call (647) 949-7729 for immediate assistance or request a quote for planned services."
+        keywords="contact TowDaddy, emergency towing phone, towing quote, roadside assistance contact, 24/7 towing Ontario"
+        canonicalUrl="https://towdaddy.lovable.app/contact"
+        structuredData={structuredData}
+        breadcrumbs={breadcrumbs}
+      />
+      <div className="min-h-screen">
+        <div className="container mx-auto px-4 pt-8">
+          <Breadcrumbs items={breadcrumbs} />
+        </div>
+      <main>
+        {/* Hero Section */}
+        <section className="bg-hero-bg text-hero-foreground py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -335,10 +371,12 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </section>
+        </section>
 
-      <Footer />
-    </div>
+        <Footer />
+      </main>
+      </div>
+    </>
   );
 };
 

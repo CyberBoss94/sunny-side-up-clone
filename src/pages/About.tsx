@@ -1,6 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { 
   Shield, 
   Award, 
@@ -14,6 +16,27 @@ import {
 } from "lucide-react";
 
 const About = () => {
+  const breadcrumbs = [{ name: "About", url: "/about" }];
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "TowDaddy",
+      "description": "Professional towing service with 15+ years experience serving Ontario",
+      "foundingDate": "2009",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Ontario",
+        "addressCountry": "Canada"
+      },
+      "serviceArea": "Ontario, Canada",
+      "knowsAbout": ["Emergency Towing", "Roadside Assistance", "Vehicle Recovery"],
+      "hasCredential": "Licensed and Insured Towing Service"
+    }
+  };
+
   const stats = [
     { number: "10,000+", label: "Vehicles Rescued", icon: <Truck className="h-8 w-8" /> },
     { number: "24/7", label: "Hours Available", icon: <Clock className="h-8 w-8" /> },
@@ -45,9 +68,22 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-hero-bg text-hero-foreground py-12 sm:py-16 lg:py-20">
+    <>
+      <SEO 
+        title="About TowDaddy - Professional Towing Service | 15+ Years Serving Ontario"
+        description="Learn about TowDaddy's 15+ years of professional towing service across Ontario. Licensed, insured, and committed to safety-first flatbed towing and roadside assistance."
+        keywords="about TowDaddy, professional towing company, licensed towing service, Ontario towing experience, flatbed towing specialists"
+        canonicalUrl="https://towdaddy.lovable.app/about"
+        structuredData={structuredData}
+        breadcrumbs={breadcrumbs}
+      />
+      <div className="min-h-screen">
+        <div className="container mx-auto px-4 pt-8">
+          <Breadcrumbs items={breadcrumbs} />
+        </div>
+      <main>
+        {/* Hero Section */}
+        <section className="bg-hero-bg text-hero-foreground py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
@@ -210,10 +246,12 @@ const About = () => {
             </Button>
           </div>
         </div>
-      </section>
+        </section>
 
-      <Footer />
+        <Footer />
+      </main>
     </div>
+    </>
   );
 };
 

@@ -1,6 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { 
   MapPin, 
   Clock, 
@@ -13,6 +15,40 @@ import {
 } from "lucide-react";
 
 const CoverageAreas = () => {
+  const breadcrumbs = [{ name: "Coverage Areas", url: "/coverage-areas" }];
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Ontario-Wide Towing Coverage",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "TowDaddy"
+    },
+    "areaServed": [
+      {
+        "@type": "State",
+        "name": "Ontario"
+      },
+      {
+        "@type": "City",
+        "name": "Toronto"
+      },
+      {
+        "@type": "City", 
+        "name": "Ottawa"
+      },
+      {
+        "@type": "City",
+        "name": "Hamilton"
+      }
+    ],
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "servicePhone": "+1-647-949-7729"
+    }
+  };
+
   const majorCities = [
     { name: "Toronto", region: "Greater Toronto Area", population: "2.8M", responseTime: "15-25 min" },
     { name: "Ottawa", region: "Eastern Ontario", population: "1.0M", responseTime: "20-30 min" },
@@ -83,7 +119,20 @@ const CoverageAreas = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO 
+        title="Coverage Areas - Ontario-Wide Towing Service | TowDaddy Coverage Map"
+        description="TowDaddy provides towing coverage across all of Ontario. See our service areas, response times, and coverage map for Toronto, Ottawa, Hamilton, and rural areas."
+        keywords="Ontario towing coverage, service areas, response times, Toronto towing, Ottawa towing, rural Ontario towing, coverage map"
+        canonicalUrl="https://towdaddy.lovable.app/coverage-areas"
+        structuredData={structuredData}
+        breadcrumbs={breadcrumbs}
+      />
+      <div className="min-h-screen">
+        <div className="container mx-auto px-4 pt-8">
+          <Breadcrumbs items={breadcrumbs} />
+        </div>
+        <main>
       {/* Hero Section */}
       <section className="bg-hero-bg text-hero-foreground py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -249,7 +298,9 @@ const CoverageAreas = () => {
       </section>
 
       <Footer />
+      </main>
     </div>
+    </>
   );
 };
 

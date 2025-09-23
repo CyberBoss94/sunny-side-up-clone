@@ -1,6 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { 
   Truck, 
   Clock, 
@@ -15,6 +17,29 @@ import {
 } from "lucide-react";
 
 const Pricing = () => {
+  const breadcrumbs = [{ name: "Pricing", url: "/pricing" }];
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "PriceSpecification",
+    "description": "Professional Towing Service Pricing",
+    "priceCurrency": "CAD",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Emergency Roadside Assistance",
+        "price": "75.00",
+        "priceCurrency": "CAD"
+      },
+      {
+        "@type": "Offer", 
+        "name": "Local Towing Service",
+        "price": "95.00",
+        "priceCurrency": "CAD"
+      }
+    ]
+  };
+
   const pricingTiers = [
     {
       title: "Emergency Roadside",
@@ -101,7 +126,20 @@ const Pricing = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO 
+        title="Towing Pricing Ontario - Transparent Rates | No Hidden Fees - TowDaddy"
+        description="View transparent towing prices for Ontario. Emergency roadside from $75, local towing from $95. No hidden fees, fair pricing for all towing services."
+        keywords="towing prices Ontario, towing rates, emergency roadside pricing, transparent towing costs, no hidden fees"
+        canonicalUrl="https://towdaddy.lovable.app/pricing"
+        structuredData={structuredData}
+        breadcrumbs={breadcrumbs}
+      />
+      <div className="min-h-screen">
+        <div className="container mx-auto px-4 pt-8">
+          <Breadcrumbs items={breadcrumbs} />
+        </div>
+        <main>
       {/* Hero Section */}
       <section className="bg-hero-bg text-hero-foreground py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -291,7 +329,9 @@ const Pricing = () => {
       </section>
 
       <Footer />
+      </main>
     </div>
+    </>
   );
 };
 

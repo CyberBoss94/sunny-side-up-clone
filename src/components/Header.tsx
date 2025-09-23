@@ -28,7 +28,7 @@ const Header = () => {
               className="h-10 w-10 md:h-12 md:w-12"
             />
             <div>
-              <h1 className="text-xl md:text-2xl font-bold text-foreground">TowDaddy</h1>
+          <h1 className="text-xl md:text-2xl font-bold text-foreground">TowDaddy</h1>
               <p className="text-xs md:text-sm text-tow-red font-medium">24/7 Emergency</p>
             </div>
           </Link>

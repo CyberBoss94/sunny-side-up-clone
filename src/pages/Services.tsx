@@ -1,6 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { 
   Truck, 
   Wrench, 
@@ -18,6 +20,44 @@ import {
 } from "lucide-react";
 
 const Services = () => {
+  const breadcrumbs = [{ name: "Services", url: "/services" }];
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Professional Towing Services",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "TowDaddy",
+      "url": "https://towdaddy.lovable.app"
+    },
+    "areaServed": "Ontario, Canada",
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "servicePhone": "+1-800-TOW-DADDY",
+      "serviceUrl": "https://towdaddy.lovable.app/contact"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Towing Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Emergency Towing",
+            "description": "24/7 emergency towing service"
+          },
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "priceCurrency": "CAD",
+            "price": "95.00"
+          }
+        }
+      ]
+    }
+  };
+
   const services = [
     {
       icon: <Truck className="h-16 w-16 text-tow-red mb-6" />,
@@ -102,9 +142,22 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-hero-bg text-hero-foreground py-12 sm:py-16 lg:py-20">
+    <>
+      <SEO 
+        title="Professional Towing Services Ontario | Emergency, Roadside & Recovery - TowDaddy"
+        description="Complete towing services across Ontario. 24/7 emergency towing, roadside assistance, vehicle recovery, and specialized transport. Professional, licensed, and insured."
+        keywords="towing services Ontario, emergency towing, roadside assistance, vehicle recovery, flatbed towing, long distance towing, commercial towing"
+        canonicalUrl="https://towdaddy.lovable.app/services"
+        structuredData={structuredData}
+        breadcrumbs={breadcrumbs}
+      />
+      <div className="min-h-screen">
+        <div className="container mx-auto px-4 pt-8">
+          <Breadcrumbs items={breadcrumbs} />
+        </div>
+      <main>
+        {/* Hero Section */}
+        <section className="bg-hero-bg text-hero-foreground py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
@@ -203,10 +256,12 @@ const Services = () => {
             </div>
           </div>
         </div>
-      </section>
+        </section>
 
-      <Footer />
+        <Footer />
+      </main>
     </div>
+    </>
   );
 };
 
