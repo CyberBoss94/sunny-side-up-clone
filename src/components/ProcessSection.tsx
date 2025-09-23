@@ -41,48 +41,129 @@ const ProcessSection = () => {
           </p>
         </div>
 
-        {/* Responsive Timeline */}
-        <div className="relative max-w-md mx-auto md:max-w-4xl">
-          {/* Vertical connecting line */}
-          <div className="absolute left-5 w-0.5 h-full bg-primary/20 top-0 md:left-1/2 md:-translate-x-1/2" />
+        {/* ======================================================================= */}
+        {/* Mobile Version (Visible on screens < 768px)                          */}
+        {/* ======================================================================= */}
+        <div className="block md:hidden">
+          <div className="relative max-w-sm mx-auto">
+            {/* Vertical connecting line for mobile */}
+            <div className="absolute left-5 w-0.5 h-full bg-primary/20 top-0" />
 
-          {steps.map((step, index) => {
-            const IconComponent = step.icon;
-            const isEven = index % 2 === 0;
+            {steps.map((step, index) => {
+              const IconComponent = step.icon;
+              return (
+                <div key={`mobile-${index}`} className="relative flex items-start mb-8 last:mb-0">
+                  {/* Timeline Dot & Icon */}
+                  <div className="absolute left-0 top-1">
+                    <div className="w-10 h-10 bg-background rounded-full flex items-center justify-center shadow-lg border-2 border-primary z-10">
+                      <IconComponent className="w-5 h-5 text-primary" />
+                    </div>
+                  </div>
 
-            return (
-              <div key={index} className="relative flex md:grid md:grid-cols-2 md:gap-10 items-start mb-12 last:mb-0">
-                {/* === Timeline Dot & Icon (Position changes with screen size) === */}
-                <div className={`absolute left-0 top-1 md:relative md:flex ${isEven ? 'md:justify-end md:order-2' : 'md:justify-start md:order-1'}`}>
-                  <div className="w-10 h-10 bg-background rounded-full flex items-center justify-center shadow-lg border-2 border-primary z-10">
-                    <IconComponent className="w-5 h-5 text-primary" />
+                  {/* Content Card */}
+                  <div className={`w-full ml-16 p-5 rounded-lg ${index % 2 === 0 ? 'bg-primary text-background' : 'bg-muted'}`}>
+                    <div className="mb-2">
+                      <p className={`text-sm font-bold ${index % 2 === 0 ? 'opacity-70' : 'text-primary'}`}>STEP {step.number}</p>
+                      <h3 className={`text-lg font-bold ${index % 2 === 0 ? 'text-background' : 'text-foreground'}`}>{step.title}</h3>
+                    </div>
+                    <p className={`text-sm leading-relaxed ${index % 2 === 0 ? 'opacity-90' : 'text-muted-foreground'}`}>{step.description}</p>
                   </div>
                 </div>
-
-                {/* === Content Card === */}
-                <div className={`w-full ml-16 md:ml-0 p-6 rounded-lg ${isEven ? 'md:order-1 bg-primary text-background' : 'md:order-2 bg-muted'}`}>
-                  {/* Mobile Title & Step */}
-                  <div className="md:hidden mb-2">
-                    <p className="text-sm font-bold opacity-70">STEP {step.number}</p>
-                    <h3 className="text-lg font-bold">{step.title}</h3>
-                  </div>
-                  {/* Desktop Title */}
-                  <h3 className="hidden md:block text-xl font-bold mb-2">{step.title}</h3>
-                  <p className="text-sm leading-relaxed opacity-90">{step.description}</p>
-                </div>
-
-                {/* === Desktop Step Number === */}
-                <div className={`hidden md:flex items-center ${isEven ? 'md:order-2 justify-start' : 'md:order-1 justify-end'}`}>
-                  <div className="font-bold text-primary">
-                    <span className="text-4xl">STEP</span>
-                    <span className="text-6xl text-primary/60 ml-2">{step.number.padStart(2, '0')}</span>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-        
+
+        {/* ======================================================================= */}
+        {/* Desktop Version (Visible on screens > 768px)                        */}
+        {/* This is your original code.                                           */}
+        {/* ======================================================================= */}
+        <div className="hidden md:block">
+          <div className="max-w-4xl mx-auto relative">
+            {/* Dotted connecting line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-16 bottom-16">
+              <div className="w-px h-full border-l-2 border-dotted border-muted-foreground/30"></div>
+            </div>
+
+            {steps.map((step, index) => {
+              const IconComponent = step.icon;
+              const isEven = index % 2 === 0;
+              const isLast = index === steps.length - 1;
+              return <div key={`desktop-${index}`} className={`relative mb-8 sm:mb-12 lg:mb-16 ${isLast ? 'mb-0' : ''}`}>
+                <div className="flex items-center">
+                  {isEven ?
+                    // Step on left, number on right
+                    <>
+                      <div className="w-5/12 pr-4 sm:pr-6 lg:pr-8">
+                        <div className="bg-primary rounded-lg p-4 sm:p-5 lg:p-6 relative">
+                          <div className="absolute -right-4 sm:-right-5 lg:-right-6 top-1/2 transform -translate-y-1/2">
+                            <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-background rounded-full flex items-center justify-center shadow-lg border-2 sm:border-3 lg:border-4 border-primary">
+                              <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-primary" />
+                            </div>
+                          </div>
+                          <div className="pr-6 sm:pr-7 lg:pr-8 text-background">
+                            <h3 className="text-sm sm:text-base lg:text-lg font-bold mb-1 sm:mb-2">
+                              {step.title}
+                            </h3>
+                            <p className="text-xs sm:text-sm leading-relaxed opacity-90">
+                              {step.description}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="w-2/12 flex justify-center">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-primary rounded-full flex items-center justify-center shadow-lg relative z-10">
+                          <div className="w-2 h-2 sm:w-3 sm:h-3 lg:w-4 lg:h-4 bg-background rounded-full"></div>
+                        </div>
+                      </div>
+                      <div className="w-5/12 pl-4 sm:pl-6 lg:pl-8 flex items-center">
+                        <div className="text-lg sm:text-2xl lg:text-4xl font-bold text-primary">
+                          STEP
+                        </div>
+                        <div className="text-2xl sm:text-4xl lg:text-6xl font-bold text-primary/60 ml-1 sm:ml-2">
+                          {step.number.padStart(2, '0')}
+                        </div>
+                      </div>
+                    </> :
+                    // Number on left, step on right
+                    <>
+                      <div className="w-5/12 pr-4 sm:pr-6 lg:pr-8 flex items-center justify-end">
+                        <div className="text-lg sm:text-2xl lg:text-4xl font-bold text-primary text-right">
+                          STEP
+                        </div>
+                        <div className="text-2xl sm:text-4xl lg:text-6xl font-bold text-primary/60 ml-1 sm:ml-2">
+                          {step.number.padStart(2, '0')}
+                        </div>
+                      </div>
+                      <div className="w-2/12 flex justify-center">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-primary rounded-full flex items-center justify-center shadow-lg relative z-10">
+                          <div className="w-2 h-2 sm:w-3 sm:h-3 lg:w-4 lg:h-4 bg-background rounded-full"></div>
+                        </div>
+                      </div>
+                      <div className="w-5/12 pl-4 sm:pl-6 lg:pl-8">
+                        <div className="bg-muted rounded-lg p-4 sm:p-5 lg:p-6 relative">
+                          <div className="absolute -left-4 sm:-left-5 lg:-left-6 top-1/2 transform -translate-y-1/2">
+                            <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-background rounded-full flex items-center justify-center shadow-lg border-2 sm:border-3 lg:border-4 border-muted">
+                              <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-primary" />
+                            </div>
+                          </div>
+                          <div className="pl-6 sm:pl-7 lg:pl-8">
+                            <h3 className="text-sm sm:text-base lg:text-lg font-bold text-foreground mb-1 sm:mb-2">
+                              {step.title}
+                            </h3>
+                            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                              {step.description}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </>}
+                </div>
+              </div>;
+            })}
+          </div>
+        </div>
+
         {/* Availability Notice */}
         <div className="text-center mt-16">
           <div className="inline-flex items-center justify-center bg-background border border-border rounded-full px-6 py-3">
