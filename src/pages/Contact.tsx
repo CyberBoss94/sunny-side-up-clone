@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
+import RelatedPages from "@/components/RelatedPages";
+import QuickLinks from "@/components/QuickLinks";
 import { 
   Phone, 
   Mail, 
@@ -119,9 +121,11 @@ const Contact = () => {
               <span className="block text-tow-red">We're Here to Help</span>
             </h1>
             <p className="text-xl mb-8 text-hero-foreground/90">
-              Need immediate roadside assistance? Have questions about our <Link to="/services" className="text-tow-red hover:underline">services</Link>? 
-              Check our <Link to="/faq" className="text-tow-red hover:underline">FAQ page</Link> for quick answers or 
-              our professional team is available 24/7 to provide support when you need it most.
+              Need immediate roadside assistance? Have questions about our <Link to="/services" className="text-tow-red hover:underline">professional towing services</Link>? 
+              Check our <Link to="/faq" className="text-tow-red hover:underline">FAQ page</Link> for quick answers, 
+              review our <Link to="/pricing" className="text-tow-red hover:underline">transparent pricing</Link>, or 
+              view our <Link to="/coverage-areas" className="text-tow-red hover:underline">Ontario service areas</Link>. 
+              Our professional team is available 24/7 to provide support when you need it most.
             </p>
             
             {/* Emergency CTA */}
@@ -297,8 +301,9 @@ const Contact = () => {
                   <br />
                   Quote requests are typically responded to within 2-4 hours during business hours.
                   <br />
-                  View our <Link to="/pricing" className="text-tow-red hover:underline">pricing guide</Link> for 
-                  standard rates and <Link to="/coverage-areas" className="text-tow-red hover:underline">service areas</Link>.
+                  View our <Link to="/pricing" className="text-tow-red hover:underline">detailed pricing guide</Link> for 
+                  standard rates, check our <Link to="/coverage-areas" className="text-tow-red hover:underline">Ontario service areas</Link>, or 
+                  learn more <Link to="/about" className="text-tow-red hover:underline">about our company</Link> and professional team.
                 </p>
               </div>
             </Card>
@@ -378,6 +383,11 @@ const Contact = () => {
         </div>
         </section>
 
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <QuickLinks variant="info" />
+        </div>
+
+        <RelatedPages currentPage="/contact" />
         <Footer />
       </main>
       </div>

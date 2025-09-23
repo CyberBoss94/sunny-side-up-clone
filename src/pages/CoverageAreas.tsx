@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
+import RelatedPages from "@/components/RelatedPages";
+import QuickLinks from "@/components/QuickLinks";
 import { 
   MapPin, 
   Clock, 
@@ -145,8 +147,9 @@ const CoverageAreas = () => {
             <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90">
               TowDaddy provides comprehensive towing and roadside assistance across all of Ontario. 
               From bustling city centers to remote rural communities, we're there when you need us.
-              Explore our <Link to="/services" className="text-tow-red hover:underline">full service offerings</Link> and 
-              view <Link to="/pricing" className="text-tow-red hover:underline">transparent pricing</Link>.
+              Explore our <Link to="/services" className="text-tow-red hover:underline">complete range of towing services</Link>, 
+              view our <Link to="/pricing" className="text-tow-red hover:underline">transparent pricing structure</Link>, or 
+              learn more <Link to="/about" className="text-tow-red hover:underline">about our professional team</Link>.
             </p>
             <Button variant="towRed" size="lg" className="text-sm sm:text-base">
               <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
@@ -270,6 +273,8 @@ const CoverageAreas = () => {
             <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90">
               Whether you're in downtown Toronto during rush hour or on a remote highway in Northern Ontario, 
               TowDaddy's network of professional drivers and modern equipment ensures help is always within reach.
+              Have questions? Check our <Link to="/faq" className="text-tow-red hover:underline">FAQ page</Link> or 
+              <Link to="/contact" className="text-tow-red hover:underline">contact us directly</Link> for immediate assistance.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
@@ -298,9 +303,17 @@ const CoverageAreas = () => {
             </div>
           </div>
         </div>
-      </section>
+        </section>
 
-      <Footer />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <QuickLinks variant="emergency" />
+            <QuickLinks variant="services" />
+          </div>
+        </div>
+
+        <RelatedPages currentPage="/coverage-areas" />
+        <Footer />
       </main>
     </div>
     </>

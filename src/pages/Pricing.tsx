@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
+import RelatedPages from "@/components/RelatedPages";
+import QuickLinks from "@/components/QuickLinks";
 import { 
   Truck, 
   Clock, 
@@ -152,8 +154,9 @@ const Pricing = () => {
             <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90">
               Fair, upfront pricing for all towing and roadside assistance services. 
               Know what you'll pay before we arrive - no surprises, no hidden charges.
-              View our <Link to="/services" className="text-tow-red hover:underline">complete service list</Link> and 
-              <Link to="/coverage-areas" className="text-tow-red hover:underline">coverage areas</Link>.
+              View our <Link to="/services" className="text-tow-red hover:underline">complete towing services</Link>, 
+              check our <Link to="/coverage-areas" className="text-tow-red hover:underline">Ontario coverage areas</Link>, or 
+              learn <Link to="/about" className="text-tow-red hover:underline">about our professional team</Link>.
             </p>
             <Button variant="towRed" size="lg" className="text-sm sm:text-base">
               <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
@@ -316,7 +319,9 @@ const Pricing = () => {
             <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90">
               Need a custom quote for commercial accounts, fleet services, or specialty transport? 
               Our team will work with you to create a fair pricing plan. 
-              <Link to="/contact" className="text-tow-red hover:underline">Contact us</Link> for personalized service options.
+              <Link to="/contact" className="text-tow-red hover:underline">Contact our team</Link> for personalized service options, 
+              view our <Link to="/services" className="text-tow-red hover:underline">complete service offerings</Link>, or 
+              check our <Link to="/faq" className="text-tow-red hover:underline">FAQ page</Link> for quick answers.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
@@ -332,6 +337,14 @@ const Pricing = () => {
         </div>
       </section>
 
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <QuickLinks variant="emergency" />
+          <QuickLinks variant="services" />
+        </div>
+      </div>
+
+      <RelatedPages currentPage="/pricing" />
       <Footer />
       </main>
     </div>

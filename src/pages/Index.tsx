@@ -4,6 +4,7 @@ import ProcessSection from "@/components/ProcessSection";
 import CoverageAreasSection from "@/components/CoverageAreasSection";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import RelatedPages from "@/components/RelatedPages";
 
 const Index = () => {
   const structuredData = {
@@ -49,6 +50,7 @@ const Index = () => {
         <ServicesSection />
         <ProcessSection />
         <CoverageAreasSection />
+        <RelatedPages currentPage="/" />
         <Footer />
       </main>
     </>

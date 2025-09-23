@@ -9,6 +9,9 @@ import {
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { Link } from "react-router-dom";
+import RelatedPages from "@/components/RelatedPages";
+import QuickLinks from "@/components/QuickLinks";
 import { 
   HelpCircle, 
   Phone, 
@@ -61,7 +64,7 @@ const FAQ = () => {
       questions: [
         {
           question: "What areas do you service?",
-          answer: "We provide 24/7 towing and roadside assistance throughout Ontario, including all major cities, highways, and remote areas. Our coverage extends from Windsor to Ottawa, and from the US border to Northern Ontario communities. View our detailed coverage map to see response times in your area."
+          answer: "We provide 24/7 towing and roadside assistance throughout Ontario, including all major cities, highways, and remote areas. Our coverage extends from Windsor to Ottawa, and from the US border to Northern Ontario communities. View our detailed <Link to='/coverage-areas' className='text-tow-red hover:underline'>coverage map</Link> to see response times in your area."
         },
         {
           question: "How quickly can you respond?",
@@ -73,7 +76,7 @@ const FAQ = () => {
         },
         {
           question: "What makes TowDaddy different from other towing companies?",
-          answer: "We use only flatbed towing (never hooks or chains), maintain the fastest response times in Ontario, employ only licensed and insured professionals, and provide transparent pricing with no hidden fees. Learn more about our company history and values."
+          answer: "We use only flatbed towing (never hooks or chains), maintain the fastest response times in Ontario, employ only licensed and insured professionals, and provide transparent pricing with no hidden fees. Learn more <Link to='/about' className='text-tow-red hover:underline'>about our company</Link> history and values."
         }
       ]
     },
@@ -83,7 +86,7 @@ const FAQ = () => {
       questions: [
         {
           question: "How much does towing cost?",
-          answer: "Local towing starts at $95 for distances up to 10km. Long-distance towing is $2.50 per kilometer. Roadside assistance starts at $75. We provide upfront quotes before beginning any work. View our complete pricing guide for detailed rates."
+          answer: "Local towing starts at $95 for distances up to 10km. Long-distance towing is $2.50 per kilometer. Roadside assistance starts at $75. We provide upfront quotes before beginning any work. View our complete <Link to='/pricing' className='text-tow-red hover:underline'>pricing guide</Link> for detailed rates."
         },
         {
           question: "Are there any hidden fees?",
@@ -109,7 +112,7 @@ const FAQ = () => {
         },
         {
           question: "What roadside services do you provide?",
-          answer: "We offer jump starts, flat tire changes, lockout service, fuel delivery, battery replacement, and basic mechanical troubleshooting. Our technicians carry professional equipment for most common issues."
+          answer: "We offer jump starts, flat tire changes, lockout service, fuel delivery, battery replacement, and basic mechanical troubleshooting. Our technicians carry professional equipment for most common issues. View our complete <Link to='/services' className='text-tow-red hover:underline'>service offerings</Link> for more details."
         },
         {
           question: "Can you tow all types of vehicles?",
@@ -193,7 +196,10 @@ const FAQ = () => {
               <span className="block text-tow-red">Get Answers Fast</span>
             </h1>
             <p className="text-xl mb-8 text-hero-foreground/90">
-              Find answers to common questions about our towing services, pricing, and policies. 
+              Find answers to common questions about our <Link to="/services" className="text-tow-red hover:underline">professional towing services</Link>, 
+              <Link to="/pricing" className="text-tow-red hover:underline">transparent pricing</Link>, and company policies. 
+              Need immediate help? <Link to="/contact" className="text-tow-red hover:underline">Contact us directly</Link> or 
+              view our <Link to="/coverage-areas" className="text-tow-red hover:underline">Ontario service areas</Link>. 
               Can't find what you're looking for? Call us anytime.
             </p>
             <Button variant="towRed" size="lg">
@@ -315,9 +321,17 @@ const FAQ = () => {
             Contact Us Now
           </Button>
         </div>
-      </section>
+        </section>
 
-      <Footer />
+        <div className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <QuickLinks variant="emergency" />
+            <QuickLinks variant="info" />
+          </div>
+        </div>
+
+        <RelatedPages currentPage="/faq" />
+        <Footer />
       </main>
     </div>
     </>

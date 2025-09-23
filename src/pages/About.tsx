@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
+import RelatedPages from "@/components/RelatedPages";
+import QuickLinks from "@/components/QuickLinks";
 import { 
   Shield, 
   Award, 
@@ -91,10 +93,12 @@ const About = () => {
               About TowDaddy
               <span className="block text-tow-red">Ontario's Trusted Towing Service</span>
             </h1>
-            <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90 max-w-3xl mx-auto leading-relaxed">
-              Founded on the principles of safety, reliability, and customer care, TowDaddy has been Ontario's 
-              premier towing service provider for over 15 years, helping thousands of motorists get back on the road.
-            </p>
+              <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90 max-w-3xl mx-auto leading-relaxed">
+                Founded on the principles of safety, reliability, and customer care, TowDaddy has been Ontario's 
+                premier towing service provider for over 15 years, helping thousands of motorists get back on the road.
+                Explore our <Link to="/services" className="text-tow-red hover:underline">complete service offerings</Link> and 
+                see our <Link to="/coverage-areas" className="text-tow-red hover:underline">province-wide coverage areas</Link>.
+              </p>
             <Button variant="towRed" size="lg" className="text-sm sm:text-base">
               <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Call Us: (647) 949-7729
@@ -140,8 +144,9 @@ const About = () => {
               <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                 We've built our reputation on three core principles: using only flatbed towing (no hooks), 
                 maintaining 24/7 availability, and treating every customer's vehicle as if it were our own.
-                View our complete <Link to="/services" className="text-tow-red hover:underline">range of services</Link> and 
-                transparent <Link to="/pricing" className="text-tow-red hover:underline">pricing structure</Link>.
+                View our complete <Link to="/services" className="text-tow-red hover:underline">range of towing services</Link>, 
+                review our transparent <Link to="/pricing" className="text-tow-red hover:underline">pricing structure</Link>, or 
+                <Link to="/contact" className="text-tow-red hover:underline">contact us directly</Link> for immediate assistance.
               </p>
               <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-center">
@@ -235,10 +240,12 @@ const About = () => {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
             Experience the TowDaddy Difference
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90 max-w-2xl mx-auto">
-            Join thousands of satisfied customers who trust TowDaddy for their towing 
-            and roadside assistance needs across Ontario.
-          </p>
+            <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90 max-w-2xl mx-auto">
+              Join thousands of satisfied customers who trust TowDaddy for their towing 
+              and roadside assistance needs across Ontario. Have questions? Check our 
+              <Link to="/faq" className="text-tow-red hover:underline">FAQ page</Link> or 
+              view our <Link to="/coverage-areas" className="text-tow-red hover:underline">service coverage map</Link>.
+            </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button variant="towRed" size="lg" className="text-sm sm:text-base">
               <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
@@ -251,6 +258,11 @@ const About = () => {
         </div>
         </section>
 
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <QuickLinks variant="services" />
+        </div>
+
+        <RelatedPages currentPage="/about" />
         <Footer />
       </main>
     </div>
