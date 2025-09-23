@@ -22,7 +22,6 @@ const ProcessSection = () => {
     title: "Receive Service & Get Back on the Road",
     description: "Our certified flatbed operator confirms arrival and provides professional assistance."
   }];
-
   return <section className="py-12 sm:py-16 lg:py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -36,19 +35,17 @@ const ProcessSection = () => {
         </div>
 
         {/* Flowing Timeline Steps */}
-        <div className="max-w-4xl mx-auto relative">
+        <div className="grid  grid-col-4  max-w-4xl mx-auto relative">
           {/* Dotted connecting line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 top-20 bottom-20 hidden md:block">
             <div className="w-px h-full border-l-2 border-dotted border-muted-foreground/30"></div>
           </div>
           
           {steps.map((step, index) => {
-            const IconComponent = step.icon;
-            const isEven = index % 2 === 0;
-            const isLast = index === steps.length - 1;
-            
-            return (
-              <div key={index} className={`relative mb-8 md:mb-16 ${isLast ? 'mb-0' : ''}`}>
+          const IconComponent = step.icon;
+          const isEven = index % 2 === 0;
+          const isLast = index === steps.length - 1;
+          return <div key={index} className={`relative mb-8 md:mb-16 ${isLast ? 'mb-0' : ''}`}>
                 {/* Mobile Layout */}
                 <div className="md:hidden">
                   <div className="flex items-center gap-4 mb-4">
@@ -80,9 +77,9 @@ const ProcessSection = () => {
 
                 {/* Desktop Layout */}
                 <div className="hidden md:flex items-center">
-                  {isEven ? (
-                    // Step on left, number on right
-                    <>
+                  {isEven ?
+              // Step on left, number on right
+              <>
                       <div className="w-5/12 pr-8">
                         <div className="bg-primary rounded-full p-6 relative">
                           <div className="absolute -right-6 top-1/2 transform -translate-y-1/2">
@@ -113,10 +110,9 @@ const ProcessSection = () => {
                           {step.number.padStart(2, '0')}
                         </div>
                       </div>
-                    </>
-                  ) : (
-                    // Number on left, step on right
-                    <>
+                    </> :
+              // Number on left, step on right
+              <>
                       <div className="w-5/12 pr-8 flex items-center justify-end">
                         <div className="text-4xl font-bold text-primary text-right">
                           STEP
@@ -147,12 +143,10 @@ const ProcessSection = () => {
                           </div>
                         </div>
                       </div>
-                    </>
-                  )}
+                    </>}
                 </div>
-              </div>
-            );
-          })}
+              </div>;
+        })}
         </div>
 
         {/* Availability Notice */}
