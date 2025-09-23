@@ -1,45 +1,29 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Navigation, Clock, Phone } from "lucide-react";
 import coverageHeroImage from "@/assets/coverage-areas-hero.jpg";
-
 const CoverageAreasSection = () => {
-  const coverageStats = [
-    {
-      icon: Navigation,
-      stat: "400+",
-      label: "Highways Covered",
-      description: "Complete coverage of Ontario's highway network"
-    },
-    {
-      icon: MapPin,
-      stat: "50+",
-      label: "Cities Served",
-      description: "From Toronto to Thunder Bay and everywhere between"
-    },
-    {
-      icon: Clock,
-      stat: "24/7",
-      label: "Always Available",
-      description: "Round-the-clock emergency towing services"
-    }
-  ];
-
-  const majorRegions = [
-    "Greater Toronto Area",
-    "Eastern Ontario",
-    "Southwestern Ontario", 
-    "Northern Ontario",
-    "Golden Horseshoe",
-    "Central Ontario"
-  ];
-
-  return (
-    <section className="relative w-full min-h-[500px] py-8 sm:py-12 lg:py-16 overflow-hidden">
+  const coverageStats = [{
+    icon: Navigation,
+    stat: "400+",
+    label: "Highways Covered",
+    description: "Complete coverage of Ontario's highway network"
+  }, {
+    icon: MapPin,
+    stat: "50+",
+    label: "Cities Served",
+    description: "From Toronto to Thunder Bay and everywhere between"
+  }, {
+    icon: Clock,
+    stat: "24/7",
+    label: "Always Available",
+    description: "Round-the-clock emergency towing services"
+  }];
+  const majorRegions = ["Greater Toronto Area", "Eastern Ontario", "Southwestern Ontario", "Northern Ontario", "Golden Horseshoe", "Central Ontario"];
+  return <section className="relative w-full min-h-[500px] py-8 sm:py-12 lg:py-16 overflow-hidden">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${coverageHeroImage})` }}
-      />
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url(${coverageHeroImage})`
+    }} />
       
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
@@ -66,12 +50,10 @@ const CoverageAreasSection = () => {
 
               {/* Major Regions Grid - Mobile Optimized */}
               <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-2 sm:gap-3 mb-4 sm:mb-6 lg:mb-8">
-                {majorRegions.map((region, index) => (
-                  <div key={index} className="flex items-center">
+                {majorRegions.map((region, index) => <div key={index} className="flex items-center">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-tow-red rounded-full mr-2 flex-shrink-0" />
                     <span className="text-xs sm:text-sm lg:text-base text-white/90 leading-tight">{region}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
               
               <div className="flex flex-col gap-2 sm:gap-3">
@@ -79,13 +61,7 @@ const CoverageAreasSection = () => {
                   <Phone className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                   Emergency: (647) 949-7729
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="default" 
-                  className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 text-sm sm:text-base w-full sm:w-auto"
-                >
-                  View Coverage Map
-                </Button>
+                <Button variant="outline" size="default" className="border-white/30 hover:border-white/50 text-sm w-full sm:w-auto text-teal-500 bg-neutral-50 sm:text-base">Book Request</Button>
               </div>
             </div>
 
@@ -93,12 +69,8 @@ const CoverageAreasSection = () => {
             <div className="order-2 lg:order-2">
               <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
                 {coverageStats.map((item, index) => {
-                  const IconComponent = item.icon;
-                  return (
-                    <div 
-                      key={index} 
-                      className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg sm:rounded-xl p-3 sm:p-4 lg:p-6 text-center hover:bg-white/15 transition-all duration-300"
-                    >
+                const IconComponent = item.icon;
+                return <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg sm:rounded-xl p-3 sm:p-4 lg:p-6 text-center hover:bg-white/15 transition-all duration-300">
                       <div className="flex justify-center mb-2 sm:mb-3 lg:mb-4">
                         <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14 bg-tow-red rounded-full flex items-center justify-center">
                           <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 lg:w-7 lg:h-7 text-white" />
@@ -116,9 +88,8 @@ const CoverageAreasSection = () => {
                       <p className="text-xs sm:text-sm text-white/80 leading-tight">
                         {item.description}
                       </p>
-                    </div>
-                  );
-                })}
+                    </div>;
+              })}
               </div>
               
               {/* Third stat takes full width on mobile */}
@@ -150,8 +121,6 @@ const CoverageAreasSection = () => {
 
       {/* Bottom Decorative Elements */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-tow-red via-red-500 to-tow-red" />
-    </section>
-  );
+    </section>;
 };
-
 export default CoverageAreasSection;
