@@ -35,44 +35,120 @@ const ProcessSection = () => {
           </p>
         </div>
 
-        {/* Timeline Steps */}
-        <div className="max-w-5xl mx-auto relative">
-          {/* Vertical line for desktop */}
-          <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-border"></div>
+        {/* Flowing Timeline Steps */}
+        <div className="max-w-4xl mx-auto relative">
+          {/* Dotted connecting line */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 top-20 bottom-20 hidden md:block">
+            <div className="w-px h-full border-l-2 border-dotted border-muted-foreground/30"></div>
+          </div>
           
           {steps.map((step, index) => {
             const IconComponent = step.icon;
-            const isEven = index % 2 === 1;
+            const isEven = index % 2 === 0;
+            const isLast = index === steps.length - 1;
             
             return (
-              <div key={index} className={`relative mb-16 lg:mb-20 ${isEven ? 'lg:flex-row-reverse' : ''} lg:flex lg:items-center lg:justify-between`}>
-                {/* Content Side */}
-                <div className={`lg:w-5/12 ${isEven ? 'lg:text-right lg:pr-16' : 'lg:pl-16'}`}>
-                  <div className="bg-card border border-border rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
-                      {step.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {step.description}
-                    </p>
+              <div key={index} className={`relative mb-8 md:mb-16 ${isLast ? 'mb-0' : ''}`}>
+                {/* Mobile Layout */}
+                <div className="md:hidden">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+                        <span className="text-2xl font-bold text-primary-foreground">{step.number.padStart(2, '0')}</span>
+                      </div>
+                    </div>
+                    <div className="text-sm font-bold text-primary tracking-wider">
+                      STEP {step.number.padStart(2, '0')}
+                    </div>
                   </div>
-                </div>
-
-                {/* Center Circle & Icon */}
-                <div className="flex justify-center lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 my-8 lg:my-0">
-                  <div className="relative">
-                    {/* Numbered Circle */}
-                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl shadow-lg">
-                      {step.number}
+                  <div className="bg-primary/10 rounded-full p-6 relative">
+                    <div className="absolute right-6 top-1/2 transform -translate-y-1/2">
+                      <div className="w-12 h-12 bg-background rounded-full flex items-center justify-center shadow-md">
+                        <IconComponent className="w-6 h-6 text-primary" />
+                      </div>
+                    </div>
+                    <div className="pr-20">
+                      <h3 className="text-lg font-bold text-foreground mb-2">
+                        {step.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {step.description}
+                      </p>
                     </div>
                   </div>
                 </div>
 
-                {/* Icon Side */}
-                <div className={`lg:w-5/12 flex justify-center ${isEven ? 'lg:justify-start lg:pl-16' : 'lg:justify-end lg:pr-16'}`}>
-                  <div className="w-24 h-24 bg-gradient-to-br from-primary/10 to-primary/20 rounded-2xl flex items-center justify-center">
-                    <IconComponent className="w-12 h-12 text-primary" />
-                  </div>
+                {/* Desktop Layout */}
+                <div className="hidden md:flex items-center">
+                  {isEven ? (
+                    // Step on left, number on right
+                    <>
+                      <div className="w-5/12 pr-8">
+                        <div className="bg-primary rounded-full p-6 relative">
+                          <div className="absolute -right-6 top-1/2 transform -translate-y-1/2">
+                            <div className="w-12 h-12 bg-background rounded-full flex items-center justify-center shadow-lg border-4 border-primary">
+                              <IconComponent className="w-6 h-6 text-primary" />
+                            </div>
+                          </div>
+                          <div className="pr-8 text-background">
+                            <h3 className="text-lg font-bold mb-2">
+                              {step.title}
+                            </h3>
+                            <p className="text-sm leading-relaxed opacity-90">
+                              {step.description}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="w-2/12 flex justify-center">
+                        <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg relative z-10">
+                          <div className="w-4 h-4 bg-background rounded-full"></div>
+                        </div>
+                      </div>
+                      <div className="w-5/12 pl-8 flex items-center">
+                        <div className="text-4xl font-bold text-primary">
+                          STEP
+                        </div>
+                        <div className="text-6xl font-bold text-primary/60 ml-2">
+                          {step.number.padStart(2, '0')}
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    // Number on left, step on right
+                    <>
+                      <div className="w-5/12 pr-8 flex items-center justify-end">
+                        <div className="text-4xl font-bold text-primary text-right">
+                          STEP
+                        </div>
+                        <div className="text-6xl font-bold text-primary/60 ml-2">
+                          {step.number.padStart(2, '0')}
+                        </div>
+                      </div>
+                      <div className="w-2/12 flex justify-center">
+                        <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg relative z-10">
+                          <div className="w-4 h-4 bg-background rounded-full"></div>
+                        </div>
+                      </div>
+                      <div className="w-5/12 pl-8">
+                        <div className="bg-muted rounded-full p-6 relative">
+                          <div className="absolute -left-6 top-1/2 transform -translate-y-1/2">
+                            <div className="w-12 h-12 bg-background rounded-full flex items-center justify-center shadow-lg border-4 border-muted">
+                              <IconComponent className="w-6 h-6 text-primary" />
+                            </div>
+                          </div>
+                          <div className="pl-8">
+                            <h3 className="text-lg font-bold text-foreground mb-2">
+                              {step.title}
+                            </h3>
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                              {step.description}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             );
@@ -80,7 +156,7 @@ const ProcessSection = () => {
         </div>
 
         {/* Availability Notice */}
-        <div className="text-center">
+        <div className="text-center mt-16">
           <div className="inline-flex items-center justify-center bg-background border border-border rounded-full px-6 py-3">
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
