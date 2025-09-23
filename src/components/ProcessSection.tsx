@@ -1,36 +1,28 @@
 import { Card } from "@/components/ui/card";
 import { Phone, MapPin, Truck, CheckCircle } from "lucide-react";
-
 const ProcessSection = () => {
-  const steps = [
-    {
-      number: "1",
-      icon: Phone,
-      title: "Submit Your Tow Request",
-      description: "Include name, contact, vehicle details, issue, and live GPS location."
-    },
-    {
-      number: "2", 
-      icon: MapPin,
-      title: "Get Matched With a Tow Truck Driver",
-      description: "Our dispatch system assigns the closest flatbed driver."
-    },
-    {
-      number: "3",
-      icon: Truck,
-      title: "Track Your Driver in Real Time", 
-      description: "View live ETA, location map, and service status."
-    },
-    {
-      number: "4",
-      icon: CheckCircle,
-      title: "Receive Service & Get Back on the Road",
-      description: "Our certified flatbed operator will confirm your request and help safely."
-    }
-  ];
-
-  return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-muted/50">
+  const steps = [{
+    number: "1",
+    icon: Phone,
+    title: "Submit Your Tow Request",
+    description: "Include name, contact, vehicle details, issue, and live GPS location."
+  }, {
+    number: "2",
+    icon: MapPin,
+    title: "Get Matched With a Tow Truck Driver",
+    description: "Our dispatch system assigns the closest flatbed driver."
+  }, {
+    number: "3",
+    icon: Truck,
+    title: "Track Your Driver in Real Time",
+    description: "View live ETA, location map, and service status."
+  }, {
+    number: "4",
+    icon: CheckCircle,
+    title: "Receive Service & Get Back on the Road",
+    description: "Our certified flatbed operator will confirm your request and help safely."
+  }];
+  return <section className="py-12 sm:py-16 lg:py-20 bg-muted/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
@@ -46,11 +38,10 @@ const ProcessSection = () => {
         </div>
 
         {/* Process Steps Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
           {steps.map((step, index) => {
-            const IconComponent = step.icon;
-            return (
-              <Card key={index} className="relative p-6 bg-background border-2 border-red-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-tow-red/50">
+          const IconComponent = step.icon;
+          return <Card key={index} className="relative p-6 bg-background border-2 border-red-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-tow-red/50 py-[16px] my-0">
                 {/* Step Number */}
                 <div className="absolute -top-3 -right-3 w-8 h-8 bg-foreground text-background rounded-full flex items-center justify-center font-bold text-sm">
                   {step.number}
@@ -63,19 +54,18 @@ const ProcessSection = () => {
 
                 {/* Content */}
                 <div className="text-center">
-                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3 leading-tight">
+                  <h3 className="sm:text-xl font-bold text-foreground mb-3 leading-tight text-sm">
                     {step.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  <p className="sm:text-base text-muted-foreground leading-relaxed text-center text-xs">
                     {step.description}
                   </p>
                 </div>
 
                 {/* Bottom accent line */}
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-tow-red to-red-600 rounded-full" />
-              </Card>
-            );
-          })}
+              </Card>;
+        })}
         </div>
 
         {/* Availability Notice */}
@@ -88,8 +78,6 @@ const ProcessSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ProcessSection;
