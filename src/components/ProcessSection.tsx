@@ -5,67 +5,78 @@ const ProcessSection = () => {
     number: "1",
     icon: Phone,
     title: "Submit Your Tow Request",
-    description: "Include name, contact, vehicle details, issue, and live GPS location."
+    description: "Include name, contact, vehicle details, issue, and live GPS location for quick dispatch."
   }, {
     number: "2",
     icon: MapPin,
     title: "Get Matched With a Tow Truck Driver",
-    description: "Our dispatch system assigns the closest flatbed driver."
+    description: "Our dispatch system assigns the closest flatbed driver to your location immediately."
   }, {
     number: "3",
     icon: Truck,
     title: "Track Your Driver in Real Time",
-    description: "View live ETA, location map, and service status."
+    description: "View live ETA, location map, and service status through our tracking system."
   }, {
     number: "4",
     icon: CheckCircle,
     title: "Receive Service & Get Back on the Road",
-    description: "Our certified flatbed operator will confirm your request and help safely."
+    description: "Our certified flatbed operator confirms arrival and provides professional assistance."
   }];
-  return <section className="py-12 sm:py-16 lg:py-20 bg-muted/50">
+
+  return <section className="py-12 sm:py-16 lg:py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12 sm:mb-16">
-          <p className="text-tow-red font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4">
-            Professional Towing Process
-          </p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
-            How to Request Our Towing Services
+        <div className="text-center mb-16 sm:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 sm:mb-6 leading-tight">
+            How it All Works
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-4xl mx-auto px-4">
-            Need help? Whether it's a dead battery or accident recovery, TowDaddy makes Ontario-wide towing simple. Follow these 4 easy steps to request professional service.
+          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
+            Need help? Whether it's a dead battery or accident recovery, TowDaddy makes Ontario-wide towing simple.
           </p>
         </div>
 
-        {/* Process Steps Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
+        {/* Timeline Steps */}
+        <div className="max-w-5xl mx-auto relative">
+          {/* Vertical line for desktop */}
+          <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-border"></div>
+          
           {steps.map((step, index) => {
-          const IconComponent = step.icon;
-          return <Card key={index} className="relative p-6 bg-background border-2 border-red-200 rounded-xl hover:shadow-lg transition-all duration-300 hover:border-tow-red/50 py-[16px] my-0 px-[7px]">
-                {/* Step Number */}
-                <div className="absolute -top-3 -right-3 w-8 h-8 bg-foreground text-background rounded-full flex items-center justify-center font-bold text-sm">
-                  {step.number}
+            const IconComponent = step.icon;
+            const isEven = index % 2 === 1;
+            
+            return (
+              <div key={index} className={`relative mb-16 lg:mb-20 ${isEven ? 'lg:flex-row-reverse' : ''} lg:flex lg:items-center lg:justify-between`}>
+                {/* Content Side */}
+                <div className={`lg:w-5/12 ${isEven ? 'lg:text-right lg:pr-16' : 'lg:pl-16'}`}>
+                  <div className="bg-card border border-border rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
+                      {step.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
 
-                {/* Icon */}
-                <div className="w-16 h-16 bg-gradient-to-br from-tow-red to-red-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                  <IconComponent className="w-8 h-8 text-white" />
+                {/* Center Circle & Icon */}
+                <div className="flex justify-center lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 my-8 lg:my-0">
+                  <div className="relative">
+                    {/* Numbered Circle */}
+                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl shadow-lg">
+                      {step.number}
+                    </div>
+                  </div>
                 </div>
 
-                {/* Content */}
-                <div className="text-center px-0 mx-0">
-                  <h3 className="sm:text-xl font-bold text-foreground mb-3 leading-tight text-sm">
-                    {step.title}
-                  </h3>
-                  <p className="sm:text-base text-muted-foreground leading-relaxed text-center text-xs">
-                    {step.description}
-                  </p>
+                {/* Icon Side */}
+                <div className={`lg:w-5/12 flex justify-center ${isEven ? 'lg:justify-start lg:pl-16' : 'lg:justify-end lg:pr-16'}`}>
+                  <div className="w-24 h-24 bg-gradient-to-br from-primary/10 to-primary/20 rounded-2xl flex items-center justify-center">
+                    <IconComponent className="w-12 h-12 text-primary" />
+                  </div>
                 </div>
-
-                {/* Bottom accent line */}
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-tow-red to-red-600 rounded-full" />
-              </Card>;
-        })}
+              </div>
+            );
+          })}
         </div>
 
         {/* Availability Notice */}
