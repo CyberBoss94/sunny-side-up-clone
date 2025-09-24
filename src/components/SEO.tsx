@@ -156,6 +156,7 @@ const SEO = ({
       <meta name="author" content="TowDaddy" />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow" />
+      <meta name="google-site-verification" content="DXAnNjx39dtKveHHB5lYegUIhHt24unWhZoA5RYlCoE" />
       
       {/* Geographic Targeting Meta Tags */}
       <meta name="geo.region" content={geoTargeting.region} />
