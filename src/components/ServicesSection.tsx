@@ -133,7 +133,7 @@ const ServicesSection = () => {
                     Call Now
                   </Button>
                   <Button variant="outline" size="sm" className="w-full text-xs sm:text-sm" asChild>
-                    <Link to="/services">Learn More</Link>
+                    <Link to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`}>Learn More</Link>
                   </Button>
                 </div>
               </div>

@@ -12,6 +12,11 @@ import Pricing from "./pages/Pricing";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import EmergencyTowing from "./pages/services/EmergencyTowing";
+import RoadsideAssistance from "./pages/services/RoadsideAssistance";
+import VehicleRecovery from "./pages/services/VehicleRecovery";
+import LongDistanceTowing from "./pages/services/LongDistanceTowing";
+import MotorcycleTowing from "./pages/services/MotorcycleTowing";
 import Header from "./components/Header";
 
 const queryClient = new QueryClient();
@@ -27,6 +32,11 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/emergency-towing" element={<EmergencyTowing />} />
+          <Route path="/services/roadside-assistance" element={<RoadsideAssistance />} />
+          <Route path="/services/vehicle-recovery" element={<VehicleRecovery />} />
+          <Route path="/services/long-distance-towing" element={<LongDistanceTowing />} />
+          <Route path="/services/motorcycle-towing" element={<MotorcycleTowing />} />
           <Route path="/about" element={<About />} />
           <Route path="/coverage-areas" element={<CoverageAreas />} />
           <Route path="/pricing" element={<Pricing />} />
