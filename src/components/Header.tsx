@@ -15,8 +15,6 @@ const Header = () => {
     { to: "/pricing", label: "Pricing" },
     { to: "/faq", label: "FAQ" },
     { to: "/about", label: "About" },
-    { to: "/contact", label: "Contact" },
-    
   ];
 
   return (
