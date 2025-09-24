@@ -32,13 +32,13 @@ const Services = () => {
     "provider": {
       "@type": "LocalBusiness",
       "name": "TowDaddy",
-      "url": "https://towdaddy.lovable.app"
+      "url": "https://towdaddy.ca"
     },
     "areaServed": "Ontario, Canada",
     "availableChannel": {
       "@type": "ServiceChannel",
       "servicePhone": "+1-800-TOW-DADDY",
-      "serviceUrl": "https://towdaddy.lovable.app/contact"
+      "serviceUrl": "https://towdaddy.ca/contact"
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -150,7 +150,7 @@ const Services = () => {
         title="Professional Towing Services Ontario | Emergency, Roadside & Recovery - TowDaddy"
         description="Complete towing services across Ontario. 24/7 emergency towing, roadside assistance, vehicle recovery, and specialized transport. Professional, licensed, and insured."
         keywords="towing services Ontario, emergency towing, roadside assistance, vehicle recovery, flatbed towing, long distance towing, commercial towing"
-        canonicalUrl="https://towdaddy.lovable.app/services"
+        canonicalUrl="https://towdaddy.ca/services"
         structuredData={structuredData}
         breadcrumbs={breadcrumbs}
       />

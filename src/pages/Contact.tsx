@@ -103,7 +103,7 @@ const Contact = () => {
         title="Contact TowDaddy - 24/7 Emergency Towing | Get Quote & Assistance"
         description="Contact TowDaddy for 24/7 emergency towing across Ontario. Call (647) 949-7729 for immediate assistance or request a quote for planned services."
         keywords="contact TowDaddy, emergency towing phone, towing quote, roadside assistance contact, 24/7 towing Ontario"
-        canonicalUrl="https://towdaddy.lovable.app/contact"
+        canonicalUrl="https://towdaddy.ca/contact"
         structuredData={structuredData}
         breadcrumbs={breadcrumbs}
       />

@@ -134,7 +134,7 @@ const Pricing = () => {
         title="Towing Pricing Ontario - Transparent Rates | No Hidden Fees - TowDaddy"
         description="View transparent towing prices for Ontario. Emergency roadside from $75, local towing from $95. No hidden fees, fair pricing for all towing services."
         keywords="towing prices Ontario, towing rates, emergency roadside pricing, transparent towing costs, no hidden fees"
-        canonicalUrl="https://towdaddy.lovable.app/pricing"
+        canonicalUrl="https://towdaddy.ca/pricing"
         structuredData={structuredData}
         breadcrumbs={breadcrumbs}
       />

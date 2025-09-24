@@ -127,7 +127,7 @@ const CoverageAreas = () => {
         title="Coverage Areas - Ontario-Wide Towing Service | TowDaddy Coverage Map"
         description="TowDaddy provides towing coverage across all of Ontario. See our service areas, response times, and coverage map for Toronto, Ottawa, Hamilton, and rural areas."
         keywords="Ontario towing coverage, service areas, response times, Toronto towing, Ottawa towing, rural Ontario towing, coverage map"
-        canonicalUrl="https://towdaddy.lovable.app/coverage-areas"
+        canonicalUrl="https://towdaddy.ca/coverage-areas"
         structuredData={structuredData}
         breadcrumbs={breadcrumbs}
       />

@@ -27,7 +27,7 @@ const SEO = ({
     "@type": "LocalBusiness",
     "name": "TowDaddy",
     "description": "Professional 24/7 towing service across Ontario",
-    "url": "https://towdaddy.lovable.app",
+    "url": "https://towdaddy.ca",
     "telephone": "+1-800-TOW-DADDY",
     "address": {
       "@type": "PostalAddress",

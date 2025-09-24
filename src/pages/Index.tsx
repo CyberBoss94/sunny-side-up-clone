@@ -11,8 +11,8 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "TowDaddy",
-    "url": "https://towdaddy.lovable.app",
-    "logo": "https://towdaddy.lovable.app/assets/towdaddy-logo.png",
+    "url": "https://towdaddy.ca",
+    "logo": "https://towdaddy.ca/assets/towdaddy-logo.png",
     "description": "Professional 24/7 towing service across Ontario",
     "contactPoint": {
       "@type": "ContactPoint",
