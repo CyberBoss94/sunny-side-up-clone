@@ -93,9 +93,9 @@ const MotorcycleTowing = () => {
   return (
     <>
       <SEO 
-        title="Professional Motorcycle Towing Ontario | Specialized Bike Transport - TowDaddy"
-        description="Expert motorcycle towing service across Ontario. Specialized trailers, secure tie-downs, damage prevention for all bike types. Starting at $120. Call (647) 949-7729"
-        keywords="motorcycle towing Ontario, bike towing, motorcycle transport, sport bike towing, cruiser towing, motorcycle breakdown"
+        title="Professional Motorcycle Towing Toronto, Vaughan, Scarborough | Specialized Bike Transport Ontario"
+        description="Expert motorcycle towing service in Toronto, Scarborough, Thornhill, Vaughan and across Ontario. Specialized trailers, secure tie-downs, damage prevention for all bike types."
+        keywords="motorcycle towing Toronto, bike towing Vaughan, motorcycle transport Scarborough, sport bike towing Thornhill, cruiser towing Ontario, motorcycle breakdown Toronto"
         canonicalUrl="https://towdaddy.ca/services/motorcycle-towing"
         pageType="service"
         structuredData={structuredData}

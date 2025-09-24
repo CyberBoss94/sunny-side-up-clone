@@ -65,9 +65,9 @@ const EmergencyTowing = () => {
   return (
     <>
       <SEO 
-        title="24/7 Emergency Towing Service Ontario | Fast Response - TowDaddy"
-        description="Professional emergency towing service available 24/7 across Ontario. GPS tracking, rapid response, licensed operators. Starting at $95. Call (647) 949-7729"
-        keywords="emergency towing Ontario, 24/7 towing service, fast towing, roadside emergency, flatbed towing, tow truck near me"
+        title="24/7 Emergency Towing Service Toronto, Vaughan, Scarborough | Fast Response Ontario - TowDaddy"
+        description="Professional emergency towing service available 24/7 in Toronto, Scarborough, Thornhill, Vaughan and across Ontario. GPS tracking, rapid response, licensed operators. Starting at $95."
+        keywords="emergency towing Toronto, 24/7 towing service Vaughan, fast towing Scarborough, roadside emergency Thornhill, flatbed towing Ontario, tow truck near me Toronto"
         canonicalUrl="https://towdaddy.ca/services/emergency-towing"
         pageType="service"
         structuredData={structuredData}

@@ -93,9 +93,9 @@ const VehicleRecovery = () => {
   return (
     <>
       <SEO 
-        title="Professional Vehicle Recovery Ontario | Accident, Off-Road, Winch Services - TowDaddy"
-        description="Expert vehicle recovery service across Ontario. Accident recovery, off-road retrieval, winch services, heavy duty recovery. Starting at $150. Call (647) 949-7729"
-        keywords="vehicle recovery Ontario, accident recovery, off-road recovery, winch service, heavy duty recovery, rollover recovery"
+        title="Professional Vehicle Recovery Toronto, Vaughan, Scarborough | Accident, Off-Road, Winch Services Ontario"
+        description="Expert vehicle recovery service in Toronto, Scarborough, Thornhill, Vaughan and across Ontario. Accident recovery, off-road retrieval, winch services, heavy duty recovery."
+        keywords="vehicle recovery Toronto, accident recovery Vaughan, off-road recovery Scarborough, winch service Thornhill, heavy duty recovery Ontario, rollover recovery Toronto"
         canonicalUrl="https://towdaddy.ca/services/vehicle-recovery"
         pageType="service"
         structuredData={structuredData}

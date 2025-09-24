@@ -73,9 +73,9 @@ const About = () => {
   return (
     <>
       <SEO 
-        title="About TowDaddy - Professional Towing Service | 15+ Years Serving Ontario"
-        description="Learn about TowDaddy's 15+ years of professional towing service across Ontario. Licensed, insured, and committed to safety-first flatbed towing and roadside assistance."
-        keywords="about TowDaddy, professional towing company, licensed towing service, Ontario towing experience, flatbed towing specialists"
+        title="About TowDaddy - Professional Towing Service Toronto, Vaughan, Scarborough | 15+ Years Ontario"
+        description="Learn about TowDaddy's 15+ years serving Toronto, Scarborough, Thornhill, and Vaughan. Licensed, insured towing company committed to safety-first flatbed towing and roadside assistance."
+        keywords="about TowDaddy, professional towing company Toronto, licensed towing service Ontario, Toronto towing experience, flatbed towing specialists Vaughan, Scarborough towing"
         canonicalUrl="https://towdaddy.ca/about"
         pageType="website"
         structuredData={structuredData}

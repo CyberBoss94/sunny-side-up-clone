@@ -93,9 +93,9 @@ const LongDistanceTowing = () => {
   return (
     <>
       <SEO 
-        title="Long Distance Towing Service Canada | Cross-Province Vehicle Transport - TowDaddy"
-        description="Professional long distance towing across Canada. Cross-province transport with GPS tracking, secure loading, and insurance coverage. $2.50/km. Call (647) 949-7729"
-        keywords="long distance towing Canada, cross province towing, vehicle transport, long haul towing, inter-provincial towing"
+        title="Long Distance Towing Service Toronto, Vaughan | Cross-Province Vehicle Transport Canada - TowDaddy"
+        description="Professional long distance towing from Toronto, Scarborough, Thornhill, Vaughan across Canada. Cross-province transport with GPS tracking, secure loading, and insurance coverage."
+        keywords="long distance towing Toronto, cross province towing Vaughan, vehicle transport Canada, long haul towing Ontario, inter-provincial towing Toronto"
         canonicalUrl="https://towdaddy.ca/services/long-distance-towing"
         pageType="service"
         structuredData={structuredData}

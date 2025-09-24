@@ -131,9 +131,9 @@ const Pricing = () => {
   return (
     <>
       <SEO 
-        title="Towing Pricing Ontario - Transparent Rates | No Hidden Fees - TowDaddy"
-        description="View transparent towing prices for Ontario. Emergency roadside from $75, local towing from $95. No hidden fees, fair pricing for all towing services."
-        keywords="towing prices Ontario, towing rates, emergency roadside pricing, transparent towing costs, no hidden fees"
+        title="Towing Pricing Toronto, Vaughan, Scarborough - Transparent Rates | No Hidden Fees Ontario"
+        description="View transparent towing prices for Toronto, Scarborough, Thornhill, Vaughan and Ontario. Emergency roadside from $75, local towing from $95. No hidden fees, fair pricing."
+        keywords="towing prices Toronto, towing rates Vaughan, emergency roadside pricing Scarborough, transparent towing costs Ontario, no hidden fees Toronto towing"
         canonicalUrl="https://towdaddy.ca/pricing"
         pageType="website"
         structuredData={structuredData}

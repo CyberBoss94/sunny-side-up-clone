@@ -100,9 +100,9 @@ const Contact = () => {
   return (
     <>
       <SEO 
-        title="Contact TowDaddy - 24/7 Emergency Towing | Get Quote & Assistance"
-        description="Contact TowDaddy for 24/7 emergency towing across Ontario. Call (647) 949-7729 for immediate assistance or request a quote for planned services."
-        keywords="contact TowDaddy, emergency towing phone, towing quote, roadside assistance contact, 24/7 towing Ontario"
+        title="Contact TowDaddy - 24/7 Emergency Towing Toronto, Vaughan, Scarborough | Get Quote & Assistance"
+        description="Contact TowDaddy for 24/7 emergency towing in Toronto, Scarborough, Thornhill, Vaughan and across Ontario. Call (647) 949-7729 for immediate assistance or request a quote."
+        keywords="contact TowDaddy, emergency towing phone Toronto, towing quote Vaughan, roadside assistance contact Scarborough, 24/7 towing Ontario, Toronto towing service"
         canonicalUrl="https://towdaddy.ca/contact"
         pageType="website"
         structuredData={structuredData}

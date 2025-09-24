@@ -124,9 +124,9 @@ const CoverageAreas = () => {
   return (
     <>
       <SEO 
-        title="Coverage Areas - Ontario-Wide Towing Service | TowDaddy Coverage Map"
-        description="TowDaddy provides towing coverage across all of Ontario. See our service areas, response times, and coverage map for Toronto, Ottawa, Hamilton, and rural areas."
-        keywords="Ontario towing coverage, service areas, response times, Toronto towing, Ottawa towing, rural Ontario towing, coverage map"
+        title="Coverage Areas - Toronto, Vaughan, Scarborough Towing Service | Ontario-Wide TowDaddy Coverage"
+        description="TowDaddy provides towing coverage across Toronto, Scarborough, Thornhill, Vaughan and all of Ontario. See our service areas, response times, and coverage map."
+        keywords="Ontario towing coverage, Toronto service areas, Vaughan towing response times, Scarborough towing, Thornhill roadside assistance, rural Ontario towing, coverage map"
         canonicalUrl="https://towdaddy.ca/coverage-areas"
         pageType="website"
         structuredData={structuredData}

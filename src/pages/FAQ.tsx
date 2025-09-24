@@ -174,9 +174,9 @@ const FAQ = () => {
   return (
     <>
       <SEO 
-        title="Towing FAQ - Frequently Asked Questions | TowDaddy Ontario"
-        description="Get answers to common towing questions. Learn about our services, pricing, coverage areas, and response times. Quick answers for all your towing needs."
-        keywords="towing FAQ, towing questions, emergency towing help, roadside assistance questions, Ontario towing info"
+        title="Towing FAQ Toronto, Vaughan, Scarborough - Frequently Asked Questions | TowDaddy Ontario"
+        description="Get answers to common towing questions in Toronto, Scarborough, Thornhill, Vaughan and Ontario. Learn about our services, pricing, coverage areas, and response times."
+        keywords="towing FAQ Toronto, towing questions Vaughan, emergency towing help Scarborough, roadside assistance questions Thornhill, Ontario towing info"
         canonicalUrl="https://towdaddy.ca/faq"
         pageType="website"
         structuredData={structuredData}

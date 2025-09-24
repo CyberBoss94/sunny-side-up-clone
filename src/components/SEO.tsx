@@ -9,6 +9,11 @@ interface SEOProps {
   structuredData?: any;
   breadcrumbs?: Array<{ name: string; url: string }>;
   pageType?: "website" | "article" | "service";
+  geoTargeting?: {
+    cities?: string[];
+    region?: string;
+    coordinates?: string;
+  };
 }
 
 const SEO = ({
@@ -19,24 +24,31 @@ const SEO = ({
   ogImage = "https://towdaddy.ca/assets/towdaddy-logo-Bw97cD2y.png",
   structuredData,
   breadcrumbs,
-  pageType = "website"
+  pageType = "website",
+  geoTargeting = {
+    cities: ["Toronto", "Scarborough", "Thornhill", "Vaughan", "Ontario"],
+    region: "CA-ON",
+    coordinates: "43.6532;-79.3832"
+  }
 }: SEOProps) => {
   const currentUrl = canonicalUrl || `${window.location.origin}${window.location.pathname}`;
   
-  // Organization structured data (main site identity)
+  // Enhanced Organization structured data with geographic targeting
   const organizationData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "TowDaddy",
+    "@type": "LocalBusiness",
+    "name": "TowDaddy Towing Services",
     "url": "https://towdaddy.ca",
     "logo": "https://towdaddy.ca/assets/towdaddy-logo-Bw97cD2y.png",
-    "description": "Professional 24/7 towing service across Ontario",
+    "image": "https://towdaddy.ca/assets/towdaddy-logo-Bw97cD2y.png",
+    "description": "Professional 24/7 towing and roadside assistance services across Ontario",
     "telephone": "+16479497729",
     "email": "info@towdaddy.ca",
     "address": {
       "@type": "PostalAddress",
-      "addressRegion": "Ontario",
-      "addressCountry": "Canada"
+      "addressCountry": "CA",
+      "addressRegion": "ON", 
+      "addressLocality": "Toronto"
     },
     "geo": {
       "@type": "GeoCoordinates",
@@ -44,10 +56,27 @@ const SEO = ({
       "longitude": "-79.3832"
     },
     "openingHours": "Mo-Su 00:00-23:59",
-    "serviceArea": {
-      "@type": "State",
-      "name": "Ontario"
-    },
+    "areaServed": [
+      { "@type": "Place", "name": "Toronto" },
+      { "@type": "Place", "name": "Scarborough" },
+      { "@type": "Place", "name": "Thornhill" },
+      { "@type": "Place", "name": "Vaughan" },
+      { "@type": "Place", "name": "Mississauga" },
+      { "@type": "Place", "name": "Brampton" },
+      { "@type": "Place", "name": "Hamilton" },
+      { "@type": "Place", "name": "Ottawa" },
+      { "@type": "Place", "name": "London" },
+      { "@type": "Place", "name": "Ontario" }
+    ],
+    "serviceType": [
+      "Towing",
+      "Roadside Assistance", 
+      "Vehicle Recovery",
+      "Flatbed Towing",
+      "Emergency Towing",
+      "Motorcycle Towing",
+      "Long Distance Towing"
+    ],
     "sameAs": [
       "https://twitter.com/towdaddy",
       "https://www.instagram.com/towdaddy"
@@ -61,7 +90,7 @@ const SEO = ({
           "itemOffered": {
             "@type": "Service",
             "name": "Emergency Towing",
-            "description": "24/7 emergency towing service"
+            "description": "24/7 emergency towing service across Ontario"
           }
         },
         {
@@ -69,7 +98,7 @@ const SEO = ({
           "itemOffered": {
             "@type": "Service",
             "name": "Roadside Assistance",
-            "description": "Professional roadside assistance"
+            "description": "Professional roadside assistance including battery jumps, tire changes, lockouts"
           }
         },
         {
@@ -77,7 +106,7 @@ const SEO = ({
           "itemOffered": {
             "@type": "Service",
             "name": "Vehicle Recovery",
-            "description": "Safe vehicle recovery service"
+            "description": "Safe vehicle recovery from accidents and off-road situations"
           }
         }
       ]
@@ -127,6 +156,12 @@ const SEO = ({
       <meta name="author" content="TowDaddy" />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow" />
+      
+      {/* Geographic Targeting Meta Tags */}
+      <meta name="geo.region" content={geoTargeting.region} />
+      <meta name="geo.placename" content={geoTargeting.cities?.join(", ")} />
+      <meta name="geo.position" content={geoTargeting.coordinates} />
+      <meta name="ICBM" content={geoTargeting.coordinates?.replace(";", ", ")} />
       
       {/* Canonical URL */}
       <link rel="canonical" href={currentUrl} />

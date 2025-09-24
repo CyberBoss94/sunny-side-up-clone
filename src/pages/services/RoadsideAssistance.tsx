@@ -84,9 +84,9 @@ const RoadsideAssistance = () => {
   return (
     <>
       <SEO 
-        title="24/7 Roadside Assistance Ontario | Battery, Tire, Lockout Service - TowDaddy"
-        description="Professional roadside assistance available 24/7 across Ontario. Battery jump start, flat tire change, lockout service, fuel delivery. Starting at $75. Call (647) 949-7729"
-        keywords="roadside assistance Ontario, battery jump start, flat tire change, lockout service, fuel delivery, car trouble help"
+        title="24/7 Roadside Assistance Toronto, Vaughan, Scarborough | Battery, Tire, Lockout Service Ontario"
+        description="Professional roadside assistance available 24/7 in Toronto, Scarborough, Thornhill, Vaughan and across Ontario. Battery jump start, flat tire change, lockout service, fuel delivery."
+        keywords="roadside assistance Toronto, battery jump start Vaughan, flat tire change Scarborough, lockout service Thornhill, fuel delivery Ontario, car trouble help Toronto"
         canonicalUrl="https://towdaddy.ca/services/roadside-assistance"
         pageType="service"
         structuredData={structuredData}
