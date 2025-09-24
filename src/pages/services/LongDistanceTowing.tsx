@@ -97,6 +97,7 @@ const LongDistanceTowing = () => {
         description="Professional long distance towing across Canada. Cross-province transport with GPS tracking, secure loading, and insurance coverage. $2.50/km. Call (647) 949-7729"
         keywords="long distance towing Canada, cross province towing, vehicle transport, long haul towing, inter-provincial towing"
         canonicalUrl="https://towdaddy.ca/services/long-distance-towing"
+        pageType="service"
         structuredData={structuredData}
         breadcrumbs={breadcrumbs}
       />

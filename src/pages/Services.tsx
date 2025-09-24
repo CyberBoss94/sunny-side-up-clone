@@ -151,6 +151,7 @@ const Services = () => {
         description="Complete towing services across Ontario. 24/7 emergency towing, roadside assistance, vehicle recovery, and specialized transport. Professional, licensed, and insured."
         keywords="towing services Ontario, emergency towing, roadside assistance, vehicle recovery, flatbed towing, long distance towing, commercial towing"
         canonicalUrl="https://towdaddy.ca/services"
+        pageType="service"
         structuredData={structuredData}
         breadcrumbs={breadcrumbs}
       />

@@ -88,6 +88,7 @@ const RoadsideAssistance = () => {
         description="Professional roadside assistance available 24/7 across Ontario. Battery jump start, flat tire change, lockout service, fuel delivery. Starting at $75. Call (647) 949-7729"
         keywords="roadside assistance Ontario, battery jump start, flat tire change, lockout service, fuel delivery, car trouble help"
         canonicalUrl="https://towdaddy.ca/services/roadside-assistance"
+        pageType="service"
         structuredData={structuredData}
         breadcrumbs={breadcrumbs}
       />

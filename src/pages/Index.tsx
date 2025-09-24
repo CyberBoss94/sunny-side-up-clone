@@ -43,6 +43,8 @@ const Index = () => {
         title="TowDaddy - 24/7 Emergency Towing Across Ontario | Professional Flatbed Service"
         description="Need reliable towing in Ontario? TowDaddy provides 24/7 emergency flatbed towing, roadside assistance, and vehicle recovery. Licensed, insured, and professional service across Ontario."
         keywords="emergency towing Ontario, 24/7 towing service, flatbed towing, roadside assistance Ontario, vehicle recovery, professional towing, licensed towing service"
+        canonicalUrl="https://towdaddy.ca/"
+        pageType="website"
         structuredData={structuredData}
       />
       <main className="min-h-screen">

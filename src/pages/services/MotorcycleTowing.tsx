@@ -97,6 +97,7 @@ const MotorcycleTowing = () => {
         description="Expert motorcycle towing service across Ontario. Specialized trailers, secure tie-downs, damage prevention for all bike types. Starting at $120. Call (647) 949-7729"
         keywords="motorcycle towing Ontario, bike towing, motorcycle transport, sport bike towing, cruiser towing, motorcycle breakdown"
         canonicalUrl="https://towdaddy.ca/services/motorcycle-towing"
+        pageType="service"
         structuredData={structuredData}
         breadcrumbs={breadcrumbs}
       />

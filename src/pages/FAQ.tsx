@@ -178,6 +178,7 @@ const FAQ = () => {
         description="Get answers to common towing questions. Learn about our services, pricing, coverage areas, and response times. Quick answers for all your towing needs."
         keywords="towing FAQ, towing questions, emergency towing help, roadside assistance questions, Ontario towing info"
         canonicalUrl="https://towdaddy.ca/faq"
+        pageType="website"
         structuredData={structuredData}
         breadcrumbs={breadcrumbs}
       />

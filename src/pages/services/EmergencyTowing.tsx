@@ -69,6 +69,7 @@ const EmergencyTowing = () => {
         description="Professional emergency towing service available 24/7 across Ontario. GPS tracking, rapid response, licensed operators. Starting at $95. Call (647) 949-7729"
         keywords="emergency towing Ontario, 24/7 towing service, fast towing, roadside emergency, flatbed towing, tow truck near me"
         canonicalUrl="https://towdaddy.ca/services/emergency-towing"
+        pageType="service"
         structuredData={structuredData}
         breadcrumbs={breadcrumbs}
       />

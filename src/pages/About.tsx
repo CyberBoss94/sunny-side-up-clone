@@ -77,6 +77,7 @@ const About = () => {
         description="Learn about TowDaddy's 15+ years of professional towing service across Ontario. Licensed, insured, and committed to safety-first flatbed towing and roadside assistance."
         keywords="about TowDaddy, professional towing company, licensed towing service, Ontario towing experience, flatbed towing specialists"
         canonicalUrl="https://towdaddy.ca/about"
+        pageType="website"
         structuredData={structuredData}
         breadcrumbs={breadcrumbs}
       />

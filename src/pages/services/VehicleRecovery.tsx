@@ -97,6 +97,7 @@ const VehicleRecovery = () => {
         description="Expert vehicle recovery service across Ontario. Accident recovery, off-road retrieval, winch services, heavy duty recovery. Starting at $150. Call (647) 949-7729"
         keywords="vehicle recovery Ontario, accident recovery, off-road recovery, winch service, heavy duty recovery, rollover recovery"
         canonicalUrl="https://towdaddy.ca/services/vehicle-recovery"
+        pageType="service"
         structuredData={structuredData}
         breadcrumbs={breadcrumbs}
       />
