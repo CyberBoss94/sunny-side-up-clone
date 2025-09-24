@@ -9,11 +9,14 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigationLinks = [
+    { to: "/", label: "Home" },
     { to: "/services", label: "Services" },
-    { to: "/about", label: "About" },
     { to: "/coverage-areas", label: "Coverage Areas" },
     { to: "/pricing", label: "Pricing" },
     { to: "/faq", label: "FAQ" },
+    { to: "/about", label: "About" },
+    { to: "/contact", label: "Contact" },
+    
   ];
 
   return (
