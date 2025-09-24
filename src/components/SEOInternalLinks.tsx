@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOInternalLink from './SEOInternalLink';
+import { ArrowRight } from 'lucide-react';
 
 interface InternalLinkData {
   href: string;
@@ -8,8 +8,15 @@ interface InternalLinkData {
 }
 
 interface SEOInternalLinksProps {
-  links?: InternalLinkData[];
+  // Single link mode
+  href?: string;
   title?: string;
+  description?: string;
+  showArrow?: boolean;
+  
+  // Multiple links mode
+  links?: InternalLinkData[];
+  sectionTitle?: string;
   subtitle?: string;
   className?: string;
   gridCols?: 1 | 2 | 3;
@@ -49,13 +56,68 @@ const defaultInternalLinks: InternalLinkData[] = [
   }
 ];
 
+// Single Link Component
+const SEOInternalLink = ({ 
+  href, 
+  title, 
+  description, 
+  showArrow = true,
+  className = ""
+}: { href: string; title: string; description: string; showArrow?: boolean; className?: string }) => {
+  return (
+    <a 
+      href={href} 
+      className={`block group p-4 rounded-lg bg-background border border-border hover:border-tow-red/20 hover:bg-muted/30 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-tow-red focus:ring-offset-2 ${className}`}
+      role="link"
+      aria-describedby={`desc-${href.replace(/[^a-zA-Z0-9]/g, '')}`}
+    >
+      <h3 className="text-lg sm:text-xl font-bold text-foreground group-hover:text-tow-red transition-colors mb-2">
+        {title}
+      </h3>
+      <p 
+        id={`desc-${href.replace(/[^a-zA-Z0-9]/g, '')}`}
+        className="text-muted-foreground text-sm sm:text-base mb-3 leading-relaxed"
+      >
+        {description}
+      </p>
+      {showArrow && (
+        <span className="flex items-center text-tow-red font-medium text-sm group-hover:translate-x-1 transition-transform duration-200">
+          Learn more 
+          <ArrowRight className="ml-1 h-4 w-4" />
+        </span>
+      )}
+    </a>
+  );
+};
+
 const SEOInternalLinks = ({ 
+  // Single link props
+  href,
+  title,
+  description,
+  showArrow = true,
+  
+  // Multiple links props
   links = defaultInternalLinks,
-  title = "Explore Our Services",
+  sectionTitle = "Explore Our Services",
   subtitle = "Discover our comprehensive towing and roadside assistance solutions across Ontario",
   className = "",
   gridCols = 2
 }: SEOInternalLinksProps) => {
+  // Single link mode
+  if (href && title && description) {
+    return (
+      <SEOInternalLink
+        href={href}
+        title={title}
+        description={description}
+        showArrow={showArrow}
+        className={className}
+      />
+    );
+  }
+
+  // Multiple links mode
   const gridColsClass = {
     1: "grid-cols-1",
     2: "grid-cols-1 md:grid-cols-2", 
@@ -65,11 +127,11 @@ const SEOInternalLinks = ({
   return (
     <section className={`py-12 ${className}`}>
       <div className="container mx-auto px-4">
-        {(title || subtitle) && (
+        {(sectionTitle || subtitle) && (
           <div className="text-center mb-8">
-            {title && (
+            {sectionTitle && (
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
-                {title}
+                {sectionTitle}
               </h2>
             )}
             {subtitle && (
