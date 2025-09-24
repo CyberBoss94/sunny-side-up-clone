@@ -68,7 +68,8 @@ const Services = () => {
       subtitle: "Swift assistance 24/7",
       description: "Our emergency towing service operates around the clock, ensuring you're never stranded. With GPS tracking and rapid response times, we locate and assist you within minutes of your call.",
       features: ["24/7 Availability", "GPS Tracking", "Rapid Response", "Professional Equipment"],
-      price: "Starting at $95"
+      price: "Starting at $95",
+      link: "/services/emergency-towing"
     },
     {
       icon: <Wrench className="h-16 w-16 text-tow-red mb-6" />,
@@ -76,7 +77,8 @@ const Services = () => {
       subtitle: "Quick aid for common issues",
       description: "From flat tires to dead batteries, our roadside assistance covers all common vehicle problems. Our certified technicians carry professional equipment to get you back on the road quickly.",
       features: ["Battery Jump Start", "Flat Tire Change", "Lockout Service", "Fuel Delivery"],
-      price: "Starting at $75"
+      price: "Starting at $75",
+      link: "/services/roadside-assistance"
     },
     {
       icon: <Mountain className="h-16 w-16 text-tow-red mb-6" />,
@@ -84,7 +86,8 @@ const Services = () => {
       subtitle: "Skilled vehicle retrieval", 
       description: "Specialized in recovering vehicles from difficult situations including ditches, mud, snow, and accident scenes. Our recovery specialists use advanced equipment for safe extraction.",
       features: ["Accident Recovery", "Off-Road Retrieval", "Winch Services", "Heavy Duty Recovery"],
-      price: "Starting at $150"
+      price: "Starting at $150",
+      link: "/services/vehicle-recovery"
     },
     {
       icon: <Route className="h-16 w-16 text-tow-red mb-6" />,
@@ -92,7 +95,8 @@ const Services = () => {
       subtitle: "Reliable transport offer",
       description: "Need to transport your vehicle across provinces? Our long-distance towing service ensures safe, secure transport with real-time tracking and professional handling.",
       features: ["Cross-Province Transport", "Real-Time Tracking", "Secure Loading", "Insurance Coverage"],
-      price: "$2.50/km"
+      price: "$2.50/km",
+      link: "/services/long-distance-towing"
     },
     {
       icon: <Shield className="h-16 w-16 text-tow-red mb-6" />,
@@ -100,7 +104,8 @@ const Services = () => {
       subtitle: "Expert vehicle retrieval",
       description: "Our professional rescue team handles complex situations requiring specialized expertise. From luxury vehicles to commercial fleets, we provide expert care and handling.",
       features: ["Luxury Vehicle Care", "Commercial Fleet", "Specialized Equipment", "Trained Operators"],
-      price: "Quote on Request"
+      price: "Quote on Request",
+      link: null
     },
     {
       icon: <Bike className="h-16 w-16 text-tow-red mb-6" />,
@@ -108,7 +113,8 @@ const Services = () => {
       subtitle: "Specialized bike transport",
       description: "Motorcycle towing requires special care and equipment. Our bike-specific trailers and trained operators ensure your motorcycle is transported safely without damage.",
       features: ["Specialized Trailers", "Secure Tie-Downs", "Damage Prevention", "All Bike Types"],
-      price: "Starting at $120"
+      price: "Starting at $120",
+      link: "/services/motorcycle-towing"
     },
     {
       icon: <Building2 className="h-16 w-16 text-tow-red mb-6" />,
@@ -116,7 +122,8 @@ const Services = () => {
       subtitle: "Business vehicle assistance",
       description: "Supporting businesses with fleet management and commercial vehicle towing. We understand the urgency of keeping your business operations running smoothly.",
       features: ["Fleet Management", "Priority Service", "Business Accounts", "24/7 Support"],
-      price: "Custom Rates"
+      price: "Custom Rates",
+      link: null
     },
     {
       icon: <Car className="h-16 w-16 text-tow-red mb-6" />,
@@ -124,7 +131,8 @@ const Services = () => {
       subtitle: "Safe and secure vehicle relocation",
       description: "Professional vehicle transport service for dealerships, auctions, and private customers. Multi-car carriers and enclosed trailers available for premium protection.",
       features: ["Multi-Car Transport", "Enclosed Trailers", "Dealership Service", "Auction Transport"],
-      price: "Starting at $200"
+      price: "Starting at $200",
+      link: null
     },
     {
       icon: <TreePine className="h-16 w-16 text-tow-red mb-6" />,
@@ -132,7 +140,8 @@ const Services = () => {
       subtitle: "Skilled retrieval from rugged landscapes",
       description: "Specialized in recovering vehicles from challenging terrain including mountains, forests, and remote areas. Our off-road recovery vehicles can reach where others can't.",
       features: ["Off-Road Capability", "Mountain Rescue", "Remote Access", "4x4 Recovery"],
-      price: "Starting at $200"
+      price: "Starting at $200",
+      link: null
     },
     {
       icon: <Star className="h-16 w-16 text-tow-red mb-6" />,
@@ -140,7 +149,8 @@ const Services = () => {
       subtitle: "Custom vehicle transport",
       description: "Custom solutions for unique towing needs including classic cars, modified vehicles, and specialty equipment. We adapt our service to meet your specific requirements.",
       features: ["Classic Car Care", "Modified Vehicles", "Custom Solutions", "White Glove Service"],
-      price: "Quote on Request"
+      price: "Quote on Request",
+      link: null
     }
   ];
 
@@ -212,7 +222,13 @@ const Services = () => {
                 <div className="text-center mb-4 sm:mb-6">
                   {service.icon}
                   <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
-                    {service.title}
+                    {service.link ? (
+                      <a href={service.link} className="hover:text-tow-red transition-colors">
+                        {service.title}
+                      </a>
+                    ) : (
+                      service.title
+                    )}
                   </h3>
                   <p className="text-tow-red font-medium text-base sm:text-lg mb-3 sm:mb-4">
                     {service.subtitle}
@@ -241,9 +257,17 @@ const Services = () => {
                       Call Now
                     </a>
                   </Button>
-                  <Button variant="outline" className="flex-1 text-sm sm:text-base">
-                    Get Quote
-                  </Button>
+                  {service.link ? (
+                    <Button variant="outline" className="flex-1 text-sm sm:text-base" asChild>
+                      <a href={service.link}>
+                        Learn More
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button variant="outline" className="flex-1 text-sm sm:text-base">
+                      Get Quote
+                    </Button>
+                  )}
                 </div>
               </Card>
             ))}
