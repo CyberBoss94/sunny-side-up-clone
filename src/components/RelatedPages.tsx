@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, MapPin, Phone, Star, Truck, Wrench, HelpCircle, Users, DollarSign } from "lucide-react";
 
 interface RelatedPage {
@@ -78,45 +77,67 @@ const RelatedPages = ({ currentPage, className = "" }: RelatedPagesProps) => {
 
   if (relatedPages.length === 0) return null;
 
-  return (
-    <section className={`py-12 sm:py-16 bg-muted/30 ${className}`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3 sm:mb-4">
-            Related Information
-          </h2>
-          <p className="text-base sm:text-lg text-muted-foreground">
-            Explore more about our services and how we can help you
-          </p>
-        </div>
+  // Schema.org SiteNavigationElement JSON-LD
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    "name": "Related Information",
+    "url": `https://towdaddy.ca${currentPage}`,
+    "hasPart": relatedPages.map(page => ({
+      "@type": "SiteNavigationElement",
+      "name": page.title,
+      "description": page.description,
+      "url": `https://towdaddy.ca${page.to}`
+    }))
+  };
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-          {relatedPages.map((page, index) => (
-            <Card key={index} className="p-6 bg-service-card border-service-border hover:shadow-lg transition-all duration-300 group">
-              <Link to={page.to} className="block">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 p-3 rounded-lg bg-tow-red/10 text-tow-red group-hover:bg-tow-red group-hover:text-primary-foreground transition-colors">
-                    {page.icon}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-lg sm:text-xl font-bold text-foreground group-hover:text-tow-red transition-colors mb-2">
-                      {page.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm sm:text-base mb-3 leading-relaxed">
-                      {page.description}
-                    </p>
-                    <div className="flex items-center text-tow-red font-medium text-sm">
-                      <span>Learn more</span>
-                      <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+      <section className={`py-12 sm:py-16 bg-muted/30 ${className}`}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3 sm:mb-4">
+              Related Information
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground">
+              Explore more about our services and how we can help you
+            </p>
+          </div>
+
+          <nav aria-label="Related pages">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+              {relatedPages.map((page, index) => (
+                <Card key={index} className="p-6 bg-service-card border-service-border hover:shadow-lg transition-all duration-300 group">
+                  <Link to={page.to} className="block" title={page.title}>
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0 p-3 rounded-lg bg-tow-red/10 text-tow-red group-hover:bg-tow-red group-hover:text-primary-foreground transition-colors">
+                        {page.icon}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg sm:text-xl font-bold text-foreground group-hover:text-tow-red transition-colors mb-2">
+                          {page.title}
+                        </h3>
+                        <p className="text-muted-foreground text-sm sm:text-base mb-3 leading-relaxed">
+                          {page.description}
+                        </p>
+                        <div className="flex items-center text-tow-red font-medium text-sm">
+                          <span>Learn more</span>
+                          <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </Link>
-            </Card>
-          ))}
+                  </Link>
+                </Card>
+              ))}
+            </div>
+          </nav>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
