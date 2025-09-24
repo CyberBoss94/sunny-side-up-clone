@@ -30,11 +30,11 @@ const Contact = () => {
     "mainEntity": {
       "@type": "LocalBusiness",
       "name": "TowDaddy",
-      "telephone": "+1-647-949-7729",
+      "telephone": "+16479497729",
       "email": "info@towdaddy.ca",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-647-949-7729",
+        "telephone": "+16479497729",
         "contactType": "emergency",
         "areaServed": "Ontario, Canada",
         "availableLanguage": "English",
@@ -49,7 +49,7 @@ const Contact = () => {
       title: "Emergency Hotline",
       subtitle: "Available 24/7 for immediate assistance",
       details: "(647) 949-7729",
-      action: "Call Now",
+              action: "Call Now",
       primary: true
     },
     {
@@ -135,9 +135,11 @@ const Contact = () => {
               <p className="mb-4 text-hero-foreground/90">
                 Stranded or in an emergency? Don't wait - call now for immediate help
               </p>
-              <Button variant="towRed" size="lg" className="text-lg px-8">
-                <Phone className="w-6 h-6 mr-2" />
-                Call Emergency: (647) 949-7729
+              <Button variant="towRed" size="lg" className="text-lg px-8" asChild>
+                <a href="tel:+16479497729">
+                  <Phone className="w-6 h-6 mr-2" />
+                  Call Emergency: (647) 949-7729
+                </a>
               </Button>
             </div>
           </div>
@@ -174,8 +176,15 @@ const Contact = () => {
                 <Button 
                   variant={method.primary ? "towRed" : "outline"}
                   className="w-full"
+                  asChild
                 >
-                  {method.action}
+                  {method.primary ? (
+                    <a href="tel:+16479497729">{method.action}</a>
+                  ) : method.action === "Send Email" ? (
+                    <a href="mailto:info@towdaddy.ca">{method.action}</a>
+                  ) : (
+                    <span>{method.action}</span>
+                  )}
                 </Button>
               </Card>
             ))}

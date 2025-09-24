@@ -16,7 +16,7 @@ const Index = () => {
     "description": "Professional 24/7 towing service across Ontario",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-800-TOW-DADDY",
+      "telephone": "+16479497729",
       "contactType": "emergency",
       "availableLanguage": "English"
     },

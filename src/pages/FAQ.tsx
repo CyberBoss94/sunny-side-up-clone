@@ -202,9 +202,11 @@ const FAQ = () => {
               view our <Link to="/coverage-areas" className="text-tow-red hover:underline">Ontario service areas</Link>. 
               Can't find what you're looking for? Call us anytime.
             </p>
-            <Button variant="towRed" size="lg">
-              <Phone className="w-5 h-5 mr-2" />
-              Call Us: (647) 949-7729
+            <Button variant="towRed" size="lg" asChild>
+              <a href="tel:+16479497729">
+                <Phone className="w-5 h-5 mr-2" />
+                Call Us: (647) 949-7729
+              </a>
             </Button>
           </div>
         </div>

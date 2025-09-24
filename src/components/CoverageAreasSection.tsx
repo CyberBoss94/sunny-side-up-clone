@@ -59,7 +59,7 @@ const CoverageAreasSection = () => {
               <div className="flex flex-col gap-2 sm:gap-3">
                 <Button size="default" className="bg-tow-red hover:bg-tow-red-hover text-white font-semibold text-sm sm:text-base w-full sm:w-auto">
                   <Phone className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
-                  Emergency: (647) 949-7729
+                  <a href="tel:+16479497729" className="hover:text-tow-red transition-colors">Emergency: (647) 949-7729</a>
                 </Button>
                 <Button variant="outline" size="default" className="border-white/30 hover:border-white/50 text-sm w-full sm:w-auto text-teal-500 bg-neutral-50 sm:text-base">Book Request</Button>
               </div>

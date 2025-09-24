@@ -158,9 +158,11 @@ const Pricing = () => {
               check our <Link to="/coverage-areas" className="text-tow-red hover:underline">Ontario coverage areas</Link>, or 
               learn <Link to="/about" className="text-tow-red hover:underline">about our professional team</Link>.
             </p>
-            <Button variant="towRed" size="lg" className="text-sm sm:text-base">
-              <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-              Get Free Quote: (647) 949-7729
+            <Button variant="towRed" size="lg" className="text-sm sm:text-base" asChild>
+              <a href="tel:+16479497729">
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                Get Free Quote: (647) 949-7729
+              </a>
             </Button>
           </div>
         </div>
@@ -325,9 +327,11 @@ const Pricing = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Button variant="towRed" size="lg" className="text-sm sm:text-base">
-                <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                Call: (647) 949-7729
+              <Button variant="towRed" size="lg" className="text-sm sm:text-base" asChild>
+                <a href="tel:+16479497729">
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                  Call: (647) 949-7729
+                </a>
               </Button>
               <Button variant="outline" size="lg" className="bg-background/10 border-hero-foreground/30 text-hero-foreground hover:bg-background/20 text-sm sm:text-base">
                 Request Quote

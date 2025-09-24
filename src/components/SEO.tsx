@@ -28,7 +28,7 @@ const SEO = ({
     "name": "TowDaddy",
     "description": "Professional 24/7 towing service across Ontario",
     "url": "https://towdaddy.ca",
-    "telephone": "+1-800-TOW-DADDY",
+    "telephone": "+16479497729",
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "Ontario",

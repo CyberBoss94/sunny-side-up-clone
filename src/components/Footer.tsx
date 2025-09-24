@@ -26,7 +26,7 @@ const Footer = () => {
             </p>
             <Button variant="towRed" size="lg" className="w-full sm:w-auto text-sm sm:text-base py-3 sm:py-4">
               <Phone className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
-              Call Now: (647) 949-7729
+              <a href="tel:+16479497729" className="hover:text-tow-red transition-colors">Call Now: (647) 949-7729</a>
             </Button>
           </div>
 
@@ -59,11 +59,11 @@ const Footer = () => {
             <div className="space-y-2 sm:space-y-3">
               <div className="flex items-center space-x-2">
                 <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-tow-red flex-shrink-0" />
-                <span className="text-hero-foreground/80 text-sm sm:text-base">(647) 949-7729</span>
+                <a href="tel:+16479497729" className="text-hero-foreground/80 hover:text-tow-red text-sm sm:text-base transition-colors">(647) 949-7729</a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-tow-red flex-shrink-0" />
-                <span className="text-hero-foreground/80 text-sm sm:text-base">info@towdaddy.ca</span>
+                <a href="mailto:info@towdaddy.ca" className="text-hero-foreground/80 hover:text-tow-red text-sm sm:text-base transition-colors">info@towdaddy.ca</a>
               </div>
               <div className="flex items-start space-x-2">
                 <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-tow-red mt-0.5 flex-shrink-0" />
