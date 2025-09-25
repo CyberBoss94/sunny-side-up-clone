@@ -18,6 +18,7 @@ import VehicleRecovery from "./pages/services/VehicleRecovery";
 import LongDistanceTowing from "./pages/services/LongDistanceTowing";
 import MotorcycleTowing from "./pages/services/MotorcycleTowing";
 import Header from "./components/Header";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Index />} />
