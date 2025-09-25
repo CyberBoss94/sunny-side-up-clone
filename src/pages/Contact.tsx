@@ -136,7 +136,7 @@ const Contact = () => {
               <p className="mb-4 text-hero-foreground/90">
                 Stranded or in an emergency? Don't wait - call now for immediate help
               </p>
-              <Button variant="towRed" size="lg" className="text-lg px-8" asChild>
+              <Button variant="towRed" size="lg" className="text-base px-8" asChild>
                 <a href="tel:+16479497729">
                   <Phone className="w-6 h-6 mr-2" />
                   Call Emergency: (647) 949-7729
