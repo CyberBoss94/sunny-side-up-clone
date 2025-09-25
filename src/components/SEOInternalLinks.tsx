@@ -163,7 +163,4 @@ const SEOInternalLinks = ({
   );
 };
 
-// Alias for RelatedPages usage
-export const RelatedPages = SEOInternalLinks;
-
 export default SEOInternalLinks;
