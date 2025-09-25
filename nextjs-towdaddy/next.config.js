@@ -1,16 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  images: {
-    unoptimized: true
-  },
-  // Generate static HTML files for each page
-  generateStaticParams: true,
-  // Ensure all routes are statically generated
+  output: 'export', // <-- tells Next.js to build static HTML for every route
+  reactStrictMode: true,
   experimental: {
-    missingSuspenseWithCSRBailout: false,
-  }
+    missingSuspenseWithCSRBailout: true, // optional, only if you need it
+  },
 }
 
 module.exports = nextConfig
