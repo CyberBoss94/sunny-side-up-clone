@@ -47,7 +47,7 @@ const SEO = ({
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "CA",
-      "addressRegion": "ON", 
+      "addressRegion": "ON",
       "addressLocality": "Toronto"
     },
     "geo": {
@@ -70,7 +70,7 @@ const SEO = ({
     ],
     "serviceType": [
       "Towing",
-      "Roadside Assistance", 
+      "Roadside Assistance",
       "Vehicle Recovery",
       "Flatbed Towing",
       "Emergency Towing",
