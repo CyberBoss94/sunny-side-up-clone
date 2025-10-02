@@ -51,7 +51,19 @@ const routes = [
     keywords: 'motorcycle towing, bike towing, motorcycle transport, Ontario motorcycle towing'
   },
   { 
-    path: '/about', 
+    path: '/services/commercial-towing', 
+    title: 'Commercial Towing Services Ontario | TowDaddy Fleet Solutions',
+    description: 'Professional commercial towing services for businesses in Ontario. Fleet support, heavy-duty towing, and priority service for commercial vehicles. Available 24/7.',
+    keywords: 'commercial towing, fleet towing, business towing, heavy duty towing, Ontario commercial towing'
+  },
+  { 
+    path: '/services/specialized-towing', 
+    title: 'Specialized Vehicle Towing Ontario | Luxury & Classic Car Transport',
+    description: 'Expert specialized towing for luxury, exotic, classic, and modified vehicles in Ontario. Professional care for your special vehicles. Call TowDaddy 24/7.',
+    keywords: 'specialized towing, luxury car towing, exotic vehicle towing, classic car transport, Ontario specialized towing'
+  },
+  { 
+    path: '/about',
     title: 'About TowDaddy - Professional Towing Company Ontario',
     description: 'Learn about TowDaddy\'s commitment to professional towing services across Ontario. Licensed, insured, and dedicated to safe vehicle transport.',
     keywords: 'about TowDaddy, professional towing company, Ontario towing company, licensed towing'
@@ -79,6 +91,30 @@ const routes = [
     title: 'Contact TowDaddy - 24/7 Emergency Towing Service',
     description: 'Contact TowDaddy for emergency towing, roadside assistance, or vehicle recovery. Available 24/7 across Ontario. Call now for immediate service.',
     keywords: 'contact TowDaddy, emergency towing contact, Ontario towing phone, 24/7 towing contact'
+  },
+  { 
+    path: '/coverage/toronto', 
+    title: 'Towing Service Toronto & GTA | 24/7 Emergency Towing | TowDaddy',
+    description: 'Fast, reliable towing service in Toronto and GTA. Available 24/7 for emergency towing, roadside assistance, and vehicle recovery. Serving all Toronto neighborhoods.',
+    keywords: 'towing Toronto, GTA towing, emergency towing Toronto, roadside assistance Toronto, 24/7 towing Toronto'
+  },
+  { 
+    path: '/coverage/ottawa', 
+    title: 'Towing Service Ottawa | 24/7 Emergency Towing Ottawa | TowDaddy',
+    description: 'Professional towing service in Ottawa and surrounding areas. 24/7 emergency towing, roadside assistance, and vehicle recovery. Fast response times.',
+    keywords: 'towing Ottawa, emergency towing Ottawa, roadside assistance Ottawa, 24/7 towing Ottawa, Ottawa tow truck'
+  },
+  { 
+    path: '/coverage/hamilton', 
+    title: 'Towing Service Hamilton | 24/7 Emergency Towing | TowDaddy',
+    description: 'Fast, professional towing service in Hamilton and surrounding areas. 24/7 emergency towing, roadside assistance, and vehicle recovery for all Hamilton neighborhoods.',
+    keywords: 'towing Hamilton, emergency towing Hamilton, roadside assistance Hamilton, 24/7 towing Hamilton, Hamilton tow truck'
+  },
+  { 
+    path: '/coverage/london', 
+    title: 'Towing Service London Ontario | 24/7 Emergency Towing | TowDaddy',
+    description: 'Professional towing service in London, Ontario. 24/7 emergency towing, roadside assistance, and vehicle recovery. Fast response across all London areas.',
+    keywords: 'towing London Ontario, emergency towing London, roadside assistance London, 24/7 towing London, London tow truck'
   }
 ];
 
