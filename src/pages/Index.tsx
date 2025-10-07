@@ -12,7 +12,7 @@ const Index = () => {
     "@type": "Organization",
     "name": "TowDaddy",
     "url": "https://towdaddy.ca",
-    "logo": "https://towdaddy.ca/assets/towdaddy-logo.png",
+    "logo": "https://towdaddy.ca/towdaddy-logo.png",
     "description": "Professional 24/7 towing service across Ontario",
     "contactPoint": {
       "@type": "ContactPoint",

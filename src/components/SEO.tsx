@@ -21,7 +21,7 @@ const SEO = ({
   description = "Professional 24/7 towing service across Ontario. Safe flatbed towing, emergency roadside assistance, and vehicle recovery. Licensed, insured, and no hooks - just care.",
   keywords = "towing, roadside assistance, emergency towing, Ontario, flatbed towing, vehicle recovery, 24/7 towing, professional towing service",
   canonicalUrl,
-  ogImage = "https://towdaddy.ca/assets/towdaddy-logo-Bw97cD2y.png",
+  ogImage = "https://towdaddy.ca/towdaddy-logo.png",
   structuredData,
   breadcrumbs,
   pageType = "website",
@@ -39,8 +39,8 @@ const SEO = ({
     "@type": "LocalBusiness",
     "name": "TowDaddy Towing Services",
     "url": "https://towdaddy.ca",
-    "logo": "https://towdaddy.ca/assets/towdaddy-logo-Bw97cD2y.png",
-    "image": "https://towdaddy.ca/assets/towdaddy-logo-Bw97cD2y.png",
+    "logo": "https://towdaddy.ca/towdaddy-logo.png",
+    "image": "https://towdaddy.ca/towdaddy-logo.png",
     "description": "Professional 24/7 towing and roadside assistance services across Ontario",
     "telephone": "+16479497729",
     "email": "info@towdaddy.ca",
@@ -126,7 +126,7 @@ const SEO = ({
     "publisher": {
       "@type": "Organization",
       "name": "TowDaddy",
-      "logo": "https://towdaddy.ca/assets/towdaddy-logo-Bw97cD2y.png"
+      "logo": "https://towdaddy.ca/towdaddy-logo.png"
     },
     "potentialAction": {
       "@type": "SearchAction",
