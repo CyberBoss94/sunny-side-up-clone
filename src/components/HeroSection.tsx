@@ -38,7 +38,7 @@ const HeroSection = () => {
             <Card className="p-6 bg-service-card/95 backdrop-blur-sm px-0 py-[12px]">
               <div className="text-center">
                 <Truck className="h-8 w-8 text-tow-red mx-auto mb-3" />
-                <h3 className="font-semibold text-card-foreground mb-2">Flatbed Only</h3>
+                <p className="font-semibold text-card-foreground mb-2">Flatbed Only</p>
                 <p className="text-sm text-muted-foreground">No hooks, safer transport</p>
               </div>
             </Card>
@@ -46,7 +46,7 @@ const HeroSection = () => {
             <Card className="p-6 bg-service-card/95 backdrop-blur-sm border-service-border px-0">
               <div className="text-center">
                 <Clock className="h-8 w-8 text-tow-red mx-auto mb-3" />
-                <h3 className="font-semibold text-card-foreground mb-2">24/7 Service</h3>
+                <p className="font-semibold text-card-foreground mb-2">24/7 Service</p>
                 <p className="text-sm text-muted-foreground">Always available</p>
               </div>
             </Card>
@@ -54,7 +54,7 @@ const HeroSection = () => {
             <Card className="p-6 bg-service-card/95 backdrop-blur-sm border-service-border px-0">
               <div className="text-center">
                 <MapPin className="h-8 w-8 text-tow-red mx-auto mb-3" />
-                <h3 className="font-semibold text-card-foreground mb-2">Ontario-Wide</h3>
+                <p className="font-semibold text-card-foreground mb-2">Ontario-Wide</p>
                 <p className="text-sm text-muted-foreground">Province coverage</p>
               </div>
             </Card>
@@ -62,7 +62,7 @@ const HeroSection = () => {
             <Card className="p-6 bg-service-card/95 backdrop-blur-sm border-service-border px-0 py-[25px]">
               <div className="text-center">
                 <Shield className="h-8 w-8 text-tow-red mx-auto mb-3" />
-                <h3 className="font-semibold text-card-foreground mb-2">Licensed & Insured</h3>
+                <p className="font-semibold text-card-foreground mb-2">Licensed & Insured</p>
                 <p className="text-sm text-muted-foreground">Professional service</p>
               </div>
             </Card>

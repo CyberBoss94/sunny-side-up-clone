@@ -29,11 +29,12 @@ const Toronto = () => {
           ]} />
           
           <div className="mt-8">
-            <h1 className="text-4xl font-bold mb-4">Towing Service Toronto & GTA</h1>
+            <h1 className="text-4xl font-bold mb-4">24/7 Towing Service Toronto & GTA - Fast Emergency Response</h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Professional 24/7 towing and roadside assistance across Toronto and the Greater Toronto Area.
+              Professional emergency towing and roadside assistance across Toronto and the Greater Toronto Area. Licensed flatbed towing available 24/7.
             </p>
 
+            <h2 className="text-3xl font-bold mb-6 mt-12">Why Choose TowDaddy in Toronto?</h2>
             <div className="grid md:grid-cols-3 gap-6 mb-12">
               <Card>
                 <CardHeader>
@@ -72,9 +73,10 @@ const Toronto = () => {
               </Card>
             </div>
 
+            <h2 className="text-3xl font-bold mb-6 mt-12">Complete Toronto & GTA Coverage Areas</h2>
             <Card className="mb-8">
               <CardHeader>
-                <CardTitle>Areas We Cover in Toronto & GTA</CardTitle>
+                <p className="text-xl font-semibold">Neighborhoods & Cities We Serve</p>
               </CardHeader>
               <CardContent>
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">

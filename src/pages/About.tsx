@@ -171,12 +171,12 @@ const About = () => {
               </div>
             </div>
             <div className="bg-hero-bg p-6 sm:p-8 rounded-lg text-hero-foreground">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center">Why Choose TowDaddy?</h3>
+              <p className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center">Why Choose TowDaddy?</p>
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex items-start space-x-3 sm:space-x-4">
                   <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-tow-red mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold mb-2 text-sm sm:text-base">Flatbed Only Policy</h4>
+                    <p className="font-semibold mb-2 text-sm sm:text-base">Flatbed Only Policy</p>
                     <p className="text-hero-foreground/80 text-xs sm:text-sm leading-relaxed">
                       We never use hooks or chains. Every vehicle is safely loaded onto our flatbed trucks.
                     </p>
@@ -185,7 +185,7 @@ const About = () => {
                 <div className="flex items-start space-x-3 sm:space-x-4">
                   <Clock className="h-6 w-6 sm:h-8 sm:w-8 text-tow-red mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold mb-2 text-sm sm:text-base">True 24/7 Service</h4>
+                    <p className="font-semibold mb-2 text-sm sm:text-base">True 24/7 Service</p>
                     <p className="text-hero-foreground/80 text-xs sm:text-sm leading-relaxed">
                       Real people answer our phones around the clock, every day of the year.
                     </p>
@@ -194,7 +194,7 @@ const About = () => {
                 <div className="flex items-start space-x-3 sm:space-x-4">
                   <Award className="h-6 w-6 sm:h-8 sm:w-8 text-tow-red mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold mb-2 text-sm sm:text-base">Trained Professionals</h4>
+                    <p className="font-semibold mb-2 text-sm sm:text-base">Trained Professionals</p>
                     <p className="text-hero-foreground/80 text-xs sm:text-sm leading-relaxed">
                       All operators are certified and undergo continuous training on safety protocols.
                     </p>
@@ -222,12 +222,12 @@ const About = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {values.map((value, index) => (
               <Card key={index} className="p-4 sm:p-6 text-center bg-service-card border-service-border">
-                <div className="flex justify-center mb-3 sm:mb-4">
+              <div className="flex justify-center mb-3 sm:mb-4">
                   {value.icon}
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4">
+                <p className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4">
                   {value.title}
-                </h3>
+                </p>
                 <p className="text-muted-foreground text-sm sm:text-base">
                   {value.description}
                 </p>

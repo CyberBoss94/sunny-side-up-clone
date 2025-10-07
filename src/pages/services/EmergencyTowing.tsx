@@ -112,9 +112,9 @@ const EmergencyTowing = () => {
           <section className="py-12 sm:py-16 lg:py-20 bg-background">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16">
-                <div>
+              <div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 sm:mb-6">
-                    Professional Emergency Towing
+                    Professional Emergency Towing Services Ontario
                   </h2>
                   <p className="text-base sm:text-lg text-muted-foreground mb-6">
                     When your vehicle breaks down unexpectedly, every minute counts. Our emergency towing service 
@@ -140,9 +140,9 @@ const EmergencyTowing = () => {
 
                 <div>
                   <Card className="p-6 sm:p-8 bg-service-card border-service-border">
-                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">
+                    <p className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">
                       Service Features
-                    </h3>
+                    </p>
                     <div className="space-y-3 sm:space-y-4">
                       {features.map((feature, index) => (
                         <div key={index} className="flex items-start">
@@ -160,17 +160,17 @@ const EmergencyTowing = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-center">
                   <div>
                     <Clock className="h-10 w-10 sm:h-12 sm:w-12 text-tow-red mx-auto mb-3 sm:mb-4" />
-                    <h3 className="text-lg sm:text-xl font-bold mb-2">Fast Response</h3>
+                    <p className="text-lg sm:text-xl font-bold mb-2">Fast Response</p>
                     <p className="text-hero-foreground/80 text-sm sm:text-base">Average arrival time under 30 minutes</p>
                   </div>
                   <div>
                     <Shield className="h-10 w-10 sm:h-12 sm:w-12 text-tow-red mx-auto mb-3 sm:mb-4" />
-                    <h3 className="text-lg sm:text-xl font-bold mb-2">Fully Licensed</h3>
+                    <p className="text-lg sm:text-xl font-bold mb-2">Fully Licensed</p>
                     <p className="text-hero-foreground/80 text-sm sm:text-base">Licensed, insured, and bonded professionals</p>
                   </div>
                   <div>
                     <MapPin className="h-10 w-10 sm:h-12 sm:w-12 text-tow-red mx-auto mb-3 sm:mb-4" />
-                    <h3 className="text-lg sm:text-xl font-bold mb-2">Ontario Wide</h3>
+                    <p className="text-lg sm:text-xl font-bold mb-2">Ontario Wide</p>
                     <p className="text-hero-foreground/80 text-sm sm:text-base">Serving all major cities and remote areas</p>
                   </div>
                 </div>

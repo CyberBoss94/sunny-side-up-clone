@@ -79,11 +79,11 @@ const ServicesSection = () => {
             OUR SERVICES
           </p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
-            24/7 Rapid Response with GPS Tracking
+            Ontario Roadside Assistance & Towing Services
           </h2>
-          <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3 sm:mb-4">
-            ONTARIO ROADSIDE ASSISTANCE
-          </h3>
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3 sm:mb-4">
+            24/7 Rapid Response with GPS Tracking
+          </p>
           <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4">
             Professional towing and roadside assistance services available 24/7 across Ontario. 
             View detailed <Link to="/pricing" className="text-tow-red hover:underline font-medium">pricing information</Link> and 
@@ -108,9 +108,9 @@ const ServicesSection = () => {
 
               {/* Content */}
               <div className="p-4 sm:p-5 lg:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 leading-tight">
+                <p className="text-lg sm:text-xl font-bold text-gray-900 mb-2 leading-tight">
                   {service.title}
-                </h3>
+                </p>
                 <p className="text-gray-600 font-medium mb-3 sm:mb-4 text-sm sm:text-base">
                   {service.subtitle}
                 </p>

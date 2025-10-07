@@ -132,7 +132,7 @@ const RoadsideAssistance = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12 sm:mb-16">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 sm:mb-6">
-                  Complete Roadside Assistance Services
+                  Complete Roadside Assistance Services in Ontario
                 </h2>
                 <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
                   Our certified technicians are equipped to handle the most common roadside emergencies. 
@@ -154,9 +154,9 @@ const RoadsideAssistance = () => {
                   <Card key={index} className="p-6 sm:p-8 bg-service-card border-service-border hover:shadow-lg transition-shadow">
                     <div className="flex items-start mb-4">
                       {service.icon}
-                      <h3 className="text-xl sm:text-2xl font-bold text-foreground ml-3">
+                      <p className="text-xl sm:text-2xl font-bold text-foreground ml-3">
                         {service.title}
-                      </h3>
+                      </p>
                     </div>
                     <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                       {service.description}
@@ -190,9 +190,9 @@ const RoadsideAssistance = () => {
                 </div>
 
                 <Card className="p-6 sm:p-8 bg-service-card border-service-border">
-                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">
+                  <p className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">
                     Service Features
-                  </h3>
+                  </p>
                   <div className="space-y-3 sm:space-y-4">
                     {features.map((feature, index) => (
                       <div key={index} className="flex items-start">

@@ -64,7 +64,7 @@ const ProcessSection = () => {
                   <div className={`w-full ml-16 p-5 rounded-lg ${index % 2 === 0 ? 'bg-primary text-background' : 'bg-muted'}`}>
                     <div className="mb-2">
                       <p className={`text-sm font-bold ${index % 2 === 0 ? 'opacity-70' : 'text-primary'}`}>STEP {step.number}</p>
-                      <h3 className={`text-lg font-bold ${index % 2 === 0 ? 'text-background' : 'text-foreground'}`}>{step.title}</h3>
+                      <p className={`text-lg font-bold ${index % 2 === 0 ? 'text-background' : 'text-foreground'}`}>{step.title}</p>
                     </div>
                     <p className={`text-sm leading-relaxed ${index % 2 === 0 ? 'opacity-90' : 'text-muted-foreground'}`}>{step.description}</p>
                   </div>
@@ -102,9 +102,9 @@ const ProcessSection = () => {
                             </div>
                           </div>
                           <div className="pr-6 sm:pr-7 lg:pr-8 text-background">
-                            <h3 className="text-sm sm:text-base lg:text-lg font-bold mb-1 sm:mb-2">
+                            <p className="text-sm sm:text-base lg:text-lg font-bold mb-1 sm:mb-2">
                               {step.title}
-                            </h3>
+                            </p>
                             <p className="text-xs sm:text-sm leading-relaxed opacity-90">
                               {step.description}
                             </p>
@@ -148,9 +148,9 @@ const ProcessSection = () => {
                             </div>
                           </div>
                           <div className="pl-6 sm:pl-7 lg:pl-8">
-                            <h3 className="text-sm sm:text-base lg:text-lg font-bold text-foreground mb-1 sm:mb-2">
+                            <p className="text-sm sm:text-base lg:text-lg font-bold text-foreground mb-1 sm:mb-2">
                               {step.title}
-                            </h3>
+                            </p>
                             <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                               {step.description}
                             </p>
