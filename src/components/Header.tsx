@@ -18,7 +18,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-background border-b shadow-sm sticky top-0 z-50">
+    <header className="bg-background border-b shadow-sm sticky top-0 z-50" role="banner">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-3 md:py-4">
           {/* Logo */}
@@ -35,7 +35,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8" role="navigation" aria-label="Primary navigation">
             {navigationLinks.map((link) => (
               <Link
                 key={link.to}
@@ -60,7 +60,7 @@ const Header = () => {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[280px] sm:w-[350px]">
+            <SheetContent side="right" className="w-[280px] sm:w-[350px]" role="dialog" aria-label="Mobile navigation menu">
               <div className="flex flex-col h-full">
                 {/* Mobile Menu Header */}
                 <div className="flex items-center justify-between pb-6 border-b">
@@ -76,14 +76,14 @@ const Header = () => {
                     </div>
                   </div>
                   <SheetClose asChild>
-                    <Button variant="ghost" size="sm">
+                    <Button variant="ghost" size="sm" aria-label="Close menu">
                       <X className="h-4 w-4" />
                     </Button>
                   </SheetClose>
                 </div>
 
                 {/* Mobile Menu Navigation */}
-                <nav className="flex flex-col space-y-4 pt-6 flex-1">
+                <nav className="flex flex-col space-y-4 pt-6 flex-1" role="navigation" aria-label="Mobile navigation">
                   {navigationLinks.map((link) => (
                     <SheetClose asChild key={link.to}>
                       <Link

@@ -4,7 +4,7 @@ import { Truck, Clock, MapPin, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroTowing from "@/assets/hero-towing.jpg";
 const HeroSection = () => {
-  return <section className="relative bg-hero-bg text-hero-foreground min-h-screen flex items-center">
+  return <section className="relative bg-hero-bg text-hero-foreground min-h-screen flex items-center" aria-label="Hero introduction">
       {/* Background Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" style={{
       backgroundImage: `url(${heroTowing})`

@@ -5,11 +5,11 @@ import towDaddyLogo from "@/assets/towdaddy-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-hero-bg text-hero-foreground">
+    <footer className="bg-hero-bg text-hero-foreground" role="contentinfo">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
           {/* Company Info */}
-          <div className="sm:col-span-2 lg:col-span-1">
+          <div className="sm:col-span-2 lg:col-span-1" role="complementary" aria-label="Company information">
             <div className="flex items-center space-x-3 mb-4 sm:mb-6">
               <img 
                 src={towDaddyLogo} 
@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div>
+          <nav role="navigation" aria-label="Services navigation">
             <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Services</h4>
             <ul className="space-y-2">
               <li><Link to="/services" className="text-hero-foreground/80 hover:text-tow-red transition-colors text-sm sm:text-base">All Services</Link></li>
@@ -40,10 +40,10 @@ const Footer = () => {
               <li><Link to="/services#recovery" className="text-hero-foreground/80 hover:text-tow-red transition-colors text-sm sm:text-base">Vehicle Recovery</Link></li>
               <li><Link to="/pricing" className="text-hero-foreground/80 hover:text-tow-red transition-colors text-sm sm:text-base">Pricing</Link></li>
             </ul>
-          </div>
+          </nav>
 
           {/* Coverage */}
-          <div>
+          <nav role="navigation" aria-label="Company navigation">
             <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Company</h4>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-hero-foreground/80 hover:text-tow-red transition-colors text-sm sm:text-base">About Us</Link></li>
@@ -51,10 +51,10 @@ const Footer = () => {
               <li><Link to="/faq" className="text-hero-foreground/80 hover:text-tow-red transition-colors text-sm sm:text-base">FAQ</Link></li>
               <li><Link to="/coverage-areas" className="text-hero-foreground/80 hover:text-tow-red transition-colors text-sm sm:text-base">Coverage Areas</Link></li>
             </ul>
-          </div>
+          </nav>
 
           {/* Contact */}
-          <div>
+          <div role="complementary" aria-label="Contact information">
             <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Contact Info</h4>
             <div className="space-y-2 sm:space-y-3">
               <div className="flex items-center space-x-2">

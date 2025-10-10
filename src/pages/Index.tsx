@@ -47,7 +47,7 @@ const Index = () => {
         pageType="website"
         structuredData={structuredData}
       />
-      <main className="min-h-screen">
+      <main className="min-h-screen" role="main">
         <HeroSection />
         <ServicesSection />
         <ProcessSection />
