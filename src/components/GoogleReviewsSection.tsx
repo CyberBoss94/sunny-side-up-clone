@@ -169,6 +169,22 @@ const GoogleReviewsSection = () => {
           )}
         </div>
 
+        {/* Google Maps Embed */}
+        <div className="mb-10 flex justify-center">
+          <div className="w-full max-w-2xl rounded-lg overflow-hidden shadow-lg border border-border">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d740849.9065709277!2d-79.37839405!3d43.503484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6f36d1839a4e33b1%3A0xbf1b898cc3c64864!2sTowDaddy%20Inc.!5e0!3m2!1sen!2sca!4v1760468337221!5m2!1sen!2sca"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="TowDaddy Inc. Location"
+            />
+          </div>
+        </div>
+
         {/* Call to Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button size="lg" variant="towRed" className="gap-2" asChild>
