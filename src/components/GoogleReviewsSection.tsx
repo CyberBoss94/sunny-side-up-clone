@@ -1,40 +1,65 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Star, ExternalLink, MessageSquare } from "lucide-react";
+import { useEffect, useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+
+interface Review {
+  id: number;
+  author: string;
+  rating: number;
+  date: string;
+  text: string;
+  avatar: string;
+  photoUrl?: string;
+}
+
+interface GoogleReviewsData {
+  name: string;
+  rating: number;
+  totalReviews: number;
+  reviews: Review[];
+}
 
 const GoogleReviewsSection = () => {
   const googleBusinessUrl = "https://www.google.com/maps/place/?q=place_id:ChIJYeN7bRLJ1IkR0u7RQXHQe9o";
-  
-  // Sample reviews - these would ideally come from Google Places API
-  const reviews = [
-    {
-      id: 1,
-      author: "John Smith",
-      rating: 5,
-      date: "2 weeks ago",
-      text: "Excellent service! Quick response time and professional team. They handled my vehicle with care and got me back on the road fast.",
-      avatar: "JS"
-    },
-    {
-      id: 2,
-      author: "Sarah Johnson",
-      rating: 5,
-      date: "1 month ago",
-      text: "TowDaddy saved the day when I broke down on the highway. Available 24/7 and the flatbed service was top-notch. Highly recommend!",
-      avatar: "SJ"
-    },
-    {
-      id: 3,
-      author: "Mike Davis",
-      rating: 5,
-      date: "1 month ago",
-      text: "Professional and reliable towing service. Fair pricing and they arrived within the promised time. Will definitely use again if needed.",
-      avatar: "MD"
-    }
-  ];
+  const [reviewsData, setReviewsData] = useState<GoogleReviewsData>({
+    name: "TowDaddy Inc.",
+    rating: 4.9,
+    totalReviews: 127,
+    reviews: []
+  });
+  const [loading, setLoading] = useState(true);
 
-  const overallRating = 4.9;
-  const totalReviews = 127;
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        console.log('Fetching Google reviews...');
+        const { data, error } = await supabase.functions.invoke('fetch-google-reviews');
+        
+        if (error) {
+          console.error('Error fetching reviews:', error);
+          return;
+        }
+
+        if (data) {
+          console.log('Reviews data received:', data);
+          setReviewsData({
+            name: data.name || "TowDaddy Inc.",
+            rating: data.rating || 4.9,
+            totalReviews: data.totalReviews || 0,
+            reviews: data.reviews?.slice(0, 3) || [] // Show only first 3 reviews
+          });
+        }
+      } catch (err) {
+        console.error('Failed to fetch reviews:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchReviews();
+  }, []);
 
   return (
     <section className="py-20 bg-gradient-to-b from-background to-muted/30" role="complementary" aria-label="Customer reviews">
@@ -53,22 +78,26 @@ const GoogleReviewsSection = () => {
             <div className="flex items-center gap-2">
               <img 
                 src="/towdaddy-logo.png" 
-                alt="TowDaddy Inc." 
+                alt={reviewsData.name} 
                 className="h-12 w-12 rounded-full border-2 border-border"
               />
               <div className="text-left">
-                <p className="font-semibold">TowDaddy Inc.</p>
+                <p className="font-semibold">{reviewsData.name}</p>
                 <div className="flex items-center gap-1">
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (
                       <Star 
                         key={i} 
-                        className="h-4 w-4 fill-yellow-400 text-yellow-400" 
+                        className={`h-4 w-4 ${
+                          i < Math.floor(reviewsData.rating) 
+                            ? "fill-yellow-400 text-yellow-400" 
+                            : "fill-muted text-muted"
+                        }`}
                       />
                     ))}
                   </div>
-                  <span className="text-sm font-medium">{overallRating}</span>
-                  <span className="text-sm text-muted-foreground">({totalReviews} reviews)</span>
+                  <span className="text-sm font-medium">{reviewsData.rating.toFixed(1)}</span>
+                  <span className="text-sm text-muted-foreground">({reviewsData.totalReviews} reviews)</span>
                 </div>
               </div>
             </div>
@@ -77,32 +106,75 @@ const GoogleReviewsSection = () => {
 
         {/* Reviews Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-10">
-          {reviews.map((review) => (
-            <Card key={review.id} className="p-6 hover:shadow-lg transition-shadow">
-              <div className="flex items-start gap-3 mb-4">
-                <div className="h-10 w-10 rounded-full bg-tow-red text-white flex items-center justify-center font-semibold">
-                  {review.avatar}
+          {loading ? (
+            // Loading skeleton
+            [...Array(3)].map((_, i) => (
+              <Card key={i} className="p-6">
+                <div className="animate-pulse">
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="h-10 w-10 rounded-full bg-muted"></div>
+                    <div className="flex-1 space-y-2">
+                      <div className="h-4 bg-muted rounded w-1/2"></div>
+                      <div className="h-3 bg-muted rounded w-1/3"></div>
+                    </div>
+                  </div>
+                  <div className="flex gap-0.5 mb-3">
+                    {[...Array(5)].map((_, j) => (
+                      <div key={j} className="h-4 w-4 bg-muted rounded"></div>
+                    ))}
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-3 bg-muted rounded"></div>
+                    <div className="h-3 bg-muted rounded"></div>
+                    <div className="h-3 bg-muted rounded w-5/6"></div>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <p className="font-semibold">{review.author}</p>
-                  <p className="text-sm text-muted-foreground">{review.date}</p>
+              </Card>
+            ))
+          ) : reviewsData.reviews.length > 0 ? (
+            reviewsData.reviews.map((review) => (
+              <Card key={review.id} className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-3 mb-4">
+                  {review.photoUrl ? (
+                    <img 
+                      src={review.photoUrl} 
+                      alt={review.author}
+                      className="h-10 w-10 rounded-full object-cover"
+                    />
+                  ) : (
+                    <div className="h-10 w-10 rounded-full bg-tow-red text-white flex items-center justify-center font-semibold">
+                      {review.avatar}
+                    </div>
+                  )}
+                  <div className="flex-1">
+                    <p className="font-semibold">{review.author}</p>
+                    <p className="text-sm text-muted-foreground">{review.date}</p>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="flex gap-0.5 mb-3">
-                {[...Array(review.rating)].map((_, i) => (
-                  <Star 
-                    key={i} 
-                    className="h-4 w-4 fill-yellow-400 text-yellow-400" 
-                  />
-                ))}
-              </div>
-              
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {review.text}
-              </p>
-            </Card>
-          ))}
+                
+                <div className="flex gap-0.5 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star 
+                      key={i} 
+                      className={`h-4 w-4 ${
+                        i < review.rating 
+                          ? "fill-yellow-400 text-yellow-400" 
+                          : "fill-muted text-muted"
+                      }`}
+                    />
+                  ))}
+                </div>
+                
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {review.text}
+                </p>
+              </Card>
+            ))
+          ) : (
+            <div className="col-span-3 text-center text-muted-foreground">
+              No reviews available at the moment.
+            </div>
+          )}
         </div>
 
         {/* Call to Action Buttons */}
