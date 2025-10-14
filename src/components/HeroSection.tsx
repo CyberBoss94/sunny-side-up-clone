@@ -6,9 +6,13 @@ import heroTowing from "@/assets/hero-towing.jpg";
 const HeroSection = () => {
   return <section className="relative bg-hero-bg text-hero-foreground min-h-screen flex items-center" aria-label="Hero introduction">
       {/* Background Image */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" style={{
-      backgroundImage: `url(${heroTowing})`
-    }} />
+      <img 
+        src={heroTowing} 
+        alt="" 
+        className="absolute inset-0 w-full h-full object-cover opacity-40"
+        fetchPriority="high"
+        loading="eager"
+      />
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
