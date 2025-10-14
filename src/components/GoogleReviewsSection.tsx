@@ -1,8 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Star, ExternalLink, MessageSquare } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { supabase } from "@/integrations/supabase/client";
+
+declare global {
+  interface Window {
+    google: any;
+  }
+  const google: any;
+}
 interface Review {
   id: number;
   author: string;
@@ -27,6 +34,8 @@ const GoogleReviewsSection = () => {
     reviews: []
   });
   const [loading, setLoading] = useState(true);
+  const mapRef = useRef<HTMLDivElement>(null);
+  const mapInstanceRef = useRef<any>(null);
   useEffect(() => {
     const fetchReviews = async () => {
       try {
@@ -55,6 +64,96 @@ const GoogleReviewsSection = () => {
       }
     };
     fetchReviews();
+  }, []);
+
+  useEffect(() => {
+    const initMap = async () => {
+      if (!mapRef.current || mapInstanceRef.current) return;
+
+      try {
+        const { Map, InfoWindow } = await google.maps.importLibrary('maps') as any;
+        const { AdvancedMarkerElement } = await google.maps.importLibrary('marker') as any;
+        const { Place } = await google.maps.importLibrary('places') as any;
+
+        const centerCoordinates = { lat: 43.503484, lng: -79.378394 };
+        
+        const map = new Map(mapRef.current, {
+          center: centerCoordinates,
+          zoom: 14,
+          mapId: 'DEMO_MAP_ID', // Required for AdvancedMarkerElement
+        });
+
+        mapInstanceRef.current = map;
+
+        // Create Place instance
+        const place = new Place({
+          id: 'ChIJsTNOmoPRNm8RZEjGw4yJG78',
+        });
+
+        // Fetch place details
+        await place.fetchFields({
+          fields: ['displayName', 'formattedAddress', 'location', 'reviews', 'rating'],
+        });
+
+        // Create content string for InfoWindow
+        let contentString = '';
+        if (place.reviews && place.reviews.length > 0) {
+          const review = place.reviews[0];
+          const reviewRating = review.rating || 0;
+          const reviewText = review.text || '';
+          const authorName = review.authorAttribution?.displayName || 'Anonymous';
+          const authorUri = review.authorAttribution?.uri || '#';
+
+          contentString = `
+            <div style="font-family: Arial, sans-serif; max-width: 300px;">
+              <div style="font-weight: bold; font-size: 16px; margin-bottom: 8px;">${place.displayName}</div>
+              <div style="color: #666; margin-bottom: 8px;">${place.formattedAddress}</div>
+              <a href="${authorUri}" target="_blank" rel="noopener noreferrer" style="color: #1a73e8; text-decoration: none;">Author: ${authorName}</a>
+              <div style="margin-top: 8px;">Rating: ${reviewRating} stars</div>
+              <div style="margin-top: 8px;"><p>${reviewText}</p></div>
+            </div>
+          `;
+        } else {
+          contentString = `<div>No reviews were found for ${place.displayName}.</div>`;
+        }
+
+        // Create InfoWindow
+        const infoWindow = new InfoWindow({
+          content: contentString,
+          ariaLabel: place.displayName || 'TowDaddy Inc.',
+        });
+
+        // Add marker
+        const marker = new AdvancedMarkerElement({
+          map,
+          position: place.location,
+          title: place.displayName || 'TowDaddy Inc.',
+        });
+
+        // Show InfoWindow
+        infoWindow.open({
+          anchor: marker,
+          map,
+        });
+      } catch (error) {
+        console.error('Error initializing map:', error);
+      }
+    };
+
+    // Load Google Maps script
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places,marker&callback=Function.prototype`;
+    script.async = true;
+    script.defer = true;
+    script.onload = () => initMap();
+    document.head.appendChild(script);
+
+    return () => {
+      const existingScript = document.querySelector(`script[src*="maps.googleapis.com"]`);
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
+    };
   }, []);
   return <section className="py-20 bg-gradient-to-b from-background to-muted/30" role="complementary" aria-label="Customer reviews">
       <div className="container mx-auto px-4">
@@ -124,12 +223,10 @@ const GoogleReviewsSection = () => {
               </Card>) : <div className="col-span-3 text-center text-muted-foreground">No reviews available at the moment.</div>}
         </div>
 
-        {/* Google Maps Embed */}
+        {/* Google Maps with Reviews */}
         <div className="mb-10 flex justify-center">
           <div className="w-full max-w-2xl rounded-lg overflow-hidden shadow-lg border border-border">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d740849.9065709277!2d-79.37839405!3d43.503484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6f36d1839a4e33b1%3A0xbf1b898cc3c64864!2sTowDaddy%20Inc.!5e0!3m2!1sen!2sca!4v1760468337221!5m2!1sen!2sca" width="100%" height="400" style={{
-            border: 0
-          }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="TowDaddy Inc. Location" />
+            <div ref={mapRef} className="w-full h-[400px]" />
           </div>
         </div>
 
