@@ -3,11 +3,12 @@ import { Card } from "@/components/ui/card";
 import { Truck, Clock, MapPin, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroTowing from "@/assets/hero-towing.jpg";
+
 const HeroSection = () => {
   return <section className="relative bg-hero-bg text-hero-foreground min-h-screen flex items-center" aria-label="Hero introduction">
       {/* Background Image */}
       <img 
-        src="/assets/hero-towing-CmFVx7r-.jpg"
+        src={heroTowing}
         alt="" 
         className="absolute inset-0 w-full h-full object-cover opacity-40"
         fetchPriority="high"
