@@ -60,7 +60,7 @@ const GoogleReviewsSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl mb-4 font-bold text-slate-950 bg-teal-300 rounded-2xl shadow-xl py-[8px] my-[5px]">What Our Customers Say</h2>
+          <h2 className="md:text-4xl mb-4 font-bold bg-teal-300 rounded-2xl shadow-xl py-[8px] my-[5px] text-slate-950 text-xl">What Our Customers Say</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-6">
             Don't just take our word for it - see what our customers have to say about TowDaddy's service
           </p>
