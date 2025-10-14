@@ -67,6 +67,34 @@ const GoogleReviewsSection = () => {
   }, []);
 
   useEffect(() => {
+    const loadMapScript = async () => {
+      try {
+        // Fetch API key from edge function
+        const { data, error } = await supabase.functions.invoke('get-maps-api-key');
+        
+        if (error || !data?.apiKey) {
+          console.error('Failed to fetch Maps API key:', error);
+          return;
+        }
+
+        const apiKey = data.apiKey;
+
+        // Check if script already exists
+        const existingScript = document.querySelector(`script[src*="maps.googleapis.com"]`);
+        if (existingScript) return;
+
+        // Load Google Maps script
+        const script = document.createElement('script');
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places,marker&callback=Function.prototype`;
+        script.async = true;
+        script.defer = true;
+        script.onload = () => initMap();
+        document.head.appendChild(script);
+      } catch (err) {
+        console.error('Error loading Maps script:', err);
+      }
+    };
+
     const initMap = async () => {
       if (!mapRef.current || mapInstanceRef.current) return;
 
@@ -80,7 +108,7 @@ const GoogleReviewsSection = () => {
         const map = new Map(mapRef.current, {
           center: centerCoordinates,
           zoom: 14,
-          mapId: 'DEMO_MAP_ID', // Required for AdvancedMarkerElement
+          mapId: 'DEMO_MAP_ID',
         });
 
         mapInstanceRef.current = map;
@@ -140,13 +168,7 @@ const GoogleReviewsSection = () => {
       }
     };
 
-    // Load Google Maps script
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places,marker&callback=Function.prototype`;
-    script.async = true;
-    script.defer = true;
-    script.onload = () => initMap();
-    document.head.appendChild(script);
+    loadMapScript();
 
     return () => {
       const existingScript = document.querySelector(`script[src*="maps.googleapis.com"]`);
