@@ -133,7 +133,9 @@ const ServicesSection = () => {
                     <a href="tel:+16479497729" className="hover:text-tow-red transition-colors">Call Now</a>
                   </Button>
                   <Button variant="outline" size="sm" className="w-full text-xs sm:text-sm" asChild>
-                    <Link to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`}>Learn More</Link>
+                    <Link to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`}>
+                      Learn More About {service.title.charAt(0) + service.title.slice(1).toLowerCase()}
+                    </Link>
                   </Button>
                 </div>
               </div>
