@@ -22,7 +22,7 @@ interface GoogleReviewsData {
 }
 
 const GoogleReviewsSection = () => {
-  const googleBusinessUrl = "https://www.google.com/maps/place/?q=place_id:ChIJYeN7bRLJ1IkR0u7RQXHQe9o";
+  const googleBusinessUrl = "https://www.google.com/maps/place/?q=place_id:ChIJsTNOmoPRNm8RZEjGw4yJG78";
   const [reviewsData, setReviewsData] = useState<GoogleReviewsData>({
     name: "TowDaddy Inc.",
     rating: 4.9,
