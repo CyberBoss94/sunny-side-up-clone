@@ -7,7 +7,7 @@ const HeroSection = () => {
   return <section className="relative bg-hero-bg text-hero-foreground min-h-screen flex items-center" aria-label="Hero introduction">
       {/* Background Image */}
       <img 
-        src={heroTowing} 
+        src="/assets/hero-towing-CmFVx7r-.jpg"
         alt="" 
         className="absolute inset-0 w-full h-full object-cover opacity-40"
         fetchPriority="high"
