@@ -63,10 +63,10 @@ const ProcessSection = () => {
                   {/* Content Card */}
                   <div className={`w-full ml-16 p-5 rounded-lg ${index % 2 === 0 ? 'bg-primary text-background' : 'bg-muted'}`}>
                     <div className="mb-2">
-                      <p className={`text-sm font-bold ${index % 2 === 0 ? 'opacity-70' : 'text-primary'}`}>STEP {step.number}</p>
+                      <p className={`text-sm font-bold ${index % 2 === 0 ? 'text-background' : 'text-primary'}`}>STEP {step.number}</p>
                       <p className={`text-lg font-bold ${index % 2 === 0 ? 'text-background' : 'text-foreground'}`}>{step.title}</p>
                     </div>
-                    <p className={`text-sm leading-relaxed ${index % 2 === 0 ? 'opacity-90' : 'text-muted-foreground'}`}>{step.description}</p>
+                    <p className={`text-sm leading-relaxed ${index % 2 === 0 ? 'text-background' : 'text-muted-foreground'}`}>{step.description}</p>
                   </div>
                 </div>
               );
@@ -105,7 +105,7 @@ const ProcessSection = () => {
                             <p className="text-sm sm:text-base lg:text-lg font-bold mb-1 sm:mb-2">
                               {step.title}
                             </p>
-                            <p className="text-xs sm:text-sm leading-relaxed opacity-90">
+                            <p className="text-xs sm:text-sm leading-relaxed text-background">
                               {step.description}
                             </p>
                           </div>

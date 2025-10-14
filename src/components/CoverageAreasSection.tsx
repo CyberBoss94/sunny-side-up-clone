@@ -61,7 +61,7 @@ const CoverageAreasSection = () => {
                   <Phone className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                   <a href="tel:+16479497729" className="hover:text-tow-red transition-colors">Emergency: (647) 949-7729</a>
                 </Button>
-                <Button variant="outline" size="default" className="border-white/30 hover:border-white/50 text-sm w-full sm:w-auto text-teal-500 bg-neutral-50 sm:text-base">Book Request</Button>
+                <Button variant="outline" size="default" className="border-white/30 hover:border-white/50 text-sm w-full sm:w-auto text-teal-700 bg-neutral-50 sm:text-base">Book Request</Button>
               </div>
             </div>
 

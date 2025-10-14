@@ -17,14 +17,14 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 0 84% 48%;
+    --primary: 0 84% 42%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
-    --muted-foreground: 215 20% 55%;
+    --muted-foreground: 215 25% 40%;
 
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
@@ -39,8 +39,8 @@ All colors MUST be HSL.
     /* TowDaddy Design System */
     --hero-bg: 220 13% 9%;
     --hero-foreground: 0 0% 98%;
-    --tow-red: 0 84% 48%;
-    --tow-red-hover: 0 84% 40%;
+    --tow-red: 0 84% 42%;
+    --tow-red-hover: 0 84% 38%;
     --service-card: 0 0% 100%;
     --service-border: 214.3 31.8% 91.4%;
 
