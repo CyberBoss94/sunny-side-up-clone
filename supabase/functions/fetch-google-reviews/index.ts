@@ -35,31 +35,39 @@ Deno.serve(async (req) => {
 
     console.log('Fetching Google reviews for place:', placeId);
 
-    // Fetch place details including reviews
-    const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,rating,user_ratings_total,reviews&key=${apiKey}`;
+    // Use the newer Places API (New) format
+    const url = `https://places.googleapis.com/v1/places/${placeId}`;
     
-    const response = await fetch(url);
-    const data = await response.json() as GooglePlaceDetails;
+    const response = await fetch(url, {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Goog-Api-Key': apiKey,
+        'X-Goog-FieldMask': 'id,displayName,rating,userRatingCount,reviews.author,reviews.rating,reviews.relativePublishTimeDescription,reviews.text,reviews.authorAttribution.photoUri'
+      }
+    });
 
-    console.log('Google API response status:', data.status);
-
-    if (data.status !== 'OK') {
-      throw new Error(`Google API error: ${data.status}`);
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('Google API error response:', errorText);
+      throw new Error(`Google API error: ${response.status} - ${errorText}`);
     }
+
+    const data = await response.json();
+    console.log('Google API response received:', JSON.stringify(data, null, 2));
 
     // Transform the data to match our component's format
     const transformedData = {
-      name: data.result.name,
-      rating: data.result.rating,
-      totalReviews: data.result.user_ratings_total,
-      reviews: data.result.reviews?.map((review, index) => ({
+      name: data.displayName?.text || 'TowDaddy Inc.',
+      rating: data.rating || 0,
+      totalReviews: data.userRatingCount || 0,
+      reviews: data.reviews?.map((review: any, index: number) => ({
         id: index + 1,
-        author: review.author_name,
-        rating: review.rating,
-        date: review.relative_time_description,
-        text: review.text,
-        avatar: review.author_name.split(' ').map(n => n[0]).join('').toUpperCase(),
-        photoUrl: review.profile_photo_url,
+        author: review.authorAttribution?.displayName || 'Anonymous',
+        rating: review.rating || 0,
+        date: review.relativePublishTimeDescription || 'Recently',
+        text: review.text?.text || '',
+        avatar: (review.authorAttribution?.displayName || 'A').split(' ').map((n: string) => n[0]).join('').toUpperCase(),
+        photoUrl: review.authorAttribution?.photoUri || '',
       })) || [],
     };
 

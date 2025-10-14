@@ -48,7 +48,7 @@ const GoogleReviewsSection = () => {
             name: data.name || "TowDaddy Inc.",
             rating: data.rating || 4.9,
             totalReviews: data.totalReviews || 0,
-            reviews: data.reviews?.slice(0, 3) || [] // Show only first 3 reviews
+            reviews: data.reviews || [] // Show all reviews
           });
         }
       } catch (err) {
