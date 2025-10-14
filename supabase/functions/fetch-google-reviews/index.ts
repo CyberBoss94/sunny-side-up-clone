@@ -34,40 +34,48 @@ Deno.serve(async (req) => {
     }
 
     console.log('Fetching Google reviews for place:', placeId);
+    console.log('Using API key (first 10 chars):', apiKey.substring(0, 10) + '...');
 
-    // Use the newer Places API (New) format
-    const url = `https://places.googleapis.com/v1/places/${placeId}`;
+    // Use the standard Places API Details endpoint
+    const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,rating,user_ratings_total,reviews&key=${apiKey}`;
     
-    const response = await fetch(url, {
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Goog-Api-Key': apiKey,
-        'X-Goog-FieldMask': 'id,displayName,rating,userRatingCount,reviews.author,reviews.rating,reviews.relativePublishTimeDescription,reviews.text,reviews.authorAttribution.photoUri'
-      }
-    });
+    console.log('Making request to Google Places API...');
+    const response = await fetch(url);
+    const data = await response.json() as GooglePlaceDetails;
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('Google API error response:', errorText);
-      throw new Error(`Google API error: ${response.status} - ${errorText}`);
+    console.log('Google API response status:', data.status);
+    
+    if (data.status !== 'OK') {
+      console.error('Google API full response:', JSON.stringify(data, null, 2));
+      
+      // Provide helpful error messages
+      let errorMessage = `Google API error: ${data.status}`;
+      if (data.status === 'REQUEST_DENIED') {
+        errorMessage += ' - Check that the Places API is enabled in Google Cloud Console and billing is set up';
+      } else if (data.status === 'INVALID_REQUEST') {
+        errorMessage += ' - The place ID or request format may be invalid';
+      } else if (data.status === 'NOT_FOUND') {
+        errorMessage += ' - The place ID was not found. Please verify the Place ID is correct';
+      }
+      
+      throw new Error(errorMessage);
     }
 
-    const data = await response.json();
-    console.log('Google API response received:', JSON.stringify(data, null, 2));
+    console.log('Successfully received place data:', data.result.name);
 
     // Transform the data to match our component's format
     const transformedData = {
-      name: data.displayName?.text || 'TowDaddy Inc.',
-      rating: data.rating || 0,
-      totalReviews: data.userRatingCount || 0,
-      reviews: data.reviews?.map((review: any, index: number) => ({
+      name: data.result.name,
+      rating: data.result.rating,
+      totalReviews: data.result.user_ratings_total,
+      reviews: data.result.reviews?.map((review, index) => ({
         id: index + 1,
-        author: review.authorAttribution?.displayName || 'Anonymous',
-        rating: review.rating || 0,
-        date: review.relativePublishTimeDescription || 'Recently',
-        text: review.text?.text || '',
-        avatar: (review.authorAttribution?.displayName || 'A').split(' ').map((n: string) => n[0]).join('').toUpperCase(),
-        photoUrl: review.authorAttribution?.photoUri || '',
+        author: review.author_name,
+        rating: review.rating,
+        date: review.relative_time_description,
+        text: review.text,
+        avatar: review.author_name.split(' ').map(n => n[0]).join('').toUpperCase(),
+        photoUrl: review.profile_photo_url,
       })) || [],
     };
 
