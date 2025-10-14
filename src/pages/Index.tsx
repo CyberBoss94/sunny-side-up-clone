@@ -1,6 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
+import GoogleReviewsSection from "@/components/GoogleReviewsSection";
 import CoverageAreasSection from "@/components/CoverageAreasSection";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -51,6 +52,7 @@ const Index = () => {
         <HeroSection />
         <ServicesSection />
         <ProcessSection />
+        <GoogleReviewsSection />
         <CoverageAreasSection />
         <RelatedPages currentPage="/" />
         <Footer />
