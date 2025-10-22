@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import TrustBarSection from "@/components/TrustBarSection";
 import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
 import GoogleReviewsSection from "@/components/GoogleReviewsSection";
@@ -41,15 +42,16 @@ const Index = () => {
   return (
     <>
       <SEO 
-        title="TowDaddy - 24/7 Emergency Towing Toronto, Scarborough, Vaughan | Ontario Roadside Assistance"
-        description="Professional towing services in Toronto, Scarborough, Thornhill, and Vaughan. 24/7 emergency flatbed towing, roadside assistance, and vehicle recovery across Ontario. Licensed and insured."
-        keywords="Toronto towing, Scarborough towing, Thornhill towing, Vaughan towing, Ontario towing services, Toronto roadside assistance, emergency towing Toronto, flatbed towing Ontario"
+        title="TowDaddy - 24/7 Emergency Towing Toronto & GTA | Fast Flatbed Service"
+        description="Need towing in Toronto or the GTA? We're here 24/7 with flatbed trucks. Fast response. Safe transport. Serving Toronto, Scarborough, Vaughan, Hamilton. Call now for help!"
+        keywords="Toronto towing, Scarborough towing, Thornhill towing, Vaughan towing, Ontario towing services, Toronto roadside assistance, emergency towing Toronto, flatbed towing Ontario, GTA towing, Hamilton towing"
         canonicalUrl="https://towdaddy.ca/"
         pageType="website"
         structuredData={structuredData}
       />
       <main className="min-h-screen" role="main">
         <HeroSection />
+        <TrustBarSection />
         <ServicesSection />
         <ProcessSection />
         <GoogleReviewsSection />

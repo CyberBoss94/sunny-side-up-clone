@@ -19,13 +19,12 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="max-w-4xl">
           <h1 className="text-2xl mb-6 leading-tight font-bold lg:text-5xl mb:text-4xl ">
-            24/7 Towing Across Ontario
-            <span className="block text-tow-red">– TowDaddy</span>
+            Fast, Safe Towing Across Ontario
+            <span className="block text-tow-red">24/7 – TowDaddy</span>
           </h1>
           
           <p className="text-xl mb-8 text-hero-foreground/90 max-w-3xl md:text-2xl text-left">
-            Safe flatbed towing and emergency roadside help across Ontario — no hooks, just care. 
-            Serving you anywhere in the province.
+            We tow your vehicle safely with flatbed trucks. No hooks. No damage. Just fast help when you need it most.
           </p>
 
           {/* CTA Buttons */}
