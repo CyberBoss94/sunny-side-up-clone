@@ -15,9 +15,9 @@ const Ottawa = () => {
   return (
     <>
       <Helmet>
-        <title>Towing Service Ottawa | 24/7 Emergency Towing Ottawa | TowDaddy</title>
-        <meta name="description" content="Professional towing service in Ottawa and surrounding areas. 24/7 emergency towing, roadside assistance, and vehicle recovery. Fast response times." />
-        <meta name="keywords" content="towing Ottawa, emergency towing Ottawa, roadside assistance Ottawa, 24/7 towing Ottawa, Ottawa tow truck" />
+        <title>Towing Ottawa | 24/7 Emergency Towing & Roadside Help | TowDaddy Ontario</title>
+        <meta name="description" content="Need towing in Ottawa? We're here 24/7. Fast help. Safe towing. Call now for emergency towing or roadside assistance in Ottawa and area." />
+        <meta name="keywords" content="towing Ottawa, emergency towing Ottawa, roadside assistance Ottawa, 24/7 towing Ottawa, Ottawa tow truck, flatbed towing Ottawa" />
         <link rel="canonical" href="https://towdaddy.ca/coverage/ottawa" />
       </Helmet>
 
@@ -29,9 +29,9 @@ const Ottawa = () => {
           ]} />
           
           <div className="mt-8">
-            <h1 className="text-4xl font-bold mb-4">Towing Service Ottawa</h1>
+            <h1 className="text-4xl font-bold mb-4">Towing Ottawa</h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Reliable 24/7 towing and roadside assistance throughout Ottawa and the National Capital Region.
+              Need towing in Ottawa? We're here 24/7. Fast help. Safe towing across Ottawa and surrounding areas.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-12">

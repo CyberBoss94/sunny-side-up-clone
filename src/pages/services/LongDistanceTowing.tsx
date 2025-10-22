@@ -93,9 +93,9 @@ const LongDistanceTowing = () => {
   return (
     <>
       <SEO 
-        title="Long Distance Towing Service Toronto, Vaughan | Cross-Province Vehicle Transport Canada - TowDaddy"
-        description="Professional long distance towing from Toronto, Scarborough, Thornhill, Vaughan across Canada. Cross-province transport with GPS tracking, secure loading, and insurance coverage."
-        keywords="long distance towing Toronto, cross province towing Vaughan, vehicle transport Canada, long haul towing Ontario, inter-provincial towing Toronto"
+        title="Long Distance Towing Toronto & GTA | Move Your Car Across Ontario & Canada | TowDaddy"
+        description="Moving your car across Ontario or Canada? We tow it safe. GPS tracking. Door-to-door service. From $2.50/km. Call now!"
+        keywords="long distance towing Toronto GTA, cross province towing, vehicle transport Canada Ontario, long haul towing, inter-provincial towing Toronto"
         canonicalUrl="https://towdaddy.ca/services/long-distance-towing"
         pageType="service"
         structuredData={structuredData}

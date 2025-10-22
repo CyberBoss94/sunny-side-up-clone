@@ -15,9 +15,9 @@ const Toronto = () => {
   return (
     <>
       <Helmet>
-        <title>Towing Service Toronto & GTA | 24/7 Emergency Towing | TowDaddy</title>
-        <meta name="description" content="Fast, reliable towing service in Toronto and GTA. Available 24/7 for emergency towing, roadside assistance, and vehicle recovery. Serving all Toronto neighborhoods." />
-        <meta name="keywords" content="towing Toronto, GTA towing, emergency towing Toronto, roadside assistance Toronto, 24/7 towing Toronto" />
+        <title>Towing Toronto & GTA | 24/7 Emergency Help | TowDaddy Fast Response</title>
+        <meta name="description" content="Need towing in Toronto or the GTA? We're here 24/7. Fast help across all Toronto neighborhoods. Scarborough, Vaughan, North York, Etobicoke. Call now!" />
+        <meta name="keywords" content="towing Toronto GTA, emergency towing Toronto, roadside assistance Toronto Scarborough, 24/7 towing GTA, Vaughan North York towing" />
         <link rel="canonical" href="https://towdaddy.ca/coverage/toronto" />
       </Helmet>
 
@@ -29,25 +29,25 @@ const Toronto = () => {
           ]} />
           
           <div className="mt-8">
-            <h1 className="text-4xl font-bold mb-4">24/7 Towing Service Toronto & GTA - Fast Emergency Response</h1>
+            <h1 className="text-4xl font-bold mb-4">Towing Toronto & GTA</h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Professional{" "}
+              Need{" "}
               <Link to="/services/emergency-towing" className="text-tow-red hover:underline font-medium" title="24/7 emergency towing in Toronto">
                 emergency towing
               </Link>{" "}
-              and{" "}
+              or{" "}
               <Link to="/services/roadside-assistance" className="text-tow-red hover:underline font-medium" title="Toronto roadside assistance">
-                roadside assistance
+                roadside help
               </Link>{" "}
-              across Toronto and the Greater Toronto Area. Licensed flatbed towing available 24/7. We also provide{" "}
+              in Toronto or the GTA? We're here 24/7. Fast flatbed towing. We tow{" "}
               <Link to="/services/motorcycle-towing" className="text-tow-red hover:underline font-medium" title="Motorcycle towing in Toronto">
-                motorcycle towing
+                motorcycles
               </Link>{" "}
-              and{" "}
+              and do{" "}
               <Link to="/services/vehicle-recovery" className="text-tow-red hover:underline font-medium" title="Vehicle recovery services Toronto">
                 vehicle recovery
               </Link>{" "}
-              throughout the GTA.
+              too.
             </p>
 
             <h2 className="text-3xl font-bold mb-6 mt-12">Why Choose TowDaddy in Toronto?</h2>
@@ -114,7 +114,7 @@ const Toronto = () => {
               <Button asChild size="lg">
                 <Link to="/contact">
                   <Phone className="w-4 h-4 mr-2" />
-                  Call Now for Service
+                  Get Help Now
                 </Link>
               </Button>
             </div>

@@ -124,9 +124,9 @@ const CoverageAreas = () => {
   return (
     <>
       <SEO 
-        title="Coverage Areas - Toronto, Vaughan, Scarborough Towing Service | Ontario-Wide TowDaddy Coverage"
-        description="TowDaddy provides towing coverage across Toronto, Scarborough, Thornhill, Vaughan and all of Ontario. See our service areas, response times, and coverage map."
-        keywords="Ontario towing coverage, Toronto service areas, Vaughan towing response times, Scarborough towing, Thornhill roadside assistance, rural Ontario towing, coverage map"
+        title="Coverage Areas Toronto & GTA | Where We Tow in Ontario | TowDaddy Service Map"
+        description="We tow across Toronto, the GTA, and all Ontario. See our service areas and response times. From downtown Toronto to rural Ontario. We're there."
+        keywords="towing coverage Toronto GTA, service areas Toronto Vaughan, response times Scarborough, Ontario towing map, Toronto roadside assistance, GTA coverage towing"
         canonicalUrl="https://towdaddy.ca/coverage-areas"
         pageType="website"
         structuredData={structuredData}
@@ -142,22 +142,22 @@ const CoverageAreas = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-              Ontario-Wide Coverage
-              <span className="block text-tow-red">From City to Remote Areas</span>
+              We Tow Across Ontario
+              <span className="block text-tow-red">Toronto, GTA & Beyond</span>
             </h1>
             <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90">
-              TowDaddy provides comprehensive towing and roadside assistance across all of Ontario. 
-              From bustling city centers to remote rural communities, we're there when you need us.
-              Explore our <Link to="/services" className="text-tow-red hover:underline">complete range of towing services</Link>, 
-              view our <Link to="/pricing" className="text-tow-red hover:underline">transparent pricing structure</Link>, or 
-              learn more <Link to="/about" className="text-tow-red hover:underline">about our professional team</Link>.
+              Need towing in Toronto? Scarborough? Vaughan? We're there. 
+              From downtown to rural roads, we tow across all Ontario.
+              See our <Link to="/services" className="text-tow-red hover:underline">services</Link>, 
+              view our <Link to="/pricing" className="text-tow-red hover:underline">prices</Link>, or 
+              learn <Link to="/about" className="text-tow-red hover:underline">about us</Link>.
             </p>
-            <Button variant="towRed" size="lg" className="text-sm sm:text-base" asChild>
-              <a href="tel:+16479497729">
-                <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                Emergency: (647) 949-7729
-              </a>
-            </Button>
+              <Button variant="towRed" size="lg" className="text-sm sm:text-base" asChild>
+                <a href="tel:+16479497729">
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                  Get Help Now: (647) 949-7729
+                </a>
+              </Button>
           </div>
         </div>
       </section>
@@ -299,7 +299,7 @@ const CoverageAreas = () => {
               <Button variant="towRed" size="lg" className="text-sm sm:text-base" asChild>
                 <a href="tel:+16479497729">
                   <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                  Call Now: (647) 949-7729
+                  Get Help Now: (647) 949-7729
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="bg-background/10 border-hero-foreground/30 text-hero-foreground hover:bg-background/20 text-sm sm:text-base">

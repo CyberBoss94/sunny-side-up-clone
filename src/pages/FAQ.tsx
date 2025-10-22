@@ -174,9 +174,9 @@ const FAQ = () => {
   return (
     <>
       <SEO 
-        title="Towing FAQ Toronto, Vaughan, Scarborough - Frequently Asked Questions | TowDaddy Ontario"
-        description="Get answers to common towing questions in Toronto, Scarborough, Thornhill, Vaughan and Ontario. Learn about our services, pricing, coverage areas, and response times."
-        keywords="towing FAQ Toronto, towing questions Vaughan, emergency towing help Scarborough, roadside assistance questions Thornhill, Ontario towing info"
+        title="Towing FAQ Toronto & GTA | Quick Answers About Towing Services | TowDaddy"
+        description="Got towing questions? Get fast answers about prices, response times, and services in Toronto and the GTA. Learn what we do and how we help."
+        keywords="towing FAQ Toronto GTA, towing questions Toronto, emergency towing help, roadside assistance questions, Ontario towing info, towing answers"
         canonicalUrl="https://towdaddy.ca/faq"
         pageType="website"
         structuredData={structuredData}
@@ -193,20 +193,17 @@ const FAQ = () => {
           <div className="max-w-4xl mx-auto text-center">
             <HelpCircle className="h-16 w-16 text-tow-red mx-auto mb-6" />
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Frequently Asked Questions
-              <span className="block text-tow-red">Get Answers Fast</span>
+              Towing Questions?
+              <span className="block text-tow-red">Get Fast Answers</span>
             </h1>
             <p className="text-xl mb-8 text-hero-foreground/90">
-              Find answers to common questions about our professional towing services, 
-              transparent pricing, and company policies. 
-              Need immediate help? Contact us directly or 
-              view our Ontario service areas. 
-              Can't find what you're looking for? Call us anytime.
+              Find quick answers about our towing services, prices, and coverage in Toronto and the GTA.
+              Need help now? Call us. Want to know more? Keep reading.
             </p>
             <Button variant="towRed" size="lg" asChild>
               <a href="tel:+16479497729">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Us: (647) 949-7729
+                Get Help Now: (647) 949-7729
               </a>
             </Button>
           </div>
@@ -360,9 +357,11 @@ const FAQ = () => {
             </div>
           </div>
 
-          <Button variant="towRed" size="lg">
-            <Phone className="w-5 h-5 mr-2" />
-            Contact Us Now
+          <Button variant="towRed" size="lg" asChild>
+            <a href="tel:+16479497729">
+              <Phone className="w-5 h-5 mr-2" />
+              Get Help Now
+            </a>
           </Button>
         </div>
         </section>

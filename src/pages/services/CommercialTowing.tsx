@@ -19,9 +19,9 @@ const CommercialTowing = () => {
   return (
     <>
       <Helmet>
-        <title>Commercial Towing Services Ontario | TowDaddy Fleet Solutions</title>
-        <meta name="description" content="Professional commercial towing services for businesses in Ontario. Fleet support, heavy-duty towing, and priority service for commercial vehicles. Available 24/7." />
-        <meta name="keywords" content="commercial towing, fleet towing, business towing, heavy duty towing, Ontario commercial towing" />
+        <title>Commercial Towing Toronto & Ontario | Business Fleet Towing | TowDaddy 24/7</title>
+        <meta name="description" content="Business towing in Toronto and Ontario. Fleet support. Priority service. Heavy-duty trucks. Keep your business moving. Call now!" />
+        <meta name="keywords" content="commercial towing Toronto Ontario, fleet towing, business towing GTA, heavy duty towing, Ontario commercial towing, fleet management" />
         <link rel="canonical" href="https://towdaddy.ca/services/commercial-towing" />
       </Helmet>
 
@@ -34,19 +34,18 @@ const CommercialTowing = () => {
           
           <div className="mt-8 grid gap-8 lg:grid-cols-2 items-start">
             <div>
-              <h1 className="text-4xl font-bold mb-4">Commercial Towing Services</h1>
+              <h1 className="text-4xl font-bold mb-4">Business Towing Toronto & Ontario</h1>
               <p className="text-xl text-muted-foreground mb-6">
-                Professional fleet and commercial vehicle towing solutions for businesses across{" "}
-                <Link to="/coverage-areas" className="text-tow-red hover:underline font-medium" title="Ontario commercial towing coverage">
-                  Ontario
-                </Link>. From{" "}
+                We help businesses in{" "}
                 <Link to="/coverage/toronto" className="text-tow-red hover:underline font-medium" title="Toronto fleet towing">
                   Toronto
-                </Link>{" "}
-                to{" "}
+                </Link>,{" "}
                 <Link to="/coverage/hamilton" className="text-tow-red hover:underline font-medium" title="Hamilton commercial towing">
                   Hamilton
-                </Link>, we provide priority service for commercial clients.
+                </Link>, and across{" "}
+                <Link to="/coverage-areas" className="text-tow-red hover:underline font-medium" title="Ontario commercial towing coverage">
+                  Ontario
+                </Link>. Fleet towing. Priority service. Business accounts.
               </p>
               
               <div className="space-y-4 mb-8">
@@ -76,7 +75,7 @@ const CommercialTowing = () => {
               <Button asChild size="lg" className="w-full sm:w-auto">
                 <Link to="/contact">
                   <Phone className="w-4 h-4 mr-2" />
-                  Request Commercial Service
+                  Get Help Now
                 </Link>
               </Button>
             </div>

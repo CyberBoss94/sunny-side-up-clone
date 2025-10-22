@@ -65,9 +65,9 @@ const EmergencyTowing = () => {
   return (
     <>
       <SEO 
-        title="24/7 Emergency Towing Service Toronto, Vaughan, Scarborough | Fast Response Ontario - TowDaddy"
-        description="Professional emergency towing service available 24/7 in Toronto, Scarborough, Thornhill, Vaughan and across Ontario. GPS tracking, rapid response, licensed operators. Starting at $95."
-        keywords="emergency towing Toronto, 24/7 towing service Vaughan, fast towing Scarborough, roadside emergency Thornhill, flatbed towing Ontario, tow truck near me Toronto"
+        title="Emergency Towing Toronto & GTA | 24/7 Fast Help | TowDaddy From $95"
+        description="Stuck on the road in Toronto or the GTA? We're here 24/7. Fast towing. GPS tracking. Licensed pros. Call now! From $95."
+        keywords="emergency towing Toronto GTA, 24/7 towing Toronto Vaughan, fast towing Scarborough, roadside emergency Toronto, flatbed towing GTA, tow truck near me Toronto"
         canonicalUrl="https://towdaddy.ca/services/emergency-towing"
         pageType="service"
         structuredData={structuredData}
@@ -86,18 +86,18 @@ const EmergencyTowing = () => {
               <div className="max-w-4xl mx-auto text-center">
                 <Truck className="h-16 w-16 text-tow-red mx-auto mb-6" />
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                  24/7 Emergency Towing
-                  <span className="block text-tow-red">Swift Assistance When You Need It</span>
+                  Emergency Towing Toronto & GTA
+                  <span className="block text-tow-red">We're Here 24/7</span>
                 </h1>
                 <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90">
-                  Stranded on the road? Our emergency towing service operates around the clock with GPS tracking 
-                  and rapid response times. Professional, licensed operators across Ontario.
+                  Stuck? Broke down? Had an accident? We're here. Call now. 
+                  We track your tow with GPS. We get there fast. We're licensed pros.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                   <Button variant="towRed" size="lg" className="text-sm sm:text-base" asChild>
                     <a href="tel:+16479497729">
                       <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                      Emergency: (647) 949-7729
+                      Get Help Now: (647) 949-7729
                     </a>
                   </Button>
                   <Button variant="outline" size="lg" asChild className="bg-background/10 border-hero-foreground/30 text-hero-foreground hover:bg-background/20 text-sm sm:text-base">

@@ -73,9 +73,9 @@ const About = () => {
   return (
     <>
       <SEO 
-        title="About TowDaddy - Professional Towing Service Toronto, Vaughan, Scarborough | 15+ Years Ontario"
-        description="Learn about TowDaddy's 15+ years serving Toronto, Scarborough, Thornhill, and Vaughan. Licensed, insured towing company committed to safety-first flatbed towing and roadside assistance."
-        keywords="about TowDaddy, professional towing company Toronto, licensed towing service Ontario, Toronto towing experience, flatbed towing specialists Vaughan, Scarborough towing"
+        title="About TowDaddy - Toronto's Trusted Towing Company | 15+ Years Serving GTA & Ontario"
+        description="Meet TowDaddy. 15+ years helping drivers in Toronto, GTA, and Ontario. Safe flatbed towing, 24/7 help, licensed pros. We treat your car like our own."
+        keywords="about TowDaddy, Toronto towing company, GTA towing service, professional towing Toronto, licensed towing Ontario, flatbed towing specialists, Scarborough Vaughan towing"
         canonicalUrl="https://towdaddy.ca/about"
         pageType="website"
         structuredData={structuredData}
@@ -92,18 +92,18 @@ const About = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
               About TowDaddy
-              <span className="block text-tow-red">Ontario's Trusted Towing Service</span>
+              <span className="block text-tow-red">Toronto & GTA's Trusted Towing Team</span>
             </h1>
               <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90 max-w-3xl mx-auto leading-relaxed">
-                Founded on the principles of safety, reliability, and customer care, TowDaddy has been Ontario's 
-                premier towing service provider for over 15 years, helping thousands of motorists get back on the road.
-                Explore our <Link to="/services" className="text-tow-red hover:underline">complete service offerings</Link> and 
-                see our <Link to="/coverage-areas" className="text-tow-red hover:underline">province-wide coverage areas</Link>.
+                We started TowDaddy to help drivers. For 15+ years, we've towed thousands of cars across Toronto, the GTA, and Ontario.
+                We use safe flatbed trucks. No hooks. No damage. Just help when you need it.
+                See our <Link to="/services" className="text-tow-red hover:underline">towing services</Link> and 
+                <Link to="/coverage-areas" className="text-tow-red hover:underline">coverage areas</Link>.
               </p>
             <Button variant="towRed" size="lg" className="text-sm sm:text-base" asChild>
               <a href="tel:+16479497729">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                Call Us: (647) 949-7729
+                Get Help Now: (647) 949-7729
               </a>
             </Button>
           </div>
@@ -137,19 +137,17 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 sm:mb-6">
-                Our Story
+                How TowDaddy Started
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                TowDaddy was founded with a simple mission: to provide the safest, most reliable towing 
-                service across Ontario. What started as a small family operation has grown into the 
-                province's most trusted name in emergency roadside assistance.
+                We started small. One family. One goal: help Toronto drivers safely.
+                No hooks. No damage. Just care.
               </p>
               <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                We've built our reputation on three core principles: using only flatbed towing (no hooks), 
-                maintaining 24/7 availability, and treating every customer's vehicle as if it were our own.
-                View our complete <Link to="/services" className="text-tow-red hover:underline">range of towing services</Link>, 
-                review our transparent <Link to="/pricing" className="text-tow-red hover:underline">pricing structure</Link>, or 
-                <Link to="/contact" className="text-tow-red hover:underline">contact us directly</Link> for immediate assistance.
+                Now we're Toronto's trusted towing team. We work 24/7. We use flatbed trucks only. We treat your car right.
+                See our <Link to="/services" className="text-tow-red hover:underline">towing services</Link>, 
+                check our <Link to="/pricing" className="text-tow-red hover:underline">fair prices</Link>, or 
+                <Link to="/contact" className="text-tow-red hover:underline">call us now</Link> for help.
               </p>
               <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-center">
@@ -253,7 +251,7 @@ const About = () => {
             <Button variant="towRed" size="lg" className="text-sm sm:text-base" asChild>
               <a href="tel:+16479497729">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                Call Now: (647) 949-7729
+                Get Help Now: (647) 949-7729
               </a>
             </Button>
             <Button variant="outline" size="lg" className="bg-background/10 border-hero-foreground/30 text-hero-foreground hover:bg-background/20 text-sm sm:text-base">

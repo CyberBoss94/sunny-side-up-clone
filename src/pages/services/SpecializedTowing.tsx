@@ -19,9 +19,9 @@ const SpecializedTowing = () => {
   return (
     <>
       <Helmet>
-        <title>Specialized Vehicle Towing Ontario | Luxury & Classic Car Transport</title>
-        <meta name="description" content="Expert specialized towing for luxury, exotic, classic, and modified vehicles in Ontario. Professional care for your special vehicles. Call TowDaddy 24/7." />
-        <meta name="keywords" content="specialized towing, luxury car towing, exotic vehicle towing, classic car transport, Ontario specialized towing" />
+        <title>Specialized Towing Toronto & Ontario | Luxury, Classic, Exotic Car Transport | TowDaddy</title>
+        <meta name="description" content="Towing for luxury, classic, and exotic cars in Toronto and Ontario. Expert care. Special equipment. Your valuable car is safe with us. Call now!" />
+        <meta name="keywords" content="specialized towing Toronto, luxury car towing GTA, exotic vehicle towing Ontario, classic car transport, modified vehicle towing" />
         <link rel="canonical" href="https://towdaddy.ca/services/specialized-towing" />
       </Helmet>
 
@@ -34,20 +34,20 @@ const SpecializedTowing = () => {
           
           <div className="mt-8 grid gap-8 lg:grid-cols-2 items-start">
             <div>
-              <h1 className="text-4xl font-bold mb-4">Specialized Vehicle Towing</h1>
+              <h1 className="text-4xl font-bold mb-4">Luxury & Classic Car Towing</h1>
               <p className="text-xl text-muted-foreground mb-6">
-                Expert care and handling for luxury, exotic, classic, and specialty vehicles across{" "}
+                Got a luxury car? Classic car? Exotic car? We tow it right.
+                Special care across{" "}
                 <Link to="/coverage-areas" className="text-tow-red hover:underline font-medium" title="Ontario specialized towing coverage">
                   Ontario
-                </Link>. Professional{" "}
+                </Link>. We use{" "}
                 <Link to="/services/emergency-towing" className="text-tow-red hover:underline font-medium" title="Flatbed towing for luxury vehicles">
                   flatbed towing
                 </Link>{" "}
-                with extra precautions for your valuable vehicles. Also offering{" "}
+                with extra protection. We also offer{" "}
                 <Link to="/services/long-distance-towing" className="text-tow-red hover:underline font-medium" title="Long distance exotic vehicle transport">
                   long distance transport
-                </Link>{" "}
-                for collector vehicles.
+                </Link>.
               </p>
               
               <div className="space-y-4 mb-8">
@@ -77,7 +77,7 @@ const SpecializedTowing = () => {
               <Button asChild size="lg" className="w-full sm:w-auto">
                 <Link to="/contact">
                   <Phone className="w-4 h-4 mr-2" />
-                  Request Specialized Service
+                  Get Help Now
                 </Link>
               </Button>
             </div>

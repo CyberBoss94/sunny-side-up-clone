@@ -131,9 +131,9 @@ const Pricing = () => {
   return (
     <>
       <SEO 
-        title="Towing Pricing Toronto, Vaughan, Scarborough - Transparent Rates | No Hidden Fees Ontario"
-        description="View transparent towing prices for Toronto, Scarborough, Thornhill, Vaughan and Ontario. Emergency roadside from $75, local towing from $95. No hidden fees, fair pricing."
-        keywords="towing prices Toronto, towing rates Vaughan, emergency roadside pricing Scarborough, transparent towing costs Ontario, no hidden fees Toronto towing"
+        title="Towing Prices Toronto & GTA | Fair Rates, No Hidden Fees | TowDaddy Ontario"
+        description="See our towing prices for Toronto and the GTA. Roadside help from $75. Towing from $95. No hidden fees. Fair pricing. Call for a quote!"
+        keywords="towing prices Toronto GTA, towing rates Toronto Vaughan, roadside pricing Scarborough, towing costs Ontario, no hidden fees Toronto towing, fair towing rates GTA"
         canonicalUrl="https://towdaddy.ca/pricing"
         pageType="website"
         structuredData={structuredData}
@@ -149,15 +149,15 @@ const Pricing = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-              Transparent Pricing
+              Fair Towing Prices
               <span className="block text-tow-red">No Hidden Fees</span>
             </h1>
             <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90">
-              Fair, upfront pricing for all towing and roadside assistance services. 
-              Know what you'll pay before we arrive - no surprises, no hidden charges.
-              View our <Link to="/services" className="text-tow-red hover:underline">complete towing services</Link>, 
-              check our <Link to="/coverage-areas" className="text-tow-red hover:underline">Ontario coverage areas</Link>, or 
-              learn <Link to="/about" className="text-tow-red hover:underline">about our professional team</Link>.
+              See what you'll pay before we tow. Fair prices. No surprises. No tricks.
+              Roadside help starts at $75. Towing starts at $95.
+              See our <Link to="/services" className="text-tow-red hover:underline">services</Link>, 
+              check our <Link to="/coverage-areas" className="text-tow-red hover:underline">areas</Link>, or 
+              learn <Link to="/about" className="text-tow-red hover:underline">about us</Link>.
             </p>
             <Button variant="towRed" size="lg" className="text-sm sm:text-base" asChild>
               <a href="tel:+16479497729">

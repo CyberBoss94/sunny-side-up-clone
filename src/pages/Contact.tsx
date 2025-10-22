@@ -100,9 +100,9 @@ const Contact = () => {
   return (
     <>
       <SEO 
-        title="Contact TowDaddy - 24/7 Emergency Towing Toronto, Vaughan, Scarborough | Get Quote & Assistance"
-        description="Contact TowDaddy for 24/7 emergency towing in Toronto, Scarborough, Thornhill, Vaughan and across Ontario. Call (647) 949-7729 for immediate assistance or request a quote."
-        keywords="contact TowDaddy, emergency towing phone Toronto, towing quote Vaughan, roadside assistance contact Scarborough, 24/7 towing Ontario, Toronto towing service"
+        title="Contact TowDaddy Toronto - Get Help Now | 24/7 Emergency Towing GTA & Ontario"
+        description="Need towing in Toronto or the GTA? Call (647) 949-7729 now for help. We're here 24/7. Fast response. Get a quote or emergency assistance."
+        keywords="contact TowDaddy Toronto, emergency towing phone GTA, towing quote Toronto Vaughan, roadside assistance Scarborough, 24/7 towing Ontario, call tow truck Toronto"
         canonicalUrl="https://towdaddy.ca/contact"
         pageType="website"
         structuredData={structuredData}
@@ -118,15 +118,15 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Get In Touch
-              <span className="block text-tow-red">We're Here to Help</span>
+              Contact TowDaddy
+              <span className="block text-tow-red">We're Ready to Help</span>
             </h1>
             <p className="text-xl mb-8 text-hero-foreground/90">
-              Need immediate roadside assistance? Have questions about our <Link to="/services" className="text-tow-red hover:underline">professional towing services</Link>? 
-              Check our <Link to="/faq" className="text-tow-red hover:underline">FAQ page</Link> for quick answers, 
-              review our <Link to="/pricing" className="text-tow-red hover:underline">transparent pricing</Link>, or 
-              view our <Link to="/coverage-areas" className="text-tow-red hover:underline">Ontario service areas</Link>. 
-              Our professional team is available 24/7 to provide support when you need it most.
+              Stuck on the road? Need a tow in Toronto or the GTA? Call us now.
+              Check our <Link to="/faq" className="text-tow-red hover:underline">FAQ</Link> for quick answers, 
+              see our <Link to="/pricing" className="text-tow-red hover:underline">prices</Link>, or 
+              view our <Link to="/coverage-areas" className="text-tow-red hover:underline">service areas</Link>. 
+              We're here 24/7.
             </p>
             
             {/* Emergency CTA */}
@@ -139,7 +139,7 @@ const Contact = () => {
               <Button variant="towRed" size="lg" className="text-lg px-8" asChild>
                 <a href="tel:+16479497729">
                   <Phone className="w-6 h-6 mr-2" />
-                  Call NOW
+                  Get Help Now
                 </a>
               </Button>
             </div>

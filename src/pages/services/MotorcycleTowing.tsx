@@ -93,9 +93,9 @@ const MotorcycleTowing = () => {
   return (
     <>
       <SEO 
-        title="Professional Motorcycle Towing Toronto, Vaughan, Scarborough | Specialized Bike Transport Ontario"
-        description="Expert motorcycle towing service in Toronto, Scarborough, Thornhill, Vaughan and across Ontario. Specialized trailers, secure tie-downs, damage prevention for all bike types."
-        keywords="motorcycle towing Toronto, bike towing Vaughan, motorcycle transport Scarborough, sport bike towing Thornhill, cruiser towing Ontario, motorcycle breakdown Toronto"
+        title="Motorcycle Towing Toronto & GTA | Safe Bike Transport | TowDaddy From $120"
+        description="Need to tow your bike in Toronto or the GTA? We use special trailers. Soft straps. No scratches. All bikes welcome. Call now! From $120."
+        keywords="motorcycle towing Toronto GTA, bike towing Toronto Vaughan, motorcycle transport, sport bike towing, cruiser towing, motorcycle breakdown Toronto"
         canonicalUrl="https://towdaddy.ca/services/motorcycle-towing"
         pageType="service"
         structuredData={structuredData}

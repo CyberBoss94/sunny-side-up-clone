@@ -15,9 +15,9 @@ const Hamilton = () => {
   return (
     <>
       <Helmet>
-        <title>Towing Service Hamilton | 24/7 Emergency Towing | TowDaddy</title>
-        <meta name="description" content="Fast, professional towing service in Hamilton and surrounding areas. 24/7 emergency towing, roadside assistance, and vehicle recovery for all Hamilton neighborhoods." />
-        <meta name="keywords" content="towing Hamilton, emergency towing Hamilton, roadside assistance Hamilton, 24/7 towing Hamilton, Hamilton tow truck" />
+        <title>Towing Hamilton | 24/7 Emergency Help | TowDaddy Fast Response</title>
+        <meta name="description" content="Need towing in Hamilton? We're here 24/7. Fast help across Hamilton, Stoney Creek, Ancaster, Dundas, and area. Call now!" />
+        <meta name="keywords" content="towing Hamilton, emergency towing Hamilton Stoney Creek, roadside assistance Ancaster, 24/7 towing Dundas, Hamilton tow truck" />
         <link rel="canonical" href="https://towdaddy.ca/coverage/hamilton" />
       </Helmet>
 
@@ -29,27 +29,26 @@ const Hamilton = () => {
           ]} />
           
           <div className="mt-8">
-            <h1 className="text-4xl font-bold mb-4">Towing Service Hamilton</h1>
+            <h1 className="text-4xl font-bold mb-4">Towing Hamilton</h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Professional 24/7{" "}
+              Need{" "}
               <Link to="/services/emergency-towing" className="text-tow-red hover:underline font-medium" title="Emergency towing service Hamilton">
                 emergency towing
               </Link>{" "}
-              and{" "}
+              or{" "}
               <Link to="/services/roadside-assistance" className="text-tow-red hover:underline font-medium" title="Roadside assistance Hamilton">
-                roadside assistance
+                roadside help
               </Link>{" "}
-              serving Hamilton and the surrounding region. We offer{" "}
+              in Hamilton? We're here 24/7. We also do{" "}
               <Link to="/services/long-distance-towing" className="text-tow-red hover:underline font-medium" title="Long distance towing from Hamilton">
                 long distance towing
               </Link>,{" "}
               <Link to="/services/commercial-towing" className="text-tow-red hover:underline font-medium" title="Commercial fleet towing Hamilton">
-                commercial towing
+                business towing
               </Link>, and{" "}
               <Link to="/services/vehicle-recovery" className="text-tow-red hover:underline font-medium" title="Vehicle recovery Hamilton area">
                 vehicle recovery
-              </Link>{" "}
-              throughout the Hamilton area.
+              </Link>.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -114,7 +113,7 @@ const Hamilton = () => {
               <Button asChild size="lg">
                 <Link to="/contact">
                   <Phone className="w-4 h-4 mr-2" />
-                  Call for Service
+                  Get Help Now
                 </Link>
               </Button>
             </div>

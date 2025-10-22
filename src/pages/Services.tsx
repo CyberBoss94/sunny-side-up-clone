@@ -157,9 +157,9 @@ const Services = () => {
   return (
     <>
       <SEO 
-        title="Professional Towing Services Toronto, Vaughan, Scarborough | Emergency Roadside Assistance Ontario"
-        description="Complete towing services across Toronto, Scarborough, Thornhill, Vaughan and Ontario. 24/7 emergency towing, roadside assistance, vehicle recovery. Professional, licensed, and insured."
-        keywords="towing services Toronto, emergency towing Vaughan, roadside assistance Scarborough, vehicle recovery Thornhill, flatbed towing Ontario, commercial towing Toronto"
+        title="Towing Services Toronto & GTA | 24/7 Emergency Towing & Roadside Help Ontario"
+        description="Need towing in Toronto or the GTA? We offer emergency towing, roadside help, and vehicle recovery. 24/7. Fast. Safe. Licensed pros. Call now!"
+        keywords="towing services Toronto GTA, emergency towing Toronto Vaughan, roadside assistance Scarborough, vehicle recovery Toronto, flatbed towing Ontario, commercial towing GTA"
         canonicalUrl="https://towdaddy.ca/services"
         pageType="service"
         structuredData={structuredData}
@@ -175,21 +175,20 @@ const Services = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-              Professional Towing Services
-              <span className="block text-tow-red">Across Ontario</span>
+              Towing Services Toronto & GTA
+              <span className="block text-tow-red">We're Here 24/7</span>
             </h1>
             <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-hero-foreground/90">
-              Comprehensive towing and roadside assistance services available 24/7. 
-              Professional, licensed, and fully insured for your peace of mind.
-              View our <Link to="/pricing" className="text-tow-red hover:underline">transparent pricing guide</Link>, 
-              check our <Link to="/coverage-areas" className="text-tow-red hover:underline">Ontario service coverage map</Link>, or 
-              read <Link to="/about" className="text-tow-red hover:underline">about our company</Link> and 15+ years of experience.
+              Need help on the road? We tow cars across Toronto, the GTA, and Ontario. 24/7. Fast. Safe. Licensed.
+              See our <Link to="/pricing" className="text-tow-red hover:underline">prices</Link>, 
+              check our <Link to="/coverage-areas" className="text-tow-red hover:underline">service areas</Link>, or 
+              read <Link to="/about" className="text-tow-red hover:underline">about us</Link>.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button variant="towRed" size="lg" className="text-sm sm:text-base" asChild>
                 <a href="tel:+16479497729">
                   <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                  Call Now: (647) 949-7729
+                  Get Help Now: (647) 949-7729
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="bg-background/10 border-hero-foreground/30 text-hero-foreground hover:bg-background/20 text-sm sm:text-base">
@@ -254,7 +253,7 @@ const Services = () => {
                 <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                   <Button variant="towRed" className="flex-1 text-sm sm:text-base" asChild>
                     <a href="tel:+16479497729">
-                      Call Now
+                      Get Help Now
                     </a>
                   </Button>
                   {service.link ? (

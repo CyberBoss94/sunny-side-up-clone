@@ -15,9 +15,9 @@ const London = () => {
   return (
     <>
       <Helmet>
-        <title>Towing Service London Ontario | 24/7 Emergency Towing | TowDaddy</title>
-        <meta name="description" content="Professional towing service in London, Ontario. 24/7 emergency towing, roadside assistance, and vehicle recovery. Fast response across all London areas." />
-        <meta name="keywords" content="towing London Ontario, emergency towing London, roadside assistance London, 24/7 towing London, London tow truck" />
+        <title>Towing London Ontario | 24/7 Emergency Towing & Roadside Help | TowDaddy</title>
+        <meta name="description" content="Need towing in London, Ontario? We're here 24/7. Fast help. Safe towing. Call now for emergency towing or roadside assistance in London." />
+        <meta name="keywords" content="towing London Ontario, emergency towing London, roadside assistance London, 24/7 towing London, London tow truck, flatbed towing London" />
         <link rel="canonical" href="https://towdaddy.ca/coverage/london" />
       </Helmet>
 
@@ -29,9 +29,9 @@ const London = () => {
           ]} />
           
           <div className="mt-8">
-            <h1 className="text-4xl font-bold mb-4">Towing Service London, Ontario</h1>
+            <h1 className="text-4xl font-bold mb-4">Towing London Ontario</h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Trusted 24/7 towing and roadside assistance throughout London and southwestern Ontario.
+              Need towing in London? We're here 24/7. Fast help. Safe towing across London and area.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -96,7 +96,7 @@ const London = () => {
               <Button asChild size="lg">
                 <Link to="/contact">
                   <Phone className="w-4 h-4 mr-2" />
-                  Contact Us Now
+                  Get Help Now
                 </Link>
               </Button>
             </div>
