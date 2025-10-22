@@ -117,14 +117,25 @@ const EmergencyTowing = () => {
                     Professional Emergency Towing Services Ontario
                   </h2>
                   <p className="text-base sm:text-lg text-muted-foreground mb-6">
-                    When your vehicle breaks down unexpectedly, every minute counts. Our emergency towing service 
-                    ensures you're never left stranded, with professional operators standing by 24/7 to provide 
-                    immediate assistance across Ontario.
+                    When your vehicle breaks down or you're involved in an accident, every minute counts. 
+                    TowDaddy's 24/7 emergency towing service provides rapid response across{" "}
+                    <Link to="/coverage-areas" className="text-tow-red hover:underline font-medium" title="View our Ontario service coverage areas">
+                      Ontario with professional flatbed towing
+                    </Link>{" "}
+                    that's safe for all vehicle types. Whether you need{" "}
+                    <Link to="/services/roadside-assistance" className="text-tow-red hover:underline font-medium" title="24/7 roadside assistance in Ontario">
+                      roadside assistance for minor issues
+                    </Link>{" "}
+                    or complete vehicle transport, we're here to help.
                   </p>
                   <p className="text-base sm:text-lg text-muted-foreground mb-6">
-                    Whether you're dealing with an accident, mechanical failure, or roadside emergency, our GPS-equipped 
-                    fleet can locate and reach you quickly. We specialize in damage-free towing using modern flatbed 
-                    trucks and professional equipment.
+                    Unlike traditional hook-and-chain towing that can damage your vehicle's transmission 
+                    or undercarriage, our flatbed towing ensures your car is fully lifted and secured on 
+                    a flat platform. This method is ideal for all-wheel drive vehicles, luxury cars, and 
+                    any situation where vehicle protection is paramount. For specialized vehicles, explore our{" "}
+                    <Link to="/services/specialized-towing" className="text-tow-red hover:underline font-medium" title="Luxury and exotic vehicle towing">
+                      specialized towing services
+                    </Link>.
                   </p>
                   <div className="bg-tow-red/10 p-4 sm:p-6 rounded-lg">
                     <div className="flex items-center mb-3">
@@ -183,7 +194,18 @@ const EmergencyTowing = () => {
                 </h2>
                 <p className="text-base sm:text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
                   Our emergency towing service covers all major Ontario cities and remote areas. 
-                  Check our <Link to="/coverage-areas" className="text-tow-red hover:underline">complete coverage map</Link> for detailed service zones.
+                  Check our{" "}
+                  <Link to="/coverage-areas" className="text-tow-red hover:underline font-medium" title="Complete Ontario towing coverage">
+                    complete coverage map
+                  </Link>{" "}
+                  for detailed service zones including{" "}
+                  <Link to="/coverage/toronto" className="text-tow-red hover:underline font-medium" title="Toronto emergency towing">
+                    Toronto
+                  </Link>{" "}
+                  and{" "}
+                  <Link to="/coverage/hamilton" className="text-tow-red hover:underline font-medium" title="Hamilton towing service">
+                    Hamilton
+                  </Link>.
                 </p>
                 <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
                   {serviceAreas.map((area, index) => (

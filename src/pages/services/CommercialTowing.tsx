@@ -36,7 +36,17 @@ const CommercialTowing = () => {
             <div>
               <h1 className="text-4xl font-bold mb-4">Commercial Towing Services</h1>
               <p className="text-xl text-muted-foreground mb-6">
-                Professional fleet and commercial vehicle towing solutions for businesses across Ontario.
+                Professional fleet and commercial vehicle towing solutions for businesses across{" "}
+                <Link to="/coverage-areas" className="text-tow-red hover:underline font-medium" title="Ontario commercial towing coverage">
+                  Ontario
+                </Link>. From{" "}
+                <Link to="/coverage/toronto" className="text-tow-red hover:underline font-medium" title="Toronto fleet towing">
+                  Toronto
+                </Link>{" "}
+                to{" "}
+                <Link to="/coverage/hamilton" className="text-tow-red hover:underline font-medium" title="Hamilton commercial towing">
+                  Hamilton
+                </Link>, we provide priority service for commercial clients.
               </p>
               
               <div className="space-y-4 mb-8">

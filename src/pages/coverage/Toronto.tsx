@@ -31,7 +31,23 @@ const Toronto = () => {
           <div className="mt-8">
             <h1 className="text-4xl font-bold mb-4">24/7 Towing Service Toronto & GTA - Fast Emergency Response</h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Professional emergency towing and roadside assistance across Toronto and the Greater Toronto Area. Licensed flatbed towing available 24/7.
+              Professional{" "}
+              <Link to="/services/emergency-towing" className="text-tow-red hover:underline font-medium" title="24/7 emergency towing in Toronto">
+                emergency towing
+              </Link>{" "}
+              and{" "}
+              <Link to="/services/roadside-assistance" className="text-tow-red hover:underline font-medium" title="Toronto roadside assistance">
+                roadside assistance
+              </Link>{" "}
+              across Toronto and the Greater Toronto Area. Licensed flatbed towing available 24/7. We also provide{" "}
+              <Link to="/services/motorcycle-towing" className="text-tow-red hover:underline font-medium" title="Motorcycle towing in Toronto">
+                motorcycle towing
+              </Link>{" "}
+              and{" "}
+              <Link to="/services/vehicle-recovery" className="text-tow-red hover:underline font-medium" title="Vehicle recovery services Toronto">
+                vehicle recovery
+              </Link>{" "}
+              throughout the GTA.
             </p>
 
             <h2 className="text-3xl font-bold mb-6 mt-12">Why Choose TowDaddy in Toronto?</h2>

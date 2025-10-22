@@ -146,13 +146,28 @@ const MotorcycleTowing = () => {
                   </h2>
                   <p className="text-base sm:text-lg text-muted-foreground mb-6">
                     Motorcycles require specialized towing equipment and techniques that differ significantly 
-                    from standard vehicle towing. Our motorcycle towing service uses purpose-built trailers 
-                    and professional tie-down systems designed specifically for two-wheeled vehicles.
+                    from{" "}
+                    <Link to="/services/emergency-towing" className="text-tow-red hover:underline font-medium" title="Standard vehicle emergency towing">
+                      standard vehicle towing
+                    </Link>. Our motorcycle towing service uses purpose-built trailers 
+                    and professional tie-down systems designed specifically for two-wheeled vehicles. Available across{" "}
+                    <Link to="/coverage/toronto" className="text-tow-red hover:underline font-medium" title="Motorcycle towing in Toronto">
+                      Toronto
+                    </Link>,{" "}
+                    <Link to="/coverage/hamilton" className="text-tow-red hover:underline font-medium" title="Hamilton motorcycle transport">
+                      Hamilton
+                    </Link>, and throughout{" "}
+                    <Link to="/coverage-areas" className="text-tow-red hover:underline font-medium" title="Complete Ontario coverage">
+                      Ontario
+                    </Link>.
                   </p>
                   <p className="text-base sm:text-lg text-muted-foreground mb-6">
                     Whether your bike has broken down, been in an accident, or you need transport for 
                     purchase or service, our trained operators handle every motorcycle with the care 
-                    and expertise it deserves.
+                    and expertise it deserves. For vintage or high-value bikes, see our{" "}
+                    <Link to="/services/specialized-towing" className="text-tow-red hover:underline font-medium" title="Specialized luxury vehicle towing">
+                      specialized towing options
+                    </Link>.
                   </p>
                   <div className="bg-tow-red/10 p-4 sm:p-6 rounded-lg">
                     <div className="flex items-center mb-3">

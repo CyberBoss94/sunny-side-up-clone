@@ -172,12 +172,26 @@ const RoadsideAssistance = () => {
                     Why Choose TowDaddy Roadside Assistance?
                   </h2>
                   <p className="text-base sm:text-lg text-muted-foreground mb-6">
-                    When you're dealing with car trouble, you need reliable help fast. Our roadside assistance 
-                    service combines professional expertise with rapid response times to get you back on the road quickly.
+                    Not every vehicle problem requires towing. TowDaddy's roadside assistance service 
+                    provides on-the-spot solutions for common issues like dead batteries, flat tires, 
+                    lockouts, and fuel delivery. Our mobile technicians arrive quickly with professional 
+                    equipment to get you back on the road. When you need immediate help in the GTA, our{" "}
+                    <Link to="/coverage/toronto" className="text-tow-red hover:underline font-medium" title="Fast roadside assistance in Toronto">
+                      Toronto roadside service
+                    </Link>{" "}
+                    offers rapid response times.
                   </p>
                   <p className="text-base sm:text-lg text-muted-foreground mb-6">
-                    Our certified technicians carry professional-grade equipment and have extensive experience 
-                    handling all types of roadside emergencies. We're available 24/7 across Ontario.
+                    Available 24/7 across{" "}
+                    <Link to="/coverage-areas" className="text-tow-red hover:underline font-medium" title="Our complete Ontario service coverage">
+                      Ontario
+                    </Link>, our roadside assistance is perfect for minor breakdowns 
+                    that don't need a tow truck. If your issue can't be resolved on-site, we'll seamlessly 
+                    transition to our{" "}
+                    <Link to="/services/emergency-towing" className="text-tow-red hover:underline font-medium" title="24/7 emergency towing service">
+                      emergency towing service
+                    </Link>{" "}
+                    to get your vehicle to a repair facility.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Button variant="towRed" asChild>

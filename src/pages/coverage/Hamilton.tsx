@@ -31,7 +31,25 @@ const Hamilton = () => {
           <div className="mt-8">
             <h1 className="text-4xl font-bold mb-4">Towing Service Hamilton</h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Professional 24/7 towing and roadside assistance serving Hamilton and the surrounding region.
+              Professional 24/7{" "}
+              <Link to="/services/emergency-towing" className="text-tow-red hover:underline font-medium" title="Emergency towing service Hamilton">
+                emergency towing
+              </Link>{" "}
+              and{" "}
+              <Link to="/services/roadside-assistance" className="text-tow-red hover:underline font-medium" title="Roadside assistance Hamilton">
+                roadside assistance
+              </Link>{" "}
+              serving Hamilton and the surrounding region. We offer{" "}
+              <Link to="/services/long-distance-towing" className="text-tow-red hover:underline font-medium" title="Long distance towing from Hamilton">
+                long distance towing
+              </Link>,{" "}
+              <Link to="/services/commercial-towing" className="text-tow-red hover:underline font-medium" title="Commercial fleet towing Hamilton">
+                commercial towing
+              </Link>, and{" "}
+              <Link to="/services/vehicle-recovery" className="text-tow-red hover:underline font-medium" title="Vehicle recovery Hamilton area">
+                vehicle recovery
+              </Link>{" "}
+              throughout the Hamilton area.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-12">

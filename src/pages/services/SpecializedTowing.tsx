@@ -36,7 +36,18 @@ const SpecializedTowing = () => {
             <div>
               <h1 className="text-4xl font-bold mb-4">Specialized Vehicle Towing</h1>
               <p className="text-xl text-muted-foreground mb-6">
-                Expert care and handling for luxury, exotic, classic, and specialty vehicles across Ontario.
+                Expert care and handling for luxury, exotic, classic, and specialty vehicles across{" "}
+                <Link to="/coverage-areas" className="text-tow-red hover:underline font-medium" title="Ontario specialized towing coverage">
+                  Ontario
+                </Link>. Professional{" "}
+                <Link to="/services/emergency-towing" className="text-tow-red hover:underline font-medium" title="Flatbed towing for luxury vehicles">
+                  flatbed towing
+                </Link>{" "}
+                with extra precautions for your valuable vehicles. Also offering{" "}
+                <Link to="/services/long-distance-towing" className="text-tow-red hover:underline font-medium" title="Long distance exotic vehicle transport">
+                  long distance transport
+                </Link>{" "}
+                for collector vehicles.
               </p>
               
               <div className="space-y-4 mb-8">

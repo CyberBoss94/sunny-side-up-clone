@@ -146,13 +146,26 @@ const LongDistanceTowing = () => {
                   </h2>
                   <p className="text-base sm:text-lg text-muted-foreground mb-6">
                     Whether you're relocating, buying a vehicle from another province, or need specialized 
-                    transport for a non-running vehicle, our long distance towing service provides 
-                    reliable door-to-door transportation across Canada.
+                    transport for a non-running vehicle, our{" "}
+                    <Link to="/services/vehicle-recovery" className="text-tow-red hover:underline font-medium" title="Professional vehicle transport and recovery">
+                      long distance towing service
+                    </Link>{" "}
+                    provides reliable door-to-door transportation across Canada. Starting from{" "}
+                    <Link to="/coverage/toronto" className="text-tow-red hover:underline font-medium" title="Long distance towing from Toronto">
+                      Toronto
+                    </Link>{" "}
+                    or{" "}
+                    <Link to="/coverage/hamilton" className="text-tow-red hover:underline font-medium" title="Hamilton long distance transport">
+                      Hamilton
+                    </Link>, we can transport your vehicle anywhere in Canada.
                   </p>
                   <p className="text-base sm:text-lg text-muted-foreground mb-6">
                     Our experienced drivers use modern flatbed trucks equipped with GPS tracking, 
                     allowing you to monitor your vehicle's progress throughout the journey. We handle 
-                    everything from pickup to delivery with professional care.
+                    everything from pickup to delivery with professional care. For local moves, consider our{" "}
+                    <Link to="/services/emergency-towing" className="text-tow-red hover:underline font-medium" title="Local emergency towing service">
+                      local emergency towing
+                    </Link>.
                   </p>
                   <div className="bg-tow-red/10 p-4 sm:p-6 rounded-lg">
                     <div className="flex items-center mb-3">

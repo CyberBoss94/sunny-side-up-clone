@@ -182,12 +182,22 @@ const VehicleRecovery = () => {
                   </h2>
                   <p className="text-base sm:text-lg text-muted-foreground mb-6">
                     Vehicle recovery requires specialized knowledge, equipment, and techniques. Our recovery team 
-                    has extensive experience in complex situations where standard towing methods aren't sufficient.
+                    has extensive experience in complex situations where{" "}
+                    <Link to="/services/emergency-towing" className="text-tow-red hover:underline font-medium" title="Standard emergency towing services">
+                      standard towing methods
+                    </Link>{" "}
+                    aren't sufficient. From accident scenes to off-road extractions, we handle the most challenging recovery situations across{" "}
+                    <Link to="/coverage-areas" className="text-tow-red hover:underline font-medium" title="Ontario-wide recovery service areas">
+                      Ontario
+                    </Link>.
                   </p>
                   <p className="text-base sm:text-lg text-muted-foreground mb-6">
                     We use heavy-duty winches, specialized rigging equipment, and recovery vehicles designed for 
                     challenging terrain. Our operators are trained in safe recovery techniques to minimize 
-                    vehicle damage during extraction.
+                    vehicle damage during extraction. For immediate assistance, check our{" "}
+                    <Link to="/pricing" className="text-tow-red hover:underline font-medium" title="Vehicle recovery pricing information">
+                      recovery service rates
+                    </Link>.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Button variant="towRed" asChild>
