@@ -6,7 +6,6 @@
   <!-- Homepage - Highest Priority -->
   <url>
     <loc>https://towdaddy.ca/</loc>
-    <lastmod>2025-10-11T00:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -19,7 +18,6 @@
   <!-- Main Service Pages - High Priority -->
   <url>
     <loc>https://towdaddy.ca/services</loc>
-    <lastmod>2025-10-11T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -34,7 +32,6 @@
   
   <url>
     <loc>https://towdaddy.ca/coverage-areas</loc>
-    <lastmod>2025-10-11T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -46,14 +43,12 @@
   <!-- Important Business Pages -->
   <url>
     <loc>https://towdaddy.ca/pricing</loc>
-    <lastmod>2025-10-11T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://towdaddy.ca/about</loc>
-    <lastmod>2025-10-11T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -61,14 +56,12 @@
   <!-- Support & Contact Pages -->
   <url>
     <loc>https://towdaddy.ca/faq</loc>
-    <lastmod>2025-10-11T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://towdaddy.ca/contact</loc>
-    <lastmod>2025-10-11T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -76,9 +69,8 @@
   <!-- Individual Service Pages for Better SEO -->
   <url>
     <loc>https://towdaddy.ca/services/emergency-towing</loc>
-    <lastmod>2025-10-11T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
     <image:image>
       <image:loc>https://towdaddy.ca/assets/services/emergency-towing.jpg</image:loc>
       <image:caption>24/7 Emergency Towing Service</image:caption>
@@ -87,9 +79,8 @@
   
   <url>
     <loc>https://towdaddy.ca/services/roadside-assistance</loc>
-    <lastmod>2025-10-11T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
     <image:image>
       <image:loc>https://towdaddy.ca/assets/services/roadside-assistance.jpg</image:loc>
       <image:caption>Professional Roadside Assistance</image:caption>
@@ -98,9 +89,8 @@
   
   <url>
     <loc>https://towdaddy.ca/services/vehicle-recovery</loc>
-    <lastmod>2025-10-11T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
     <image:image>
       <image:loc>https://towdaddy.ca/assets/services/vehicle-recovery.jpg</image:loc>
       <image:caption>Safe Vehicle Recovery Service</image:caption>
@@ -109,9 +99,8 @@
   
   <url>
     <loc>https://towdaddy.ca/services/long-distance-towing</loc>
-    <lastmod>2025-10-11T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
     <image:image>
       <image:loc>https://towdaddy.ca/assets/services/long-distance-towing.jpg</image:loc>
       <image:caption>Long Distance Towing Service</image:caption>
@@ -120,9 +109,8 @@
   
   <url>
     <loc>https://towdaddy.ca/services/commercial-towing</loc>
-    <lastmod>2025-10-11T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
     <image:image>
       <image:loc>https://towdaddy.ca/assets/services/commercial-towing.jpg</image:loc>
       <image:caption>Commercial Towing Services</image:caption>
@@ -131,9 +119,8 @@
   
   <url>
     <loc>https://towdaddy.ca/services/specialized-towing</loc>
-    <lastmod>2025-10-11T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
     <image:image>
       <image:loc>https://towdaddy.ca/assets/services/specialized-towing.jpg</image:loc>
       <image:caption>Specialized Vehicle Towing</image:caption>
@@ -142,42 +129,37 @@
   
   <url>
     <loc>https://towdaddy.ca/services/motorcycle-towing</loc>
-    <lastmod>2025-10-11T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
     <image:image>
       <image:loc>https://towdaddy.ca/assets/services/motorcycle-towing.jpg</image:loc>
       <image:caption>Motorcycle Towing Service</image:caption>
     </image:image>
   </url>
   
-  <!-- Coverage Area Specific Pages -->
+  <!-- Coverage Area Specific Pages - Local SEO Priority -->
   <url>
     <loc>https://towdaddy.ca/coverage/toronto</loc>
-    <lastmod>2025-10-11T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://towdaddy.ca/coverage/ottawa</loc>
-    <lastmod>2025-10-11T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://towdaddy.ca/coverage/hamilton</loc>
-    <lastmod>2025-10-11T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://towdaddy.ca/coverage/london</loc>
-    <lastmod>2025-10-11T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
   </url>
   
 </urlset>
