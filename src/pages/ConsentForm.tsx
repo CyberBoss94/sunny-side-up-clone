@@ -225,36 +225,36 @@ const ConsentForm = () => {
   }
   return <>
       <SEO title="Towing Consent Form - TowDaddy" description="Complete your towing service consent form online. Quick and secure digital authorization for your vehicle towing or transport." keywords="towing consent form, vehicle authorization, towing service form, Ontario towing consent" />
-      <main className="min-h-screen bg-gradient-to-b from-background to-secondary/20 py-12">
-        <div className="container max-w-3xl mx-0 px-[8px]">
+      <main className="min-h-screen bg-gradient-to-b from-background to-secondary/20 py-6 md:py-12">
+        <div className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card>
             <CardHeader>
-              <CardTitle className="text-3xl">Towing Consent Form</CardTitle>
-              <CardDescription>
+              <CardTitle className="text-2xl md:text-3xl">Towing Consent Form</CardTitle>
+              <CardDescription className="text-sm md:text-base">
                 Please complete all steps to authorize towing service
               </CardDescription>
               <div className="mt-4 flex items-center justify-between">
                 {[1, 2, 3].map(step => <div key={step} className="flex items-center">
-                    <div className={`flex h-10 w-10 items-center justify-center rounded-full ${currentStep >= step ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>
+                    <div className={`flex h-8 w-8 md:h-10 md:w-10 items-center justify-center rounded-full text-sm md:text-base ${currentStep >= step ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>
                       {step}
                     </div>
-                    {step < 3 && <div className={`h-1 w-20 ${currentStep > step ? "bg-primary" : "bg-muted"}`} />}
+                    {step < 3 && <div className={`h-1 w-12 sm:w-16 md:w-20 ${currentStep > step ? "bg-primary" : "bg-muted"}`} />}
                   </div>)}
               </div>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {/* Step 1: Basic Information */}
-                {currentStep === 1 && <div className="space-y-4 grid-cols-2 ">
-                    <h3 className="text-xl font-semibold">Step 1: Basic Information</h3>
+                {currentStep === 1 && <div className="space-y-6">
+                    <h3 className="text-lg md:text-xl font-semibold">Step 1: Basic Information</h3>
                     
-                    <div className="space-y-2">
-                      <Label htmlFor="driver_name">Driver Name *</Label>
-                      <Input id="driver_name" {...register("driver_name")} />
-                      {errors.driver_name && <p className="text-sm text-destructive">{errors.driver_name.message}</p>}
-                    </div>
-
                     <div className="grid gap-4 md:grid-cols-2">
+                      <div className="space-y-2">
+                        <Label htmlFor="driver_name">Driver Name *</Label>
+                        <Input id="driver_name" {...register("driver_name")} />
+                        {errors.driver_name && <p className="text-sm text-destructive">{errors.driver_name.message}</p>}
+                      </div>
+
                       <div className="space-y-2">
                         <Label htmlFor="driver_phone">Phone Number *</Label>
                         <Input id="driver_phone" type="tel" {...register("driver_phone")} />
@@ -266,52 +266,50 @@ const ConsentForm = () => {
                         <Input id="driver_email" type="email" {...register("driver_email")} />
                         {errors.driver_email && <p className="text-sm text-destructive">{errors.driver_email.message}</p>}
                       </div>
-                    </div>
 
-                    <div className="space-y-2">
-                      <Label>Service Type *</Label>
-                      <RadioGroup value={serviceType} onValueChange={val => setValue("service_type", val as "Towing" | "Transport")}>
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="Towing" id="towing" />
-                          <Label htmlFor="towing" className="font-normal">Towing</Label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="Transport" id="transport" />
-                          <Label htmlFor="transport" className="font-normal">Transport</Label>
-                        </div>
-                      </RadioGroup>
-                    </div>
-
-                    <div className="grid gap-4 md:grid-cols-3">
                       <div className="space-y-2">
-                        <Label htmlFor="vehicle_make">Make *</Label>
+                        <Label>Service Type *</Label>
+                        <RadioGroup value={serviceType} onValueChange={val => setValue("service_type", val as "Towing" | "Transport")}>
+                          <div className="flex items-center space-x-2">
+                            <RadioGroupItem value="Towing" id="towing" />
+                            <Label htmlFor="towing" className="font-normal">Towing</Label>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <RadioGroupItem value="Transport" id="transport" />
+                            <Label htmlFor="transport" className="font-normal">Transport</Label>
+                          </div>
+                        </RadioGroup>
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="vehicle_make">Vehicle Make *</Label>
                         <Input id="vehicle_make" {...register("vehicle_make")} placeholder="Toyota" />
                         {errors.vehicle_make && <p className="text-sm text-destructive">{errors.vehicle_make.message}</p>}
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="vehicle_model">Model *</Label>
+                        <Label htmlFor="vehicle_model">Vehicle Model *</Label>
                         <Input id="vehicle_model" {...register("vehicle_model")} placeholder="Camry" />
                         {errors.vehicle_model && <p className="text-sm text-destructive">{errors.vehicle_model.message}</p>}
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="vehicle_year">Year *</Label>
+                        <Label htmlFor="vehicle_year">Vehicle Year *</Label>
                         <Input id="vehicle_year" {...register("vehicle_year")} placeholder="2020" />
                         {errors.vehicle_year && <p className="text-sm text-destructive">{errors.vehicle_year.message}</p>}
                       </div>
-                    </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="license_plate">License Plate (Ontario) *</Label>
-                      <Input id="license_plate" {...register("license_plate")} placeholder="ABCD 123" />
-                      {errors.license_plate && <p className="text-sm text-destructive">{errors.license_plate.message}</p>}
-                    </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="license_plate">License Plate (Ontario) *</Label>
+                        <Input id="license_plate" {...register("license_plate")} placeholder="ABCD 123" />
+                        {errors.license_plate && <p className="text-sm text-destructive">{errors.license_plate.message}</p>}
+                      </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="pickup_address">Pickup Address *</Label>
-                      <Input id="pickup_address" {...register("pickup_address")} placeholder="123 Main St, Toronto, ON" />
-                      {errors.pickup_address && <p className="text-sm text-destructive">{errors.pickup_address.message}</p>}
+                      <div className="space-y-2 md:col-span-2">
+                        <Label htmlFor="pickup_address">Pickup Address *</Label>
+                        <Input id="pickup_address" {...register("pickup_address")} placeholder="123 Main St, Toronto, ON" />
+                        {errors.pickup_address && <p className="text-sm text-destructive">{errors.pickup_address.message}</p>}
+                      </div>
                     </div>
 
                     <Button type="button" onClick={handleNext} disabled={!canProceedToStep2()} className="w-full">
@@ -320,22 +318,22 @@ const ConsentForm = () => {
                   </div>}
 
                 {/* Step 2: Additional Details */}
-                {currentStep === 2 && <div className="space-y-4">
-                    <h3 className="text-xl font-semibold">Step 2: Additional Details</h3>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="vin_number">VIN Number *</Label>
-                      <Input id="vin_number" {...register("vin_number")} placeholder="Check vehicle for VIN" />
-                      {errors.vin_number && <p className="text-sm text-destructive">{errors.vin_number.message}</p>}
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="destination_address">Destination Address *</Label>
-                      <Input id="destination_address" {...register("destination_address")} placeholder="Where to take vehicle" />
-                      {errors.destination_address && <p className="text-sm text-destructive">{errors.destination_address.message}</p>}
-                    </div>
+                {currentStep === 2 && <div className="space-y-6">
+                    <h3 className="text-lg md:text-xl font-semibold">Step 2: Additional Details</h3>
 
                     <div className="grid gap-4 md:grid-cols-2">
+                      <div className="space-y-2 md:col-span-2">
+                        <Label htmlFor="vin_number">VIN Number *</Label>
+                        <Input id="vin_number" {...register("vin_number")} placeholder="Check vehicle for VIN" />
+                        {errors.vin_number && <p className="text-sm text-destructive">{errors.vin_number.message}</p>}
+                      </div>
+
+                      <div className="space-y-2 md:col-span-2">
+                        <Label htmlFor="destination_address">Destination Address *</Label>
+                        <Input id="destination_address" {...register("destination_address")} placeholder="Where to take vehicle" />
+                        {errors.destination_address && <p className="text-sm text-destructive">{errors.destination_address.message}</p>}
+                      </div>
+
                       <div className="space-y-2">
                         <Label htmlFor="consenter_first_name">Consenter First Name *</Label>
                         <Input id="consenter_first_name" {...register("consenter_first_name")} />
@@ -349,8 +347,8 @@ const ConsentForm = () => {
                       </div>
                     </div>
 
-                    <div className="flex gap-2">
-                      <Button type="button" variant="outline" onClick={() => setCurrentStep(1)}>
+                    <div className="flex flex-col sm:flex-row gap-2">
+                      <Button type="button" variant="outline" onClick={() => setCurrentStep(1)} className="w-full sm:w-auto">
                         Back
                       </Button>
                       <Button type="button" onClick={handleNext} disabled={!canProceedToStep3()} className="flex-1">
@@ -360,11 +358,11 @@ const ConsentForm = () => {
                   </div>}
 
                 {/* Step 3: Legal Authorization */}
-                {currentStep === 3 && <div className="space-y-4">
-                    <h3 className="text-xl font-semibold">Step 3: Legal Authorization</h3>
+                {currentStep === 3 && <div className="space-y-6">
+                    <h3 className="text-lg md:text-xl font-semibold">Step 3: Legal Authorization</h3>
 
                     <div className="rounded-lg border bg-muted/50 p-4">
-                      <h4 className="mb-2 font-semibold">Terms and Conditions</h4>
+                      <h4 className="mb-2 font-semibold text-sm md:text-base">Terms and Conditions</h4>
                       <p className="mb-4 text-sm text-muted-foreground">
                         I authorize TowDaddy to tow or transport my vehicle as described above. I confirm that I am the
                         legal owner or authorized representative of this vehicle. I understand that standard towing rates
@@ -380,7 +378,7 @@ const ConsentForm = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <Label>Signature *</Label>
+                      <Label className="text-sm md:text-base">Signature *</Label>
                       <div className="rounded-lg border bg-white p-2">
                         <canvas ref={canvasRef} width={600} height={200} className="w-full touch-none border" onMouseDown={startDrawing} onMouseMove={draw} onMouseUp={stopDrawing} onMouseLeave={stopDrawing} onTouchStart={startDrawing} onTouchMove={draw} onTouchEnd={stopDrawing} />
                         <Button type="button" variant="outline" size="sm" onClick={clearSignature} className="mt-2">
@@ -390,8 +388,8 @@ const ConsentForm = () => {
                       {!hasSignature && <p className="text-sm text-muted-foreground">Please sign above</p>}
                     </div>
 
-                    <div className="flex gap-2">
-                      <Button type="button" variant="outline" onClick={() => setCurrentStep(2)}>
+                    <div className="flex flex-col sm:flex-row gap-2">
+                      <Button type="button" variant="outline" onClick={() => setCurrentStep(2)} className="w-full sm:w-auto">
                         Back
                       </Button>
                       <Button type="submit" disabled={!canSubmit() || isSubmitting} className="flex-1">
