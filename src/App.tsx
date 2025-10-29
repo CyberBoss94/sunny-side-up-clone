@@ -23,6 +23,7 @@ import Toronto from "./pages/coverage/Toronto";
 import Ottawa from "./pages/coverage/Ottawa";
 import Hamilton from "./pages/coverage/Hamilton";
 import London from "./pages/coverage/London";
+import ConsentForm from "./pages/ConsentForm";
 import Header from "./components/Header";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -56,6 +57,7 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/consent-form" element={<ConsentForm />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
