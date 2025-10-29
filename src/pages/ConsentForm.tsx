@@ -245,7 +245,7 @@ const ConsentForm = () => {
             <CardContent>
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {/* Step 1: Basic Information */}
-                {currentStep === 1 && <div className="space-y-4">
+                {currentStep === 1 && <div className="space-y-4 grid-cols-2 ">
                     <h3 className="text-xl font-semibold">Step 1: Basic Information</h3>
                     
                     <div className="space-y-2">
