@@ -14,7 +14,69 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      consent_forms: {
+        Row: {
+          consent_id: string
+          consenter_first_name: string
+          consenter_last_name: string
+          created_at: string | null
+          destination_address: string
+          driver_email: string
+          driver_name: string
+          driver_phone: string
+          id: string
+          license_plate: string
+          pickup_address: string
+          service_type: string
+          signature_image_url: string
+          terms_accepted: boolean
+          vehicle_make: string
+          vehicle_model: string
+          vehicle_year: string
+          vin_number: string
+        }
+        Insert: {
+          consent_id?: string
+          consenter_first_name: string
+          consenter_last_name: string
+          created_at?: string | null
+          destination_address: string
+          driver_email: string
+          driver_name: string
+          driver_phone: string
+          id?: string
+          license_plate: string
+          pickup_address: string
+          service_type: string
+          signature_image_url: string
+          terms_accepted?: boolean
+          vehicle_make: string
+          vehicle_model: string
+          vehicle_year: string
+          vin_number: string
+        }
+        Update: {
+          consent_id?: string
+          consenter_first_name?: string
+          consenter_last_name?: string
+          created_at?: string | null
+          destination_address?: string
+          driver_email?: string
+          driver_name?: string
+          driver_phone?: string
+          id?: string
+          license_plate?: string
+          pickup_address?: string
+          service_type?: string
+          signature_image_url?: string
+          terms_accepted?: boolean
+          vehicle_make?: string
+          vehicle_model?: string
+          vehicle_year?: string
+          vin_number?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

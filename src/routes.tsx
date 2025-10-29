@@ -8,6 +8,7 @@ const CoverageAreas = lazy(() => import("./pages/CoverageAreas"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const Contact = lazy(() => import("./pages/Contact"));
+const ConsentForm = lazy(() => import("./pages/ConsentForm"));
 const EmergencyTowing = lazy(() => import("./pages/services/EmergencyTowing"));
 const RoadsideAssistance = lazy(() => import("./pages/services/RoadsideAssistance"));
 const VehicleRecovery = lazy(() => import("./pages/services/VehicleRecovery"));
@@ -109,5 +110,11 @@ export const routes: RouteConfig[] = [
     component: () => <LazyRoute Component={Contact} />,
     title: 'Contact TowDaddy - 24/7 Emergency Towing Service',
     description: 'Contact TowDaddy for emergency towing, roadside assistance, or vehicle recovery. Available 24/7 across Ontario. Call now for immediate service.'
+  },
+  { 
+    path: '/consent-form', 
+    component: () => <LazyRoute Component={ConsentForm} />,
+    title: 'Towing Consent Form - TowDaddy',
+    description: 'Complete your towing service consent form online. Quick and secure digital authorization for your vehicle towing or transport.'
   }
 ];
