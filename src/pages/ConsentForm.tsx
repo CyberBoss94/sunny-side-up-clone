@@ -12,8 +12,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { toast } from "sonner";
 import { CheckCircle2, Loader2 } from "lucide-react";
 import SEO from "@/components/SEO";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 const formSchema = z.object({
   driver_name: z.string().min(1, "Driver name is required"),
@@ -232,7 +230,6 @@ const ConsentForm = () => {
           title="Form Submitted - TowDaddy Consent Form"
           description="Your towing consent form has been submitted successfully."
         />
-        <Header />
         <main className="min-h-screen bg-gradient-to-b from-background to-secondary/20 py-12">
           <div className="container max-w-2xl">
             <Card className="text-center">
@@ -262,7 +259,6 @@ const ConsentForm = () => {
             </Card>
           </div>
         </main>
-        <Footer />
       </>
     );
   }
@@ -274,7 +270,6 @@ const ConsentForm = () => {
         description="Complete your towing service consent form online. Quick and secure digital authorization for your vehicle towing or transport."
         keywords="towing consent form, vehicle authorization, towing service form, Ontario towing consent"
       />
-      <Header />
       <main className="min-h-screen bg-gradient-to-b from-background to-secondary/20 py-12">
         <div className="container max-w-3xl">
           <Card>
@@ -535,7 +530,6 @@ const ConsentForm = () => {
           </Card>
         </div>
       </main>
-      <Footer />
     </>
   );
 };
