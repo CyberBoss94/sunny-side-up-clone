@@ -14,6 +14,7 @@ const Header = () => {
     { to: "/coverage-areas", label: "Coverage Areas" },
     { to: "/pricing", label: "Pricing" },
     { to: "/faq", label: "FAQ" },
+    { to: "/consent-form", label: "Consent Form" },
     { to: "/about", label: "About" },
   ];
 
