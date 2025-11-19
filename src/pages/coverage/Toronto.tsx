@@ -112,10 +112,10 @@ const Toronto = () => {
                 Fast, reliable service across all of Toronto and the GTA. Available 24/7.
               </p>
               <Button asChild size="lg">
-                <Link to="/contact">
+                <a href="https://request.towdaddy.ca/" target="_blank" rel="noopener noreferrer">
                   <Phone className="w-4 h-4 mr-2" />
                   Get Help Now
-                </Link>
+                </a>
               </Button>
             </div>
           </div>
