@@ -30,7 +30,7 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <Button variant="towRed" size="lg" className="text-lg px-8 py-6" asChild>
-              <Link to="/contact">Request a Tow →</Link>
+              <a href="https://request.towdaddy.ca/" target="_blank" rel="noopener noreferrer">Request a Tow →</a>
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-background/10 border-hero-foreground/30 text-hero-foreground hover:bg-background/20" asChild>
               <Link to="/services">View Services</Link>

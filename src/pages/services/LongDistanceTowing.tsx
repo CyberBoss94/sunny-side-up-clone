@@ -129,7 +129,7 @@ const LongDistanceTowing = () => {
                     </a>
                   </Button>
                   <Button variant="outline" size="lg" asChild className="bg-background/10 border-hero-foreground/30 text-hero-foreground hover:bg-background/20 text-sm sm:text-base">
-                    <Link to="/contact">Get Distance Quote</Link>
+                    <a href="https://request.towdaddy.ca/" target="_blank" rel="noopener noreferrer">Get Distance Quote</a>
                   </Button>
                 </div>
               </div>

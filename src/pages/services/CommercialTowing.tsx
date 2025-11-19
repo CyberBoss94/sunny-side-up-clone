@@ -73,10 +73,10 @@ const CommercialTowing = () => {
               </div>
 
               <Button asChild size="lg" className="w-full sm:w-auto">
-                <Link to="/contact">
+                <a href="https://request.towdaddy.ca/" target="_blank" rel="noopener noreferrer">
                   <Phone className="w-4 h-4 mr-2" />
                   Get Help Now
-                </Link>
+                </a>
               </Button>
             </div>
 
