@@ -7,6 +7,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { lazy, Suspense } from "react";
 import Header from "./components/Header";
 import ScrollToTop from "./components/ScrollToTop";
+import FloatingRequestWidget from "./components/FloatingRequestWidget";
 
 // Lazy load all page components for better code splitting
 const Index = lazy(() => import("./pages/Index"));
@@ -41,6 +42,7 @@ const App = () => (
         <BrowserRouter>
           <ScrollToTop />
           <Header />
+          <FloatingRequestWidget />
           <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
             <Routes>
               <Route path="/" element={<Index />} />
