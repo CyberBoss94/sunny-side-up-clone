@@ -7,6 +7,7 @@ import CoverageAreasSection from "@/components/CoverageAreasSection";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import RelatedPages from "@/components/RelatedPages";
+import LiveTrackingBanner from "@/components/LiveTrackingBanner";
 
 const Index = () => {
   const structuredData = {
@@ -49,6 +50,7 @@ const Index = () => {
         pageType="website"
         structuredData={structuredData}
       />
+      <LiveTrackingBanner />
       <main className="min-h-screen" role="main">
         <HeroSection />
         <TrustBarSection />
