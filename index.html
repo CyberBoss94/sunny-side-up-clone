@@ -109,14 +109,20 @@
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7BF6T5L2M"></script>
+    <!-- Google tag (gtag.js) - Deferred for better performance -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-F7BF6T5L2M');
+      
+      // Load gtag script after page load to reduce initial bundle size
+      window.addEventListener('load', function() {
+        var script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-F7BF6T5L2M';
+        script.async = true;
+        document.head.appendChild(script);
+      });
     </script>
   <meta property="og:title" content="TowDaddy - 24/7 Towing and Roadside Assistance">
   <meta name="twitter:title" content="TowDaddy - 24/7 Towing and Roadside Assistance">
