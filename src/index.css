@@ -39,8 +39,8 @@ All colors MUST be HSL.
     /* TowDaddy Design System */
     --hero-bg: 220 13% 9%;
     --hero-foreground: 0 0% 98%;
-    --tow-red: 0 84% 42%;
-    --tow-red-hover: 0 84% 38%;
+    --tow-red: 0 84% 62%;
+    --tow-red-hover: 0 84% 58%;
     --service-card: 0 0% 100%;
     --service-border: 214.3 31.8% 91.4%;
 
@@ -95,8 +95,8 @@ All colors MUST be HSL.
     /* TowDaddy Dark Mode */
     --hero-bg: 220 13% 9%;
     --hero-foreground: 0 0% 98%;
-    --tow-red: 0 84% 48%;
-    --tow-red-hover: 0 84% 40%;
+    --tow-red: 0 84% 62%;
+    --tow-red-hover: 0 84% 58%;
     --service-card: 217.2 32.6% 17.5%;
     --service-border: 217.2 32.6% 17.5%;
     --sidebar-background: 240 5.9% 10%;
