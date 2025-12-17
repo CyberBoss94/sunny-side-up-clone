@@ -42,7 +42,7 @@ const SEO = ({
     "logo": "https://towdaddy.ca/towdaddy-logo.png",
     "image": "https://towdaddy.ca/towdaddy-logo.png",
     "description": "Professional 24/7 towing and roadside assistance services across Ontario",
-    "telephone": "+16479497729",
+    "telephone": "+16474240433",
     "email": "info@towdaddy.ca",
     "address": {
       "@type": "PostalAddress",

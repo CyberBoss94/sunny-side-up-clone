@@ -19,7 +19,7 @@ const Index = () => {
     "description": "Professional 24/7 towing service across Ontario",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+16479497729",
+      "telephone": "+16474240433",
       "contactType": "emergency",
       "availableLanguage": "English"
     },

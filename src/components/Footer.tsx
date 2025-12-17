@@ -26,7 +26,7 @@ const Footer = () => {
             </p>
             <Button variant="towRed" size="lg" className="w-full sm:w-auto text-sm sm:text-base py-3 sm:py-4">
               <Phone className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
-              <a href="tel:+16479497729" className="hover:text-tow-red transition-colors">Call Now: (647) 949-7729</a>
+              <a href="tel:+16474240433" className="hover:text-tow-red transition-colors">Call Now: (647) 424-0433</a>
             </Button>
           </div>
 
@@ -59,7 +59,7 @@ const Footer = () => {
             <div className="space-y-2 sm:space-y-3">
               <div className="flex items-center space-x-2">
                 <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-tow-red flex-shrink-0" />
-                <a href="tel:+16479497729" className="text-hero-foreground/80 hover:text-tow-red text-sm sm:text-base transition-colors">(647) 949-7729</a>
+                <a href="tel:+16474240433" className="text-hero-foreground/80 hover:text-tow-red text-sm sm:text-base transition-colors">(647) 424-0433</a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-tow-red flex-shrink-0" />

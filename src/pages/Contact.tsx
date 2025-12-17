@@ -30,11 +30,11 @@ const Contact = () => {
     "mainEntity": {
       "@type": "LocalBusiness",
       "name": "TowDaddy",
-      "telephone": "+16479497729",
+      "telephone": "+16474240433",
       "email": "info@towdaddy.ca",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+16479497729",
+        "telephone": "+16474240433",
         "contactType": "emergency",
         "areaServed": "Ontario, Canada",
         "availableLanguage": "English",
@@ -48,7 +48,7 @@ const Contact = () => {
       icon: <Phone className="h-12 w-12 text-tow-red mb-4" />,
       title: "Emergency Hotline",
       subtitle: "Available 24/7 for immediate assistance",
-      details: "(647) 949-7729",
+      details: "(647) 424-0433",
               action: "Call Now",
       primary: true
     },
@@ -75,7 +75,7 @@ const Contact = () => {
       icon: <AlertTriangle className="h-8 w-8 text-tow-red" />,
       title: "Emergency Services",
       description: "Accidents, breakdowns, roadside assistance - immediate response needed",
-      contact: "Call (647) 949-7729 immediately"
+      contact: "Call (647) 424-0433 immediately"
     },
     {
       icon: <Truck className="h-8 w-8 text-tow-red" />,
@@ -101,7 +101,7 @@ const Contact = () => {
     <>
       <SEO 
         title="Contact TowDaddy Toronto - Get Help Now | 24/7 Emergency Towing GTA & Ontario"
-        description="Need towing in Toronto or the GTA? Call (647) 949-7729 now for help. We're here 24/7. Fast response. Get a quote or emergency assistance."
+        description="Need towing in Toronto or the GTA? Call (647) 424-0433 now for help. We're here 24/7. Fast response. Get a quote or emergency assistance."
         keywords="contact TowDaddy Toronto, emergency towing phone GTA, towing quote Toronto Vaughan, roadside assistance Scarborough, 24/7 towing Ontario, call tow truck Toronto"
         canonicalUrl="https://towdaddy.ca/contact"
         pageType="website"
@@ -137,7 +137,7 @@ const Contact = () => {
                 Stranded or in an emergency? Don't wait - call now for immediate help
               </p>
               <Button variant="towRed" size="lg" className="text-lg px-8" asChild>
-                <a href="tel:+16479497729">
+                <a href="tel:+16474240433">
                   <Phone className="w-6 h-6 mr-2" />
                   Get Help Now
                 </a>
@@ -180,7 +180,7 @@ const Contact = () => {
                   asChild
                 >
                   {method.primary ? (
-                    <a href="tel:+16479497729">{method.action}</a>
+                    <a href="tel:+16474240433">{method.action}</a>
                   ) : method.action === "Send Email" ? (
                     <a href="mailto:info@towdaddy.ca">{method.action}</a>
                   ) : (
@@ -307,7 +307,7 @@ const Contact = () => {
 
               <div className="mt-6 p-4 bg-muted/50 rounded-lg">
                 <p className="text-sm text-muted-foreground text-center">
-                  <strong>For immediate assistance or emergencies, call (647) 949-7729</strong>
+                  <strong>For immediate assistance or emergencies, call (647) 424-0433</strong>
                   <br />
                   Quote requests are typically responded to within 2-4 hours during business hours.
                   <br />
@@ -373,7 +373,7 @@ const Contact = () => {
               </h3>
               <div className="space-y-4">
                 {[
-                  "Call (647) 949-7729 immediately",
+                  "Call (647) 424-0433 immediately",
                   "Move to a safe location away from traffic",
                   "Turn on hazard lights",
                   "Stay with or near your vehicle if safe",

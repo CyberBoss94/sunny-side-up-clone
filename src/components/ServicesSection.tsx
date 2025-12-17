@@ -130,7 +130,7 @@ const ServicesSection = () => {
                 <div className="flex flex-col gap-2">
                   <Button variant="towRed" className="w-full text-sm sm:text-base py-2 sm:py-3">
                     <Phone className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
-                    <a href="tel:+16479497729" className="hover:text-tow-red transition-colors">Call Now</a>
+                    <a href="tel:+16474240433" className="hover:text-tow-red transition-colors">Call Now</a>
                   </Button>
                   <Button variant="outline" size="sm" className="w-full text-xs sm:text-sm" asChild>
                     <Link to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`}>
