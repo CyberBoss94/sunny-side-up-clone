@@ -160,9 +160,9 @@ const Pricing = () => {
               learn <Link to="/about" className="text-tow-red hover:underline">about us</Link>.
             </p>
             <Button variant="towRed" size="lg" className="text-sm sm:text-base" asChild>
-              <a href="tel:+16479497729">
+              <a href="tel:+16474240433">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                Get Free Quote: (647) 949-7729
+                Get Free Quote: (647) 424-0433
               </a>
             </Button>
           </div>
@@ -329,9 +329,9 @@ const Pricing = () => {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button variant="towRed" size="lg" className="text-sm sm:text-base" asChild>
-                <a href="tel:+16479497729">
+                <a href="tel:+16474240433">
                   <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                  Call: (647) 949-7729
+                  Call: (647) 424-0433
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="bg-background/10 border-hero-foreground/30 text-hero-foreground hover:bg-background/20 text-sm sm:text-base">
