@@ -15,10 +15,14 @@ const Hamilton = () => {
   return (
     <>
       <Helmet>
-        <title>Towing Hamilton | 24/7 Emergency Help | TowDaddy Fast Response</title>
-        <meta name="description" content="Need towing in Hamilton? We're here 24/7. Fast help across Hamilton, Stoney Creek, Ancaster, Dundas, and area. Call now!" />
+        <title>Hamilton Towing | 24/7 Emergency Help | TowDaddy</title>
+        <meta name="description" content="Need towing in Hamilton? We're here 24/7. Fast help across Hamilton, Stoney Creek, Ancaster, and Dundas. Call now!" />
         <meta name="keywords" content="towing Hamilton, emergency towing Hamilton Stoney Creek, roadside assistance Ancaster, 24/7 towing Dundas, Hamilton tow truck" />
         <link rel="canonical" href="https://towdaddy.ca/coverage/hamilton" />
+        <meta property="og:title" content="Hamilton Towing | 24/7 Emergency Help | TowDaddy" />
+        <meta property="og:description" content="24/7 towing across Hamilton, Stoney Creek, Ancaster, and Dundas. Fast, safe flatbed service." />
+        <meta property="og:url" content="https://towdaddy.ca/coverage/hamilton" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <div className="min-h-screen bg-background">
