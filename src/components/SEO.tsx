@@ -170,7 +170,7 @@ const SEO = ({
       {/* Open Graph Tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={pageType} />
+      <meta property="og:type" content={pageType === "service" ? "website" : pageType} />
       <meta property="og:url" content={currentUrl} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
