@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://towdaddy.ca/sitemap.xml
+Sitemap: https://sunny-side-up-clone.lovable.app/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
