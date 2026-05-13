@@ -8,7 +8,7 @@ interface SEOProps {
   ogImage?: string;
   structuredData?: any;
   breadcrumbs?: Array<{ name: string; url: string }>;
-  pageType?: "website" | "article" | "service";
+  pageType?: "website" | "article" | "service" | "product";
   geoTargeting?: {
     cities?: string[];
     region?: string;
@@ -18,7 +18,7 @@ interface SEOProps {
 
 const SEO = ({
   title = "TowDaddy - 24/7 Towing Across Ontario",
-  description = "Professional 24/7 towing service across Ontario. Safe flatbed towing, emergency roadside assistance, and vehicle recovery. Licensed, insured, and no hooks - just care.",
+  description = "24/7 towing across Ontario. Flatbed towing, roadside assistance, and vehicle recovery. Licensed, insured, no hooks—just care.",
   keywords = "towing, roadside assistance, emergency towing, Ontario, flatbed towing, vehicle recovery, 24/7 towing, professional towing service",
   canonicalUrl,
   ogImage = "https://towdaddy.ca/towdaddy-logo.png",
@@ -170,7 +170,7 @@ const SEO = ({
       {/* Open Graph Tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={pageType} />
+      <meta property="og:type" content={pageType === "service" ? "website" : pageType} />
       <meta property="og:url" content={currentUrl} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />

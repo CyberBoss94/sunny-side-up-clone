@@ -15,10 +15,14 @@ const London = () => {
   return (
     <>
       <Helmet>
-        <title>Towing London Ontario | 24/7 Emergency Towing & Roadside Help | TowDaddy</title>
-        <meta name="description" content="Need towing in London, Ontario? We're here 24/7. Fast help. Safe towing. Call now for emergency towing or roadside assistance in London." />
+        <title>London ON Towing | 24/7 Emergency & Roadside | TowDaddy</title>
+        <meta name="description" content="Need towing in London, Ontario? We're here 24/7. Fast, safe flatbed service. Call TowDaddy for emergency towing or roadside help." />
         <meta name="keywords" content="towing London Ontario, emergency towing London, roadside assistance London, 24/7 towing London, London tow truck, flatbed towing London" />
         <link rel="canonical" href="https://towdaddy.ca/coverage/london" />
+        <meta property="og:title" content="London ON Towing | 24/7 Emergency & Roadside | TowDaddy" />
+        <meta property="og:description" content="24/7 towing and roadside help in London, Ontario. Fast, safe flatbed service." />
+        <meta property="og:url" content="https://towdaddy.ca/coverage/london" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

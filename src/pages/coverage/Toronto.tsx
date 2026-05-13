@@ -15,10 +15,14 @@ const Toronto = () => {
   return (
     <>
       <Helmet>
-        <title>Towing Toronto & GTA | 24/7 Emergency Help | TowDaddy Fast Response</title>
-        <meta name="description" content="Need towing in Toronto or the GTA? We're here 24/7. Fast help across all Toronto neighborhoods. Scarborough, Vaughan, North York, Etobicoke. Call now!" />
+        <title>Toronto & GTA Towing | 24/7 Emergency | TowDaddy</title>
+        <meta name="description" content="Need towing in Toronto or the GTA? We're here 24/7. Fast help across Scarborough, Vaughan, North York, Etobicoke. Call now!" />
         <meta name="keywords" content="towing Toronto GTA, emergency towing Toronto, roadside assistance Toronto Scarborough, 24/7 towing GTA, Vaughan North York towing" />
         <link rel="canonical" href="https://towdaddy.ca/coverage/toronto" />
+        <meta property="og:title" content="Toronto & GTA Towing | 24/7 Emergency | TowDaddy" />
+        <meta property="og:description" content="24/7 towing across Toronto and the GTA. Fast, safe flatbed service. Call TowDaddy any time." />
+        <meta property="og:url" content="https://towdaddy.ca/coverage/toronto" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

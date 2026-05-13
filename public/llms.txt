@@ -1,0 +1,38 @@
+# TowDaddy
+
+> 24/7 professional towing and roadside assistance across Ontario. Safe flatbed towing, vehicle recovery, and emergency help. No hooks, just care.
+
+TowDaddy serves Toronto, the GTA, and major Ontario cities with around-the-clock emergency towing, roadside assistance, motorcycle towing, long-distance towing, and vehicle recovery. Licensed, insured, and dispatched fast.
+
+## Pages
+
+- [Home](/): Overview of TowDaddy's 24/7 towing service across Ontario.
+- [Services](/services): Full list of towing and roadside services we offer.
+- [Coverage Areas](/coverage-areas): Cities and regions we serve across Ontario.
+- [Pricing](/pricing): Transparent pricing for towing and roadside help.
+- [About](/about): Who we are and how we work.
+- [FAQ](/faq): Quick answers about towing, response times, and pricing.
+- [Contact](/contact): Get in touch or request a tow.
+- [Request Consent Form](/consent-form): Towing authorization form.
+
+## Services
+
+- [Emergency Towing](/services/emergency-towing): 24/7 emergency towing across Ontario.
+- [Roadside Assistance](/services/roadside-assistance): Battery jumps, tire changes, lockouts, fuel delivery.
+- [Vehicle Recovery](/services/vehicle-recovery): Safe recovery from accidents and off-road situations.
+- [Long Distance Towing](/services/long-distance-towing): Inter-city and provincial long-haul towing.
+- [Commercial Towing](/services/commercial-towing): Fleet and heavy-duty commercial towing.
+- [Specialized Towing](/services/specialized-towing): Exotic, classic, and specialty vehicle transport.
+- [Motorcycle Towing](/services/motorcycle-towing): Safe motorcycle transport on flatbeds.
+
+## Coverage
+
+- [Toronto](/coverage/toronto): Toronto and GTA towing coverage.
+- [Ottawa](/coverage/ottawa): Ottawa region towing coverage.
+- [Hamilton](/coverage/hamilton): Hamilton area towing coverage.
+- [London](/coverage/london): London, Ontario towing coverage.
+
+## Contact
+
+- Phone: +1 (647) 424-0433
+- Request a tow: https://request.towdaddy.ca/

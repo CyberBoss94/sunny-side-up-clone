@@ -15,10 +15,14 @@ const Ottawa = () => {
   return (
     <>
       <Helmet>
-        <title>Towing Ottawa | 24/7 Emergency Towing & Roadside Help | TowDaddy Ontario</title>
-        <meta name="description" content="Need towing in Ottawa? We're here 24/7. Fast help. Safe towing. Call now for emergency towing or roadside assistance in Ottawa and area." />
+        <title>Ottawa Towing | 24/7 Emergency & Roadside | TowDaddy</title>
+        <meta name="description" content="Need towing in Ottawa? We're here 24/7. Fast, safe flatbed service. Call TowDaddy for emergency towing or roadside help in Ottawa." />
         <meta name="keywords" content="towing Ottawa, emergency towing Ottawa, roadside assistance Ottawa, 24/7 towing Ottawa, Ottawa tow truck, flatbed towing Ottawa" />
         <link rel="canonical" href="https://towdaddy.ca/coverage/ottawa" />
+        <meta property="og:title" content="Ottawa Towing | 24/7 Emergency & Roadside | TowDaddy" />
+        <meta property="og:description" content="24/7 towing and roadside help in Ottawa. Fast, safe flatbed service." />
+        <meta property="og:url" content="https://towdaddy.ca/coverage/ottawa" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

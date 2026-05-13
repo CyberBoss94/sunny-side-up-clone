@@ -43,8 +43,8 @@ const Index = () => {
   return (
     <>
       <SEO 
-        title="TowDaddy - 24/7 Emergency Towing Toronto & GTA | Fast Flatbed Service"
-        description="Need towing in Toronto or the GTA? We're here 24/7 with flatbed trucks. Fast response. Safe transport. Serving Toronto, Scarborough, Vaughan, Hamilton. Call now for help!"
+        title="TowDaddy | 24/7 Emergency Towing in Toronto & GTA"
+        description="24/7 emergency towing in Toronto & the GTA. Flatbed trucks, fast response, safe transport. Call TowDaddy any time for help."
         keywords="Toronto towing, Scarborough towing, Thornhill towing, Vaughan towing, Ontario towing services, Toronto roadside assistance, emergency towing Toronto, flatbed towing Ontario, GTA towing, Hamilton towing"
         canonicalUrl="https://towdaddy.ca/"
         pageType="website"
