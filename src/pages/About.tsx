@@ -73,7 +73,7 @@ const About = () => {
   return (
     <>
       <SEO 
-        title="About TowDaddy - Toronto's Trusted Towing Company | 15+ Years Serving GTA & Ontario"
+        title="About TowDaddy | Trusted Toronto & GTA Towing Co."
         description="Meet TowDaddy. 15+ years helping drivers in Toronto, GTA, and Ontario. Safe flatbed towing, 24/7 help, licensed pros. We treat your car like our own."
         keywords="about TowDaddy, Toronto towing company, GTA towing service, professional towing Toronto, licensed towing Ontario, flatbed towing specialists, Scarborough Vaughan towing"
         canonicalUrl="https://towdaddy.ca/about"
