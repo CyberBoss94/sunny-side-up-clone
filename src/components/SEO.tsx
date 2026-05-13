@@ -8,7 +8,7 @@ interface SEOProps {
   ogImage?: string;
   structuredData?: any;
   breadcrumbs?: Array<{ name: string; url: string }>;
-  pageType?: "website" | "article" | "service";
+  pageType?: "website" | "article" | "service" | "product";
   geoTargeting?: {
     cities?: string[];
     region?: string;
