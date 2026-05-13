@@ -18,7 +18,7 @@ interface SEOProps {
 
 const SEO = ({
   title = "TowDaddy - 24/7 Towing Across Ontario",
-  description = "Professional 24/7 towing service across Ontario. Safe flatbed towing, emergency roadside assistance, and vehicle recovery. Licensed, insured, and no hooks - just care.",
+  description = "24/7 towing across Ontario. Flatbed towing, roadside assistance, and vehicle recovery. Licensed, insured, no hooks—just care.",
   keywords = "towing, roadside assistance, emergency towing, Ontario, flatbed towing, vehicle recovery, 24/7 towing, professional towing service",
   canonicalUrl,
   ogImage = "https://towdaddy.ca/towdaddy-logo.png",
