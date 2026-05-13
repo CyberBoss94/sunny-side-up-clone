@@ -174,7 +174,7 @@ const FAQ = () => {
   return (
     <>
       <SEO 
-        title="Towing FAQ Toronto & GTA | Quick Answers About Towing Services | TowDaddy"
+        title="Towing FAQ | Quick Answers About Our Service | TowDaddy"
         description="Got towing questions? Get fast answers about prices, response times, and services in Toronto and the GTA. Learn what we do and how we help."
         keywords="towing FAQ Toronto GTA, towing questions Toronto, emergency towing help, roadside assistance questions, Ontario towing info, towing answers"
         canonicalUrl="https://towdaddy.ca/faq"
