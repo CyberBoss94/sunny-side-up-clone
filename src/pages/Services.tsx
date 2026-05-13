@@ -157,7 +157,7 @@ const Services = () => {
   return (
     <>
       <SEO 
-        title="Towing Services Toronto & GTA | 24/7 Emergency Towing & Roadside Help Ontario"
+        title="Towing Services Toronto & GTA | 24/7 Help | TowDaddy"
         description="Need towing in Toronto or the GTA? We offer emergency towing, roadside help, and vehicle recovery. 24/7. Fast. Safe. Licensed pros. Call now!"
         keywords="towing services Toronto GTA, emergency towing Toronto Vaughan, roadside assistance Scarborough, vehicle recovery Toronto, flatbed towing Ontario, commercial towing GTA"
         canonicalUrl="https://towdaddy.ca/services"
