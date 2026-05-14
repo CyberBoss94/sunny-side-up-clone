@@ -116,8 +116,10 @@ const ServicesSection = () => {
   );
 };
 
+import type { LucideIcon } from "lucide-react";
+
 interface FeatureCardProps {
-  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
+  icon: LucideIcon;
   title: string;
   description: string;
   to: string;
