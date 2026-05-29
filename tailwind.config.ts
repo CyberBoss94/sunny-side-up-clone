@@ -55,8 +55,6 @@ export default {
         "hero-foreground": "hsl(var(--hero-foreground))",
         "tow-red": "hsl(var(--tow-red))",
         "tow-red-hover": "hsl(var(--tow-red-hover))",
-        "tow-yellow": "hsl(var(--tow-yellow))",
-        "tow-yellow-hover": "hsl(var(--tow-yellow-hover))",
         "service-card": "hsl(var(--service-card))",
         "service-border": "hsl(var(--service-border))",
         sidebar: {
