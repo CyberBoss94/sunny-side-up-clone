@@ -259,7 +259,7 @@ const Services = () => {
                   {service.link ? (
                     <Button variant="outline" className="flex-1 text-sm sm:text-base" asChild>
                       <a href={service.link}>
-                        Learn More
+                        View {service.title.replace('TOWING', 'Towing').replace('ASSISTANCE', 'Assistance').replace('RECOVERY', 'Recovery').toLowerCase().split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')} details
                       </a>
                     </Button>
                   ) : (
