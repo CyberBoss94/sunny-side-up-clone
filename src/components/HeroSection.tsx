@@ -35,6 +35,22 @@ const HeroSection = () => {
             <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-background/10 border-hero-foreground/30 text-hero-foreground hover:bg-background/20" asChild>
               <Link to="/services">View Services</Link>
             </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-lg px-8 py-6 bg-background/10 border-hero-foreground/30 text-hero-foreground hover:bg-background/20"
+              title="TowDaddy would love your feedback. Post a review to our profile."
+              asChild
+            >
+              <a
+                href="https://g.page/r/CWRIxsOMiRu_EBE/review"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Leave us a review on Google"
+              >
+                Leave us a Review ★
+              </a>
+            </Button>
           </div>
 
           {/* Service Highlights */}
