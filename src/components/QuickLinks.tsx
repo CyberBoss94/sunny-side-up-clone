@@ -16,9 +16,9 @@ const QuickLinks = ({ variant = "emergency", className = "" }: QuickLinksProps) 
       </h3>
       <div className="space-y-3">
         <Button variant="towRed" size="lg" className="w-full text-sm sm:text-base" asChild>
-          <a href="tel:+16474240433">
+          <a href="tel:+16479149185">
             <Phone className="h-4 w-4 mr-2" />
-            Emergency: (647) 424-0433
+            Emergency: (647) 914-9185
           </a>
         </Button>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
