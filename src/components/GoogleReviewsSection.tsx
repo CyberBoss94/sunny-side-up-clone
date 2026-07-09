@@ -55,6 +55,14 @@ const GoogleReviewsSection = () => {
     reviews: fallbackReviews
   });
   const [loading, setLoading] = useState(true);
+  const [page, setPage] = useState(0);
+  const PAGE_SIZE = 5;
+
+  const pagedReviews = useMemo(() => {
+    const start = page * PAGE_SIZE;
+    return reviewsData.reviews.slice(start, start + PAGE_SIZE);
+  }, [reviewsData.reviews, page]);
+  const totalPages = Math.max(1, Math.ceil(reviewsData.reviews.length / PAGE_SIZE));
   
   useEffect(() => {
     const fetchReviews = async () => {
