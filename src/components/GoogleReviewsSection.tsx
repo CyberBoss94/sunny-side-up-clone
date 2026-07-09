@@ -128,11 +128,10 @@ const GoogleReviewsSection = () => {
           </div>
         </div>
 
-        {/* Reviews Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
+        {/* Reviews Grid — 5 per page */}
+        <div className="grid gap-6 mb-6 sm:grid-cols-2 lg:grid-cols-5">
           {loading ?
-        // Loading skeleton
-        [...Array(3)].map((_, i) => <Card key={i} className="p-6">
+        [...Array(5)].map((_, i) => <Card key={i} className="p-6">
                 <div className="animate-pulse">
                   <div className="flex items-start gap-3 mb-4">
                     <div className="h-10 w-10 rounded-full bg-muted"></div>
@@ -150,7 +149,7 @@ const GoogleReviewsSection = () => {
                     <div className="h-3 bg-muted rounded w-5/6"></div>
                   </div>
                 </div>
-              </Card>) : reviewsData.reviews.length > 0 ? reviewsData.reviews.map(review => <Card key={review.id} className="p-6 hover:shadow-lg transition-shadow">
+              </Card>) : pagedReviews.length > 0 ? pagedReviews.map(review => <Card key={review.id} className="p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3 mb-4">
                   {review.photoUrl ? <img src={review.photoUrl} alt={review.author} className="h-10 w-10 rounded-full object-cover" /> : <div className="h-10 w-10 rounded-full bg-tow-red text-white flex items-center justify-center font-semibold">
                       {review.avatar}
@@ -165,9 +164,38 @@ const GoogleReviewsSection = () => {
                   {[...Array(5)].map((_, i) => <Star key={i} className={`h-4 w-4 ${i < review.rating ? "fill-yellow-400 text-yellow-400" : "fill-muted text-muted"}`} />)}
                 </div>
 
-                <p className="text-sm text-muted-foreground leading-relaxed">{review.text}</p>
-              </Card>) : <div className="col-span-3 text-center text-muted-foreground">No reviews available at the moment.</div>}
+                <p className="text-sm text-muted-foreground leading-relaxed line-clamp-6">{review.text}</p>
+              </Card>) : <div className="col-span-full text-center text-muted-foreground">No reviews available at the moment.</div>}
         </div>
+
+        {/* Pagination Controls */}
+        {!loading && totalPages > 1 && (
+          <div className="flex items-center justify-center gap-4 mb-10">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setPage(p => Math.max(0, p - 1))}
+              disabled={page === 0}
+              aria-label="Previous reviews"
+            >
+              <ChevronLeft className="h-4 w-4" />
+              Previous
+            </Button>
+            <span className="text-sm text-muted-foreground" aria-live="polite">
+              Page {page + 1} of {totalPages}
+            </span>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))}
+              disabled={page >= totalPages - 1}
+              aria-label="Next reviews"
+            >
+              Next
+              <ChevronRight className="h-4 w-4" />
+            </Button>
+          </div>
+        )}
 
         {/* Google Maps Embed */}
         <div className="mb-10 flex justify-center">
