@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Star, ExternalLink, MessageSquare } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Star, ExternalLink, MessageSquare, ChevronLeft, ChevronRight } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 interface Review {
   id: number;
