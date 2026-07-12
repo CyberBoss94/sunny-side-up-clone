@@ -84,6 +84,23 @@ const Footer = () => {
             <a href="#" className="hover:text-tow-red transition-colors">License Info</a>
           </div>
         </div>
+
+        {/* Developer Credit */}
+        <div className="border-t border-hero-foreground/20 mt-6 pt-6 flex justify-center">
+          <p className="text-hero-foreground/60 text-xs sm:text-sm text-center flex items-center flex-wrap justify-center gap-1">
+            <span>Copyright 2026 — All Rights Reserved by CipherX Solutions. Development &amp; Security By:</span>
+            <a
+              href="https://cpxs.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-hero-foreground hover:text-tow-red transition-colors font-medium"
+              aria-label="CipherX Solutions website"
+            >
+              <ShieldCheck className="w-3.5 h-3.5" aria-hidden="true" />
+              CipherX
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );
