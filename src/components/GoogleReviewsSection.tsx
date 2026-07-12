@@ -1,198 +1,194 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Star, ExternalLink, MessageSquare, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, ExternalLink, MessageSquare, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
+import reviewsDataset from "@/data/googleReviews.json";
+
 interface Review {
-  id: number;
+  id: string | number;
   author: string;
   rating: number;
   date: string;
   text: string;
-  avatar: string;
   photoUrl?: string;
+  isLocalGuide?: boolean;
 }
-interface GoogleReviewsData {
-  name: string;
-  rating: number;
-  totalReviews: number;
-  reviews: Review[];
-}
-const GoogleReviewsSection = () => {
-  const googleBusinessUrl = "https://www.google.com/maps/place/?q=place_id:ChIJsTNOmoPRNm8RZEjGw4yJG78";
-  // Fallback reviews if API fails
-  const fallbackReviews: Review[] = [
-    {
-      id: 1,
-      author: "Sarah M.",
-      rating: 5,
-      date: "2 weeks ago",
-      text: "Incredible service! They arrived within 20 minutes and handled my car with such care. The driver was professional and kept me updated throughout. Highly recommend TowDaddy!",
-      avatar: "SM"
-    },
-    {
-      id: 2,
-      author: "Michael P.",
-      rating: 5,
-      date: "1 month ago",
-      text: "Best towing experience I've ever had. Fair pricing, quick response, and friendly service. They went above and beyond to ensure my vehicle was safely transported.",
-      avatar: "MP"
-    },
-    {
-      id: 3,
-      author: "Jennifer L.",
-      rating: 5,
-      date: "3 weeks ago",
-      text: "Called them during a snowstorm and they still managed to help me out. The team was amazing and very understanding of my stressful situation. Will definitely use again!",
-      avatar: "JL"
-    }
-  ];
 
-  const [reviewsData, setReviewsData] = useState<GoogleReviewsData>({
-    name: "TowDaddy Inc.",
-    rating: 4.9,
-    totalReviews: 127,
-    reviews: fallbackReviews
-  });
-  const [loading, setLoading] = useState(true);
+const PAGE_SIZE = 6;
+const ROTATE_MS = 7000;
+
+const GoogleReviewsSection = () => {
+  const googleBusinessUrl =
+    "https://www.google.com/maps/place/?q=place_id:ChIJsTNOmoPRNm8RZEjGw4yJG78";
+
+  const reviews = reviewsDataset as Review[];
+
+  const businessRating = useMemo(() => {
+    if (!reviews.length) return 5;
+    const avg = reviews.reduce((s, r) => s + (r.rating || 5), 0) / reviews.length;
+    return Math.round(avg * 10) / 10;
+  }, [reviews]);
+
+  const totalPages = Math.max(1, Math.ceil(reviews.length / PAGE_SIZE));
   const [page, setPage] = useState(0);
-  const PAGE_SIZE = 5;
+  const [paused, setPaused] = useState(false);
 
   const pagedReviews = useMemo(() => {
     const start = page * PAGE_SIZE;
-    return reviewsData.reviews.slice(start, start + PAGE_SIZE);
-  }, [reviewsData.reviews, page]);
-  const totalPages = Math.max(1, Math.ceil(reviewsData.reviews.length / PAGE_SIZE));
-  
+    return reviews.slice(start, start + PAGE_SIZE);
+  }, [reviews, page]);
+
+  // Auto-rotate every ROTATE_MS unless paused
   useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        console.log("Fetching Google reviews...");
-        const {
-          data,
-          error
-        } = await supabase.functions.invoke("fetch-google-reviews");
-        
-        if (error) {
-          console.warn("Error fetching reviews, using fallback:", error);
-          // Keep fallback reviews
-          setLoading(false);
-          return;
-        }
-        
-        if (data && data.reviews && data.reviews.length > 0) {
-          console.log("Reviews data received:", data);
-          setReviewsData({
-            name: data.name || "TowDaddy Inc.",
-            rating: data.rating || 4.9,
-            totalReviews: data.totalReviews || 127,
-            reviews: data.reviews
-          });
-        } else {
-          console.log("No reviews in API response, using fallback");
-          // Keep fallback reviews
-        }
-      } catch (err) {
-        console.warn("Failed to fetch reviews, using fallback:", err);
-        // Keep fallback reviews
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchReviews();
-  }, []);
-  return <section className="py-20 bg-gradient-to-b from-background to-muted/30" role="complementary" aria-label="Customer reviews">
+    if (paused || totalPages <= 1) return;
+    const t = setInterval(() => {
+      setPage((p) => (p + 1) % totalPages);
+    }, ROTATE_MS);
+    return () => clearInterval(t);
+  }, [paused, totalPages]);
+
+  const goPrev = () => setPage((p) => (p - 1 + totalPages) % totalPages);
+  const goNext = () => setPage((p) => (p + 1) % totalPages);
+
+  return (
+    <section
+      className="py-20 bg-gradient-to-b from-background to-muted/30"
+      role="complementary"
+      aria-label="Customer reviews"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="md:text-4xl mb-4 font-bold bg-teal-300 rounded-2xl shadow-xl py-[8px] my-[5px] text-slate-950 text-xl">What Our Customers Say</h2>
+          <h2 className="md:text-4xl mb-4 font-bold bg-teal-300 rounded-2xl shadow-xl py-[8px] my-[5px] text-slate-950 text-xl">
+            What Our Customers Say
+          </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-6">
-            Don't just take our word for it - see what our customers have to say about TowDaddy's service
+            Real reviews from real customers on Google — auto-rotating every few seconds.
           </p>
 
-          {/* Google Business Profile Stats */}
-          <div className="flex items-center justify-center gap-6 mb-8">
+          <div className="flex items-center justify-center gap-6 mb-4">
             <div className="flex items-center gap-2">
-              <img src="/towdaddy-logo.png" alt={reviewsData.name} className="h-12 w-12 rounded-full border-2 border-border" />
+              <img
+                src="/towdaddy-logo.png"
+                alt="TowDaddy Inc."
+                className="h-12 w-12 rounded-full border-2 border-border"
+              />
               <div className="text-left">
-                <p className="font-semibold">{reviewsData.name}</p>
+                <p className="font-semibold">TowDaddy Inc.</p>
                 <div className="flex items-center gap-1">
                   <div className="flex">
-                    {[...Array(5)].map((_, i) => <Star key={i} className={`h-4 w-4 ${i < Math.floor(reviewsData.rating) ? "fill-yellow-400 text-yellow-400" : "fill-muted text-muted"}`} />)}
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`h-4 w-4 ${
+                          i < Math.floor(businessRating)
+                            ? "fill-yellow-400 text-yellow-400"
+                            : "fill-muted text-muted"
+                        }`}
+                      />
+                    ))}
                   </div>
-                  <span className="text-sm font-medium">{reviewsData.rating.toFixed(1)}</span>
-                  <span className="text-sm text-muted-foreground">({reviewsData.totalReviews} reviews)</span>
+                  <span className="text-sm font-medium">{businessRating.toFixed(1)}</span>
+                  <span className="text-sm text-muted-foreground">
+                    ({reviews.length}+ reviews)
+                  </span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Reviews Grid — 5 per page */}
-        <div className="grid gap-6 mb-6 sm:grid-cols-2 lg:grid-cols-5">
-          {loading ?
-        [...Array(5)].map((_, i) => <Card key={i} className="p-6">
-                <div className="animate-pulse">
-                  <div className="flex items-start gap-3 mb-4">
-                    <div className="h-10 w-10 rounded-full bg-muted"></div>
-                    <div className="flex-1 space-y-2">
-                      <div className="h-4 bg-muted rounded w-1/2"></div>
-                      <div className="h-3 bg-muted rounded w-1/3"></div>
-                    </div>
+        {/* Reviews Grid — 6 per page, auto-rotating */}
+        <div
+          key={page}
+          className="grid gap-6 mb-6 sm:grid-cols-2 lg:grid-cols-3 animate-fade-in"
+        >
+          {pagedReviews.map((review) => (
+            <Card key={review.id} className="p-6 hover:shadow-lg transition-shadow flex flex-col">
+              <div className="flex items-start gap-3 mb-4">
+                {review.photoUrl ? (
+                  <img
+                    src={review.photoUrl}
+                    alt={review.author}
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                    className="h-10 w-10 rounded-full object-cover flex-shrink-0"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).style.display = "none";
+                    }}
+                  />
+                ) : (
+                  <div className="h-10 w-10 rounded-full bg-tow-red text-white flex items-center justify-center font-semibold flex-shrink-0">
+                    {review.author
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")
+                      .slice(0, 2)
+                      .toUpperCase()}
                   </div>
-                  <div className="flex gap-0.5 mb-3">
-                    {[...Array(5)].map((_, j) => <div key={j} className="h-4 w-4 bg-muted rounded"></div>)}
-                  </div>
-                  <div className="space-y-2">
-                    <div className="h-3 bg-muted rounded"></div>
-                    <div className="h-3 bg-muted rounded"></div>
-                    <div className="h-3 bg-muted rounded w-5/6"></div>
-                  </div>
+                )}
+                <div className="flex-1 min-w-0">
+                  <p className="font-semibold truncate">{review.author}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {review.date}
+                    {review.isLocalGuide && (
+                      <span className="ml-2 text-xs text-primary">· Local Guide</span>
+                    )}
+                  </p>
                 </div>
-              </Card>) : pagedReviews.length > 0 ? pagedReviews.map(review => <Card key={review.id} className="p-6 hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-3 mb-4">
-                  {review.photoUrl ? <img src={review.photoUrl} alt={review.author} className="h-10 w-10 rounded-full object-cover" /> : <div className="h-10 w-10 rounded-full bg-tow-red text-white flex items-center justify-center font-semibold">
-                      {review.avatar}
-                    </div>}
-                  <div className="flex-1">
-                    <p className="font-semibold">{review.author}</p>
-                    <p className="text-sm text-muted-foreground">{review.date}</p>
-                  </div>
-                </div>
+              </div>
 
-                <div className="flex gap-0.5 mb-3">
-                  {[...Array(5)].map((_, i) => <Star key={i} className={`h-4 w-4 ${i < review.rating ? "fill-yellow-400 text-yellow-400" : "fill-muted text-muted"}`} />)}
-                </div>
+              <div className="flex gap-0.5 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className={`h-4 w-4 ${
+                      i < review.rating
+                        ? "fill-yellow-400 text-yellow-400"
+                        : "fill-muted text-muted"
+                    }`}
+                  />
+                ))}
+              </div>
 
-                <p className="text-sm text-muted-foreground leading-relaxed line-clamp-6">{review.text}</p>
-              </Card>) : <div className="col-span-full text-center text-muted-foreground">No reviews available at the moment.</div>}
+              <p className="text-sm text-muted-foreground leading-relaxed line-clamp-6">
+                {review.text}
+              </p>
+            </Card>
+          ))}
         </div>
 
-        {/* Pagination Controls */}
-        {!loading && totalPages > 1 && (
-          <div className="flex items-center justify-center gap-4 mb-10">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => setPage(p => Math.max(0, p - 1))}
-              disabled={page === 0}
-              aria-label="Previous reviews"
-            >
+        {/* Pagination + Auto-rotate Controls */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-3 mb-10 flex-wrap">
+            <Button variant="outline" size="sm" onClick={goPrev} aria-label="Previous reviews">
               <ChevronLeft className="h-4 w-4" />
               Previous
             </Button>
             <span className="text-sm text-muted-foreground" aria-live="polite">
               Page {page + 1} of {totalPages}
             </span>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))}
-              disabled={page >= totalPages - 1}
-              aria-label="Next reviews"
-            >
+            <Button variant="outline" size="sm" onClick={goNext} aria-label="Next reviews">
               Next
               <ChevronRight className="h-4 w-4" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setPaused((p) => !p)}
+              aria-label={paused ? "Resume auto-rotate" : "Pause auto-rotate"}
+            >
+              {paused ? (
+                <>
+                  <Play className="h-4 w-4" /> Resume
+                </>
+              ) : (
+                <>
+                  <Pause className="h-4 w-4" /> Pause
+                </>
+              )}
             </Button>
           </div>
         )}
@@ -200,21 +196,31 @@ const GoogleReviewsSection = () => {
         {/* Google Maps Embed */}
         <div className="mb-10 flex justify-center">
           <div className="w-full max-w-2xl rounded-lg overflow-hidden shadow-lg border border-border">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d740849.9065709277!2d-79.37839405!3d43.503484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6f36d1839a4e33b1%3A0xbf1b898cc3c64864!2sTowDaddy%20Inc.!5e0!3m2!1sen!2sca!4v1760468337221!5m2!1sen!2sca" width="100%" height="400" style={{
-            border: 0
-          }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="TowDaddy Inc. Location" />
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d740849.9065709277!2d-79.37839405!3d43.503484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6f36d1839a4e33b1%3A0xbf1b898cc3c64864!2sTowDaddy%20Inc.!5e0!3m2!1sen!2sca!4v1760468337221!5m2!1sen!2sca"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="TowDaddy Inc. Location"
+            />
           </div>
         </div>
 
-        {/* Call to Action Buttons */}
+        {/* CTA */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button size="lg" variant="towRed" className="gap-2" asChild>
-            <a href="https://g.page/r/CWRIxsOMiRu_EAE/review" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://g.page/r/CWRIxsOMiRu_EAE/review"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <MessageSquare className="h-5 w-5" />
               Write a Review on Google
             </a>
           </Button>
-
           <Button size="lg" variant="outline" className="gap-2" asChild>
             <a href={googleBusinessUrl} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="h-5 w-5" />
@@ -223,11 +229,14 @@ const GoogleReviewsSection = () => {
           </Button>
         </div>
 
-        {/* Trust Badge */}
         <div className="text-center mt-8">
-          <p className="text-sm text-muted-foreground">Verified reviews from real customers on Google</p>
+          <p className="text-sm text-muted-foreground">
+            Verified reviews from real customers on Google
+          </p>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default GoogleReviewsSection;
