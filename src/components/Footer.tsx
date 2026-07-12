@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MapPin, Clock, Mail } from "lucide-react";
+import { Phone, MapPin, Clock, Mail, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import towDaddyLogo from "@/assets/towdaddy-logo.png";
 
@@ -26,7 +26,7 @@ const Footer = () => {
             </p>
             <Button variant="towRed" size="lg" className="w-full sm:w-auto text-sm sm:text-base py-3 sm:py-4">
               <Phone className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
-              <a href="tel:+16479149185" className="hover:text-tow-red transition-colors">Call Now: (647) 914-9185</a>
+              <a href="tel:+16479497729" className="hover:text-tow-red transition-colors">Call Now: (647) 949-7729</a>
             </Button>
           </div>
 
@@ -59,7 +59,7 @@ const Footer = () => {
             <div className="space-y-2 sm:space-y-3">
               <div className="flex items-center space-x-2">
                 <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-tow-red flex-shrink-0" />
-                <a href="tel:+16479149185" className="text-hero-foreground/80 hover:text-tow-red text-sm sm:text-base transition-colors">(647) 914-9185</a>
+                <a href="tel:+16479497729" className="text-hero-foreground/80 hover:text-tow-red text-sm sm:text-base transition-colors">(647) 949-7729</a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-tow-red flex-shrink-0" />
@@ -83,6 +83,23 @@ const Footer = () => {
             <a href="#" className="hover:text-tow-red transition-colors">Terms of Service</a>
             <a href="#" className="hover:text-tow-red transition-colors">License Info</a>
           </div>
+        </div>
+
+        {/* Developer Credit */}
+        <div className="border-t border-hero-foreground/20 mt-6 pt-6 flex justify-center">
+          <p className="text-hero-foreground/60 text-xs sm:text-sm text-center flex items-center flex-wrap justify-center gap-1">
+            <span>Copyright 2026 — All Rights Reserved by CipherX Solutions. Development &amp; Security By:</span>
+            <a
+              href="https://cpxs.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-hero-foreground hover:text-tow-red transition-colors font-medium"
+              aria-label="CipherX Solutions website"
+            >
+              <ShieldCheck className="w-3.5 h-3.5" aria-hidden="true" />
+              CipherX
+            </a>
+          </p>
         </div>
       </div>
     </footer>
