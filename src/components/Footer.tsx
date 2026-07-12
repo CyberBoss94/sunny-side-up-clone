@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MapPin, Clock, Mail } from "lucide-react";
+import { Phone, MapPin, Clock, Mail, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import towDaddyLogo from "@/assets/towdaddy-logo.png";
 
